@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ascend Scripts</title>
+<meta name="description" content="Sales scripts, WhatsApp messages and a live call guide for Ascend Properties.">
+<meta name="theme-color" content="#F7F5F0">
+<meta name="color-scheme" content="light dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scripts">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top" id="top">
+  <div class="top-in">
+    <div class="brand"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 12 5l8 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.2 14.2h7.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Ascend Scripts</span></div>
+    <div class="seg" role="tablist" aria-label="Mode">
+      <button type="button" role="tab" id="tab-messages" data-act="mode" data-mode="messages" aria-selected="true">Messages</button>
+      <button type="button" role="tab" id="tab-call" data-act="mode" data-mode="call" aria-selected="false">Call</button>
+    </div>
+    <button type="button" class="icon-btn" data-act="settings" aria-label="Menu and settings">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="19" cy="12" r="1.8" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="app" class="wrap"></main>
+
+<button type="button" class="fab" id="fab" data-act="new-script" aria-label="New script">
+  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+</button>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="sheets"></div>
+
+<noscript><p style="padding:24px;font-family:sans-serif">Ascend Scripts needs JavaScript to run.</p></noscript>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
