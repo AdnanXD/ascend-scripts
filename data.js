@@ -430,7 +430,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-04",
       "category": "Owner Selling (House/Apt)",
       "title": "4 · Property basics",
-      "body": "Thank you, {Name}. So I can understand the property properly, may I ask a few things?\n\n• How many bedrooms and bathrooms does it have?\n• What is the land size in perches (for a house), or the floor area (for an apartment)?\n• Is there parking, and what condition is it in? Has anything been renovated recently?\n• Is it furnished, and is it occupied or vacant?\n\nShort answers or a voice note are fine."
+      "body": "Thank you, {Name}. So I can understand the property properly, may I ask a few things?\n\n• How many bedrooms and bathrooms does it have?\n• What is the land size in perches (for a house), or the floor area (for an apartment)?\n• Is there parking?\n• What condition is it in, and has anything been renovated recently?\n• Is it furnished, and is it occupied or vacant?\n\nShort answers or a voice note are fine."
     },
     {
       "id": "s-sl-05",
@@ -472,7 +472,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-11",
       "category": "Owner Selling (House/Apt)",
       "title": "11 · Proposal after visit",
-      "body": "Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n• Suggested asking price: {Price}, with my reasoning for us to discuss\n• Professional photos and video\n• One consistent listing, so the property is presented clearly\n• Buyers qualified before viewings (budget, funding, timeline)\n• Viewings handled by us\n• Negotiation and paperwork support\n• Regular updates\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
+      "body": "Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n• Suggested asking price: {Price}, with my reasoning for us to discuss\n• Professional photos and video\n• One consistent listing, so the property is presented clearly\n• Buyers qualified before viewings (budget, funding, timeline)\n• Viewings handled by us\n• Negotiation and paperwork support\n• Regular updates\n\nTerms: {Fee terms}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
     },
     {
       "id": "s-sl-12",
@@ -646,7 +646,7 @@ window.ASCEND_STARTER = {
       "id": "s-ll-10",
       "category": "Landlord Renting (House/Apt)",
       "title": "10 · Proposal / terms",
-      "body": "Thank you for your time, {Name}. Here is the plan I suggest for renting the {Property}:\n\n• Suggested rent: {Rent}, with my reasoning for us to discuss\n• Proper photos and a clear listing\n• Tenants screened first: employer, references and ability to pay the advance\n• Viewings handled by us\n• Lease agreement support\n• Inventory and handover\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
+      "body": "Thank you for your time, {Name}. Here is the plan I suggest for renting the {Property}:\n\n• Suggested rent: {Rent}, with my reasoning for us to discuss\n• Proper photos and a clear listing\n• Tenants screened first: employer, references and ability to pay the advance\n• Viewings handled by us\n• Lease agreement support\n• Inventory and handover\n\nTerms: {Fee terms}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
     },
     {
       "id": "s-ll-11",
@@ -676,7 +676,7 @@ window.ASCEND_STARTER = {
       "id": "s-ll-15",
       "category": "Landlord Renting (House/Apt)",
       "title": "15 · Tenant found - for approval",
-      "body": "Hi {Name}, we have found a tenant for the {Property}, and I would like your approval.\n\n*Tenant:* {Tenant profile}\n*Rent:* {Rent}\n*Advance:* {Advance}\n*Lease:* {Lease term}\n*Move-in:* {Move-in date}\n\nMy view: this looks like a sound match for the property, and I am comfortable recommending it.\n\nShall I proceed?"
+      "body": "Hi {Name}, we have found a tenant for the {Property}, and I would like your approval.\n\n*Tenant:* {Tenant profile}\n*Rent:* {Rent}\n*Advance:* {Advance}\n*Lease:* {Lease term}\n*Move-in:* {Move-in date}\n\nI have checked their details and can go through them with you.\n\nShall I proceed, or would you like to speak with them first?"
     },
     {
       "id": "s-ll-16",
