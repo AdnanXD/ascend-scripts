@@ -1466,5 +1466,17 @@
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('sw.js').catch(function () { /* offline support is optional */ });
     });
+    // When an updated version takes over, reload once so new scripts/features show immediately.
+    // Skip on first install (no previous controller) and never interrupt an open sheet.
+    var hadController = !!navigator.serviceWorker.controller, reloading = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (!hadController || reloading) return;
+      var tryReload = function () {
+        if (reloading) return;
+        if (stack.length === 0) { reloading = true; location.reload(); }
+        else setTimeout(tryReload, 1500);
+      };
+      tryReload();
+    });
   }
 })();
