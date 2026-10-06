@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="54 40 257 344" role="img" aria-label="Ascend Properties">
   <defs>
     <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="69.5" y1="147.6" x2="352" y2="308.5">
       <stop offset="0" stop-color="#C9A14E"/>
       <stop offset="1" stop-color="#A47C25"/>
     </linearGradient>
   </defs>
-  <rect width="512" height="512" fill="#13233F"/>
-  <g transform="translate(92.06 65.55) scale(0.8988)" fill="url(#g)">
+  <g fill="url(#g)">
     <polygon points="182.2,41 274.6,123.5 182.2,89.2 90.5,123.1"/>
     <polygon points="55.5,382.8 165.3,382.8 165.3,123.5 90,152.2 90,360.4 55.5,360.4"/>
     <polygon points="197.5,382.8 309.3,382.8 309.3,360.4 275.2,360.4 275.2,151.8 197.5,122.7"/>

@@ -3,7 +3,7 @@
    IDs prefixed "s-" are starter IDs: "Restore starter templates" re-adds any that are missing. */
 window.ASCEND_STARTER = {
   version: 1,
-  categories: ["New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
+  categories: ["Col 3 House for Sale 175Mn", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
   callNotes: "",
@@ -96,6 +96,133 @@ window.ASCEND_STARTER = {
       id: "s-m16", category: "Closing", title: "Deal closed - thank you + referral ask",
       body:
 "Dear {Name}, congratulations, and thank you for trusting {Company} with {Property}. It has been a pleasure working with you.\n\nIf there is anything you need as you settle in, from trusted contractors to property management, please do not hesitate to ask.\n\nOne small request: if you know anyone looking to buy, rent or sell in Colombo, I would be grateful for an introduction. A personal recommendation is the greatest compliment we can receive.\n\nWith warm regards,\n{MyName}"
+    },
+
+    /* ---------- Col 3 House for Sale 175Mn (starter ids s-c3-*) ---------- */
+    {
+      id: "s-c3-01", category: "Col 3 House for Sale 175Mn", title: "1 · First reply",
+      body:
+"Hi, greetings from {Company}. My name is {MyName}.\n\nThe 4-bedroom house in Kollupitiya, Colombo 3 is listed at *LKR 175 Mn*.\n\nMay I ask whether you're looking to buy for yourself or your family, or enquiring as an agent for a client?"
+    },
+    {
+      id: "s-c3-02", category: "Col 3 House for Sale 175Mn", title: "2 · Property details",
+      body:
+"Here are the details:\n\n*4-Bedroom House for Sale - Kollupitiya, Colombo 3*\n\n• Location: Off Galle Road, with easy access from Galle Road and Marine Drive\n• Price: *LKR 175 Mn*\n• Land: 8.3 perches\n• Floor area: Approx. 4,500 sq.ft\n• 2 storeys\n• 4 bedrooms\n• 4 bathrooms\n• Parking for 2 vehicles\n• Laundry area, 2 balconies and a backyard\n\nI'll send the photos now."
+    },
+    {
+      id: "s-c3-03", category: "Col 3 House for Sale 175Mn", title: "3 · After photos",
+      body:
+"These are the photos of the living and dining area, bedrooms, courtyard, balconies, bathrooms, parking and outside of the house.\n\nMay I ask, are you looking for yourself or your family, or for a client?"
+    },
+    {
+      id: "s-c3-04", category: "Col 3 House for Sale 175Mn", title: "4 · Location & budget",
+      body:
+"Thank you, {Name}. Does Kollupitiya suit you as a location?\n\nAnd is LKR 175 Mn within the range you're comfortable with?"
+    },
+    {
+      id: "s-c3-05", category: "Col 3 House for Sale 175Mn", title: "5 · Main requirements",
+      body:
+"What are the main things you need in a house? For example, number of bedrooms, parking, or space for the family.\n\nThat way I can tell you honestly if this one is a good fit."
+    },
+    {
+      id: "s-c3-06", category: "Col 3 House for Sale 175Mn", title: "6 · Timing & funding",
+      body:
+"May I ask when you're hoping to buy?\n\nAnd will you be using your own funds, a bank loan, or money from selling another property?"
+    },
+    {
+      id: "s-c3-07", category: "Col 3 House for Sale 175Mn", title: "7 · Who decides",
+      body:
+"Will anyone else be part of the decision, like your spouse or family? It's best if they can join the viewing too."
+    },
+    {
+      id: "s-c3-08", category: "Col 3 House for Sale 175Mn", title: "8 · Offer a viewing",
+      body:
+"From what you've shared, this house could suit you well. Would you like to see it in person?\n\nWhich day and time would work best for you? I'll check with the owner and confirm."
+    },
+    {
+      id: "s-c3-09", category: "Col 3 House for Sale 175Mn", title: "9 · Confirm viewing",
+      body:
+"Your viewing is confirmed:\n\n*4-Bedroom House - Kollupitiya, Colombo 3*\nDate: {Date}\nTime: {Time}\nLocation: {Location pin}\n\nPlease let me know who will be joining you. I'll meet you there. If anything changes, just message me."
+    },
+    {
+      id: "s-c3-10", category: "Col 3 House for Sale 175Mn", title: "10 · Viewing reminder",
+      body:
+"Hi {Name}, just a reminder of the Colombo 3 house viewing today at *{Time}*.\n\nI'll meet you at the house. Here is the location: {Location pin}"
+    },
+    {
+      id: "s-c3-11", category: "Col 3 House for Sale 175Mn", title: "11 · After viewing",
+      body:
+"Hi {Name}, thank you for coming to see the house today.\n\nWhat did you think? Was there anything you liked, or anything that didn't feel right?"
+    },
+    {
+      id: "s-c3-12", category: "Col 3 House for Sale 175Mn", title: "12 · Interested after viewing",
+      body:
+"Great to hear you liked it, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, documents, a second visit, or questions for the owner.\n\nWhen you're ready, you can send me your offer in writing here and I'll present it to the owner."
+    },
+    {
+      id: "s-c3-13", category: "Col 3 House for Sale 175Mn", title: "13 · Not a fit after viewing",
+      body:
+"Thank you for letting me know, {Name}. I really appreciate your honest feedback.\n\nMay I ask what didn't suit you? If I come across a house that fits better, I'll let you know."
+    },
+    {
+      id: "s-c3-14", category: "Col 3 House for Sale 175Mn", title: "14 · No reply after details",
+      body:
+"Hi, just checking if you had a chance to look at the photos of the Colombo 3 house.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+    },
+    {
+      id: "s-c3-15", category: "Col 3 House for Sale 175Mn", title: "15 · Last follow-up",
+      body:
+"Hi, following up one last time on the Kollupitiya house. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar homes in Colombo?"
+    },
+    {
+      id: "s-c3-16", category: "Col 3 House for Sale 175Mn", title: "Q · Where exactly is it?",
+      body:
+"It's in Kollupitiya, Colombo 3, just off Galle Road, with easy access from both Galle Road and Marine Drive.\n\nI share the exact location before a viewing. Would you like to arrange one?"
+    },
+    {
+      id: "s-c3-17", category: "Col 3 House for Sale 175Mn", title: "Q · What's the best price?",
+      body:
+"The asking price is *LKR 175 Mn*.\n\nIf you like the house after seeing it, I'm happy to present your offer to the owner. Would you like to view it first?"
+    },
+    {
+      id: "s-c3-18", category: "Col 3 House for Sale 175Mn", title: "Q · Is it negotiable?",
+      body:
+"The owner has listed it at *LKR 175 Mn*, and any offer would go to the owner for a decision.\n\nOnce you've seen the house, you can send me your offer in writing and I'll present it. Shall we arrange a viewing?"
+    },
+    {
+      id: "s-c3-19", category: "Col 3 House for Sale 175Mn", title: "Q · My budget is lower",
+      body:
+"Thank you for being open with me. May I ask what range you would be comfortable with?\n\nIf this one isn't the right fit, I can look for other houses in Colombo that match your budget."
+    },
+    {
+      id: "s-c3-20", category: "Col 3 House for Sale 175Mn", title: "Q · Can I view it?",
+      body:
+"Yes, of course. Which day and time would suit you? I'll check with the owner and confirm.\n\nWill anyone be joining you for the viewing?"
+    },
+    {
+      id: "s-c3-21", category: "Col 3 House for Sale 175Mn", title: "Q · I need a bank loan",
+      body:
+"That's fine, many buyers use a bank loan. Have you already spoken to your bank, or would you like to get a pre-approval first?\n\nKnowing your loan amount helps us plan the next steps smoothly."
+    },
+    {
+      id: "s-c3-22", category: "Col 3 House for Sale 175Mn", title: "Q · Need to sell my property first",
+      body:
+"That makes sense. May I ask where your current property is, and whether it's already on the market?\n\nI'd be happy to help you sell it too, so both can move together."
+    },
+    {
+      id: "s-c3-23", category: "Col 3 House for Sale 175Mn", title: "Q · Buying from overseas",
+      body:
+"No problem, we often work with buyers living overseas.\n\nI can do a live video call of the house so you can see every room. A family member here is also welcome to view it in person for you.\n\nWhen would suit you for a video call?"
+    },
+    {
+      id: "s-c3-24", category: "Col 3 House for Sale 175Mn", title: "Q · Agent with a buyer",
+      body:
+"Thank you. May I ask a few quick things?\n\n1. Do you have a specific buyer for this house?\n2. Have they seen the price and photos?\n3. Will they attend the viewing?\n\nBefore arranging access, let's confirm our co-broking and commission terms."
+    },
+    {
+      id: "s-c3-25", category: "Col 3 House for Sale 175Mn", title: "Q · Offer / wants to meet owner",
+      body:
+"Thank you, {Name}. I'm working with the owner on this sale, so I can pass your offer on directly.\n\nPlease send me your offer in writing here, with:\n• Your offer price\n• How you plan to pay (own funds or bank loan)\n• Your preferred timeline\n\nI'll present it to the owner and come back to you."
     }
   ],
 
@@ -177,6 +304,46 @@ window.ASCEND_STARTER = {
           id: "s-f-landlord-7", title: "Close & confirm",
           say: "Thank you for your time. To confirm: I'll visit on [date and time], bring a short proposal and the mandate for you to review, and send a summary on WhatsApp today.\n\nIs there anything else I should know before then?",
           notes: "Repeat the plan back. Send the WhatsApp recap within the hour. Note any follow-ups you promised."
+        }
+      ]
+    },
+    {
+      id: "s-f-c3", title: "Col 3 House 175Mn",
+      steps: [
+        {
+          id: "s-f-c3-1", title: "Opener",
+          say: "Hi, this is {MyName} from {Company}. You enquired about the 4-bedroom house in Kollupitiya, Colombo 3, listed at 175 million. Is now a good time to talk for a few minutes?",
+          notes: "If it's a bad time, agree a specific call-back time."
+        },
+        {
+          id: "s-f-c3-2", title: "Buyer or agent",
+          say: "May I ask, are you looking for yourself or your family, or for a client?",
+          notes: "Agent: ask if they have a specific buyer, if the buyer has seen price and photos, and if the buyer will attend. Confirm co-broking and commission terms before giving access."
+        },
+        {
+          id: "s-f-c3-3", title: "Location & budget",
+          say: "Does Kollupitiya suit you as a location? And is 175 million within the range you're comfortable with?",
+          notes: "If the budget is lower, ask their range and offer to find other options. Don't argue the price."
+        },
+        {
+          id: "s-f-c3-4", title: "Requirements",
+          say: "What are the main things you need in a house? Bedrooms, parking, space for family?",
+          notes: "Key features: 8.3 perches, approx. 4,500 sq.ft, 2 storeys, 4 bed / 4 bath, parking for 2, laundry, 2 balconies, backyard. Off Galle Road, access from Galle Road and Marine Drive."
+        },
+        {
+          id: "s-f-c3-5", title: "Timing & funding",
+          say: "When are you hoping to buy? And will it be your own funds, a bank loan, or from selling another property?",
+          notes: "Strongest signals: clear budget, funding plan, and timeline. Selling first? Offer to help sell theirs too."
+        },
+        {
+          id: "s-f-c3-6", title: "Who decides",
+          say: "Will anyone else be part of the decision? It's best if they can join the viewing too.",
+          notes: "Aim to get all decision makers at the same viewing."
+        },
+        {
+          id: "s-f-c3-7", title: "Book the viewing",
+          say: "From what you've told me, it's worth seeing in person. Which day and time suits you? I'll confirm with the owner and send you the location on WhatsApp.",
+          notes: "End with a clear next step: viewing booked, one detail to resolve, follow-up date, or not a fit. Don't promise anything not yet confirmed (availability, documents, furniture, negotiability)."
         }
       ]
     }

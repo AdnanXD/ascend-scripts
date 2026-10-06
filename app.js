@@ -103,6 +103,12 @@
     messages.forEach(function (m) { if (cats.indexOf(m.category) < 0) cats.push(m.category); });
     var fields = {};
     Object.keys(obj(p.fields)).forEach(function (k) { if (typeof p.fields[k] === 'string') fields[k] = p.fields[k]; });
+    // null = this data predates seenStarter (old data or old backup); migrateStarter() initialises it.
+    var seenStarter = null, mt = obj(p.meta);
+    if (Array.isArray(mt.seenStarter)) {
+      seenStarter = [];
+      mt.seenStarter.forEach(function (x) { if (typeof x === 'string' && x && seenStarter.indexOf(x) < 0) seenStarter.push(x); });
+    }
     var st = obj(p.settings), u = obj(p.ui), steps = {};
     Object.keys(obj(u.steps)).forEach(function (k) { steps[k] = Math.max(0, Math.floor(num(u.steps[k]))); });
     return {
@@ -111,11 +117,55 @@
       fields: fields,
       settings: { myName: str(st.myName, 'Adnan'), company: str(st.company, 'Ascend Properties') },
       callNotes: str(p.callNotes),
+      meta: { seenStarter: seenStarter },
       ui: { mode: u.mode === 'call' ? 'call' : 'messages', flowId: str(u.flowId), steps: steps }
     };
   }
 
-  function starter() { return normalize(clone(window.ASCEND_STARTER)); }
+  /* Starter ids that shipped before seenStarter existed (v1/v2 of the app). Never extend this list:
+     items added to data.js later are exactly the ones migrateStarter() should deliver to existing users. */
+  var ORIGINAL_STARTER_IDS = ['s-m01', 's-m02', 's-m03', 's-m04', 's-m05', 's-m06', 's-m07', 's-m08', 's-m09', 's-m10',
+    's-m11', 's-m12', 's-m13', 's-m14', 's-m15', 's-m16', 's-f-buyer', 's-f-landlord',
+    's-o01', 's-o02', 's-o03', 's-o04', 's-o05', 's-o06', 's-o07', 's-o08', 's-o09', 's-o10'];
+  var FIRST_CATEGORY = 'Col 3 House for Sale 175Mn';
+
+  function starterIds(st) {
+    return st.messages.concat(st.flows, st.objections).map(function (x) { return x.id; });
+  }
+
+  /* Fresh starter content; everything in it counts as already seeded. */
+  function starter() {
+    var st = normalize(clone(window.ASCEND_STARTER));
+    st.meta.seenStarter = starterIds(st);
+    return st;
+  }
+
+  /* Content migration for existing data. Adds starter items whose id has never been seeded (appended at
+     the end of their list), then records them as seen so anything the user deletes later stays deleted. */
+  function migrateStarter() {
+    if (!window.ASCEND_STARTER) return;
+    if (!S.meta || !Array.isArray(S.meta.seenStarter)) S.meta = { seenStarter: ORIGINAL_STARTER_IDS.slice() };
+    var seen = S.meta.seenStarter, st = starter();
+    function fresh(arr, mine) {
+      return arr.filter(function (x) {
+        return seen.indexOf(x.id) < 0 && !mine.some(function (y) { return y.id === x.id; });
+      });
+    }
+    var addM = fresh(st.messages, S.messages), addF = fresh(st.flows, S.flows), addO = fresh(st.objections, S.objections);
+    addM.forEach(function (m) { S.messages.push(m); });
+    addF.forEach(function (f) { S.flows.push(f); });
+    addO.forEach(function (o) { S.objections.push(o); });
+    // A starter category is added only while delivering a new item that belongs to it, so a category
+    // the user later deletes or renames does not keep coming back.
+    var wanted = {};
+    addM.forEach(function (m) { wanted[m.category] = 1; });
+    st.categories.forEach(function (c) {
+      if (!wanted[c] || S.categories.indexOf(c) >= 0) return;
+      if (c === FIRST_CATEGORY) S.categories.unshift(c); else S.categories.push(c);
+    });
+    starterIds(st).forEach(function (id) { if (seen.indexOf(id) < 0) seen.push(id); });
+    if (!S.ui.flowId && S.flows[0]) S.ui.flowId = S.flows[0].id;
+  }
 
   function load() {
     var raw = null;
@@ -127,7 +177,7 @@
         setTimeout(function () { toast('Saved data could not be read. A copy was kept and starter content loaded.', { ms: 6000 }); }, 400);
       }
     }
-    if (!S) { S = starter(); }
+    if (!S) { S = starter(); } else { migrateStarter(); }
   }
 
   function save() {
@@ -1202,7 +1252,11 @@
     st.messages.forEach(function (m) { if (!has(S.messages, m.id)) { S.messages.push(m); added++; } });
     st.flows.forEach(function (f) { if (!has(S.flows, f.id)) { S.flows.push(f); added++; } });
     st.objections.forEach(function (o) { if (!has(S.objections, o.id)) { S.objections.push(o); added++; } });
-    st.categories.forEach(function (c) { if (S.categories.indexOf(c) < 0) S.categories.push(c); });
+    st.categories.forEach(function (c) {
+      if (S.categories.indexOf(c) < 0) { if (c === FIRST_CATEGORY) S.categories.unshift(c); else S.categories.push(c); }
+    });
+    if (!S.meta || !Array.isArray(S.meta.seenStarter)) S.meta = { seenStarter: [] };
+    starterIds(st).forEach(function (id) { if (S.meta.seenStarter.indexOf(id) < 0) S.meta.seenStarter.push(id); });
     if (!S.ui.flowId && S.flows[0]) S.ui.flowId = S.flows[0].id;
     save();
     refreshAll();
@@ -1310,7 +1364,7 @@
         text: 'This backup has ' + data.messages.length + ' scripts, ' + data.flows.length + ' call flows and ' + data.objections.length +
           ' objections. It will replace everything currently in the app.',
         onOk: function () {
-          S = data; save();
+          S = data; migrateStarter(); save();
           stack.slice().forEach(function (s) { s.close(true); });
           ui.q = ''; ui.cat = '__all__';
           applyMode();

@@ -1,9 +1,9 @@
 /* Ascend Scripts service worker: cache-first app shell.
    Bump CACHE whenever any app file changes. */
-const CACHE = 'ascend-scripts-v2';
+const CACHE = 'ascend-scripts-v3';
 const SHELL = [
   './', './index.html', './styles.css', './app.js', './data.js',
-  './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'
+  './manifest.webmanifest', './icon.svg', './logo.svg', './icon-192.png', './icon-512.png'
 ];
 
 self.addEventListener('install', (e) => {
