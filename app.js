@@ -172,7 +172,9 @@
     addM.forEach(function (m) { wanted[m.category] = 1; });
     st.categories.forEach(function (c) {
       if (!wanted[c] || S.categories.indexOf(c) >= 0) return;
-      if (c === FIRST_CATEGORY) S.categories.unshift(c); else S.categories.push(c);
+      // Insert at the starter's position (listing categories sit at the top, newest after older ones).
+      var at = Math.min(st.categories.indexOf(c), S.categories.length);
+      S.categories.splice(at < 0 ? S.categories.length : at, 0, c);
     });
     starterIds(st).forEach(function (id) { if (seen.indexOf(id) < 0) seen.push(id); });
     if (!S.ui.flowId && S.flows[0]) S.ui.flowId = S.flows[0].id;

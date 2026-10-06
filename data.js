@@ -3,7 +3,7 @@
    IDs prefixed "s-" are starter IDs: "Restore starter templates" re-adds any that are missing. */
 window.ASCEND_STARTER = {
   version: 1,
-  categories: ["Col 3 House for Sale 175Mn", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
+  categories: ["Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
   callNotes: "",
@@ -223,6 +223,188 @@ window.ASCEND_STARTER = {
       id: "s-c3-25", category: "Col 3 House for Sale 175Mn", title: "Q · Offer / wants to meet owner",
       body:
 "Thank you, {Name}. I'm working with the owner on this sale, so I can pass your offer on directly.\n\nPlease send me your offer in writing here, with:\n• Your offer price\n• How you plan to pay (own funds or bank loan)\n• Your preferred timeline\n\nI'll present it to the owner and come back to you."
+    },
+
+    /* ---------- Col 5 Siripa Lane House ---------- */
+    {
+      "id": "s-c5-01",
+      "category": "Col 5 Siripa Lane House",
+      "title": "1 · First reply",
+      "body": "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for your interest in the house on *Siripa Lane, Colombo 5*. It sits on a *32-perch* land.\n\nMay I ask whether you're looking to buy for yourself or your family, or enquiring as an agent for a client?"
+    },
+    {
+      "id": "s-c5-02",
+      "category": "Col 5 Siripa Lane House",
+      "title": "2 · Property details",
+      "body": "Here are the details:\n\n*House for Sale - Siripa Lane, Colombo 5*\n\n• Location: Siripa Lane, Thimbirigasyaya, Colombo 5\n• Land: 32 perches\n• Existing house with a garden\n• Price: *{Asking price}*\n\nI'll send the photo now."
+    },
+    {
+      "id": "s-c5-03",
+      "category": "Col 5 Siripa Lane House",
+      "title": "3 · After photos",
+      "body": "Here's the house and garden.\n\nMay I ask, are you looking for a home to live in, or more as an investment?"
+    },
+    {
+      "id": "s-c5-04",
+      "category": "Col 5 Siripa Lane House",
+      "title": "4 · Budget",
+      "body": "Thank you, {Name}. Does Colombo 5 suit you as a location?\n\nAnd may I ask what budget range you have in mind?"
+    },
+    {
+      "id": "s-c5-05",
+      "category": "Col 5 Siripa Lane House",
+      "title": "5 · Main requirements",
+      "body": "What are the main things you're looking for? For example, land size, number of bedrooms, or space for the family.\n\nThat way I can tell you honestly if this one is a good fit."
+    },
+    {
+      "id": "s-c5-06",
+      "category": "Col 5 Siripa Lane House",
+      "title": "6 · Timing & funding",
+      "body": "May I ask when you're hoping to buy?\n\nAnd will you be using your own funds, a bank loan, or money from selling another property?"
+    },
+    {
+      "id": "s-c5-07",
+      "category": "Col 5 Siripa Lane House",
+      "title": "7 · Who decides",
+      "body": "Will anyone else be part of the decision, like your spouse or family? It's best if they can join the viewing too."
+    },
+    {
+      "id": "s-c5-08",
+      "category": "Col 5 Siripa Lane House",
+      "title": "8 · Offer a viewing",
+      "body": "From what you've shared, this property could suit you well. Would you like to see it in person?\n\nWhich day and time would work best for you? I'll check with the owner and confirm."
+    },
+    {
+      "id": "s-c5-09",
+      "category": "Col 5 Siripa Lane House",
+      "title": "9 · Confirm viewing",
+      "body": "Your viewing is confirmed:\n\n*House on 32 Perches - Siripa Lane, Colombo 5*\nDate: {Date}\nTime: {Time}\nLocation: {Location pin}\n\nPlease let me know who will be joining you. I'll meet you there. If anything changes, just message me."
+    },
+    {
+      "id": "s-c5-10",
+      "category": "Col 5 Siripa Lane House",
+      "title": "10 · Viewing reminder",
+      "body": "Hi {Name}, just a reminder of the Siripa Lane viewing today at *{Time}*.\n\nI'll meet you at the house. Here is the location: {Location pin}"
+    },
+    {
+      "id": "s-c5-11",
+      "category": "Col 5 Siripa Lane House",
+      "title": "11 · After viewing",
+      "body": "Hi {Name}, thank you for coming to see the property today.\n\nWhat did you think? Was there anything you liked, or anything that didn't feel right?"
+    },
+    {
+      "id": "s-c5-12",
+      "category": "Col 5 Siripa Lane House",
+      "title": "12 · Interested after viewing",
+      "body": "Great to hear you liked it, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, documents, a second visit, or questions for the owner.\n\nWhen you're ready, you can send me your offer in writing here and I'll present it to the owner."
+    },
+    {
+      "id": "s-c5-13",
+      "category": "Col 5 Siripa Lane House",
+      "title": "13 · Not a fit after viewing",
+      "body": "Thank you for letting me know, {Name}. I really appreciate your honest feedback.\n\nMay I ask what didn't suit you? If I come across a property that fits better, I'll let you know."
+    },
+    {
+      "id": "s-c5-14",
+      "category": "Col 5 Siripa Lane House",
+      "title": "14 · No reply after details",
+      "body": "Hi, just checking if you had a chance to look at the Siripa Lane property in Colombo 5.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+    },
+    {
+      "id": "s-c5-15",
+      "category": "Col 5 Siripa Lane House",
+      "title": "15 · Last follow-up",
+      "body": "Hi, following up one last time on the Siripa Lane property. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar properties in Colombo?"
+    },
+    {
+      "id": "s-c5-16",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Where exactly is it?",
+      "body": "It's on Siripa Lane in Thimbirigasyaya, Colombo 5.\n\nI share the exact location before a viewing. Would you like to arrange one?"
+    },
+    {
+      "id": "s-c5-17",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Bedrooms / house details?",
+      "body": "Good question. I'm confirming the full house details with the owner, such as bedrooms, bathrooms and floor area, and I'll send them to you shortly.\n\nIn the meantime, may I ask how many bedrooms you need?"
+    },
+    {
+      "id": "s-c5-18",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Price per perch?",
+      "body": "The property is priced as a whole, the house and the 32-perch land together, at *{Asking price}*.\n\nSince it comes with an existing house and garden, it's best seen in person. Shall we arrange a viewing?"
+    },
+    {
+      "id": "s-c5-19",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · What's the best price?",
+      "body": "The asking price is *{Asking price}*.\n\nIf you like the property after seeing it, I'm happy to present your offer to the owner. Would you like to view it first?"
+    },
+    {
+      "id": "s-c5-20",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Is it negotiable?",
+      "body": "The owner has listed it at *{Asking price}*, and any offer would go to the owner for a decision.\n\nOnce you've seen the property, you can send me your offer in writing and I'll present it. Shall we arrange a viewing?"
+    },
+    {
+      "id": "s-c5-21",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Low offer (land value only)",
+      "body": "Thank you, {Name}. I'm happy to present any written offer to the owner.\n\nJust to note, this is a house with a garden on 32 perches, not bare land, so it's worth seeing before you decide on a figure. Would you like to arrange a viewing first?"
+    },
+    {
+      "id": "s-c5-22",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · My budget is lower",
+      "body": "Thank you for being open with me. May I ask what range you would be comfortable with?\n\nIf this one isn't the right fit, I can look for other properties in Colombo that match your budget."
+    },
+    {
+      "id": "s-c5-23",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Can I build / develop?",
+      "body": "I can't confirm zoning or development approvals yet, so I don't want to promise anything on that.\n\nMay I ask what you have in mind? I'll check with the owner what documents are available, such as the deed and survey plan, so you can do your own checks."
+    },
+    {
+      "id": "s-c5-24",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Documents / deed?",
+      "body": "I'll confirm with the owner which documents can be shared, such as the deed and survey plan, and at what stage.\n\nWould you like to view the property first?"
+    },
+    {
+      "id": "s-c5-25",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Can I view it?",
+      "body": "Yes, of course. Which day and time would suit you? I'll check with the owner and confirm.\n\nWill anyone be joining you for the viewing?"
+    },
+    {
+      "id": "s-c5-26",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · I need a bank loan",
+      "body": "That's fine, many buyers use a bank loan. Have you already spoken to your bank, or would you like to get a pre-approval first?\n\nKnowing your loan amount helps us plan the next steps smoothly."
+    },
+    {
+      "id": "s-c5-27",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Need to sell my property first",
+      "body": "That makes sense. May I ask where your current property is, and whether it's already on the market?\n\nI'd be happy to help you sell it too, so both can move together."
+    },
+    {
+      "id": "s-c5-28",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Buying from overseas",
+      "body": "No problem, we often work with buyers living overseas.\n\nI can do a live video call of the property so you can see it properly. A family member here is also welcome to view it in person for you.\n\nWhen would suit you for a video call?"
+    },
+    {
+      "id": "s-c5-29",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Agent with a buyer",
+      "body": "Thank you. May I ask a few quick things?\n\n1. Do you have a specific buyer for this property?\n2. Have they seen the details and photo?\n3. Will they attend the viewing?\n\nBefore arranging access, let's confirm our co-broking and commission terms."
+    },
+    {
+      "id": "s-c5-30",
+      "category": "Col 5 Siripa Lane House",
+      "title": "Q · Offer / wants to meet owner",
+      "body": "Thank you, {Name}. I'm working with the owner on this sale, so I can pass your offer on directly.\n\nPlease send me your offer in writing here, with:\n• Your offer price\n• How you plan to pay (own funds or bank loan)\n• Your preferred timeline\n\nI'll present it to the owner and come back to you."
     }
   ],
 
@@ -344,6 +526,54 @@ window.ASCEND_STARTER = {
           id: "s-f-c3-7", title: "Book the viewing",
           say: "From what you've told me, it's worth seeing in person. Which day and time suits you? I'll confirm with the owner and send you the location on WhatsApp.",
           notes: "End with a clear next step: viewing booked, one detail to resolve, follow-up date, or not a fit. Don't promise anything not yet confirmed (availability, documents, furniture, negotiability)."
+        }
+      ]
+    },
+    {
+      "id": "s-f-c5",
+      "title": "Col 5 Siripa Lane",
+      "steps": [
+        {
+          "id": "s-f-c5-1",
+          "title": "Opener",
+          "say": "Hi, this is {MyName} from {Company}. You enquired about the house on Siripa Lane, Colombo 5, on 32 perches. Is now a good time to talk for a few minutes?",
+          "notes": "If it's a bad time, agree a specific call-back time."
+        },
+        {
+          "id": "s-f-c5-2",
+          "title": "Buyer or agent",
+          "say": "May I ask, are you looking for yourself or your family, or for a client?",
+          "notes": "Agent: ask if they have a specific buyer, if the buyer has seen the details, and if the buyer will attend. Confirm co-broking and commission terms before giving access."
+        },
+        {
+          "id": "s-f-c5-3",
+          "title": "Home or investment",
+          "say": "Are you looking for a home to live in, or more as an investment?",
+          "notes": "Don't claim development potential. Zoning and approvals are not confirmed. If they want to build, offer to check which documents the owner can share."
+        },
+        {
+          "id": "s-f-c5-4",
+          "title": "Location & budget",
+          "say": "Does Colombo 5 suit you? And may I ask what budget range you have in mind?",
+          "notes": "Price is quoted for the whole property, house and land together. Avoid talking per perch. If they push per perch, say it's a house with a garden, not bare land, and steer to a viewing."
+        },
+        {
+          "id": "s-f-c5-5",
+          "title": "Timing & funding",
+          "say": "When are you hoping to buy? And will it be your own funds, a bank loan, or from selling another property?",
+          "notes": "Strongest signals: clear budget, funding plan, and timeline. Selling first? Offer to help sell theirs too."
+        },
+        {
+          "id": "s-f-c5-6",
+          "title": "Who decides",
+          "say": "Will anyone else be part of the decision? It's best if they can join the viewing too.",
+          "notes": "Aim to get all decision makers at the same viewing."
+        },
+        {
+          "id": "s-f-c5-7",
+          "title": "Book the viewing",
+          "say": "From what you've told me, it's worth seeing in person. Which day and time suits you? I'll confirm with the owner and send you the location on WhatsApp.",
+          "notes": "House details (bedrooms, floor area, condition, documents) are still being confirmed. Say \"I'll check with the owner\" rather than guessing. End with a clear next step."
         }
       ]
     }
