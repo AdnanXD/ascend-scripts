@@ -3,7 +3,7 @@
    IDs prefixed "s-" are starter IDs: "Restore starter templates" re-adds any that are missing. */
 window.ASCEND_STARTER = {
   version: 1,
-  categories: ["Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
+  categories: ["Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
   callNotes: "",
@@ -405,6 +405,350 @@ window.ASCEND_STARTER = {
       "category": "Col 5 Siripa Lane House",
       "title": "Q · Offer / wants to meet owner",
       "body": "Thank you, {Name}. I'm working with the owner on this sale, so I can pass your offer on directly.\n\nPlease send me your offer in writing here, with:\n• Your offer price\n• How you plan to pay (own funds or bank loan)\n• Your preferred timeline\n\nI'll present it to the owner and come back to you."
+    },
+
+    /* ---------- Owner Selling & Landlord Renting (House/Apt) ---------- */
+    {
+      "id": "s-sl-01",
+      "category": "Owner Selling (House/Apt)",
+      "title": "1 · Reply to owner enquiry",
+      "body": "Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you sell your property. To guide you properly, may I ask a few quick things?\n\n• Is it a house or an apartment, and where is it?\n• Roughly how soon would you like to sell?"
+    },
+    {
+      "id": "s-sl-02",
+      "category": "Owner Selling (House/Apt)",
+      "title": "2 · Outreach to owner's own ad",
+      "body": "Hi {Name}, this is {MyName} from {Company}. I came across your advertisement for the {Property}.\n\nWe work with expat, diplomatic, corporate and local buyers who are looking in {Area}, so I thought it worth a short message.\n\nWould you be open to speaking with an agent about it? A brief call is enough, and there is no pressure at all."
+    },
+    {
+      "id": "s-sl-03",
+      "category": "Owner Selling (House/Apt)",
+      "title": "3 · Follow-up (no reply)",
+      "body": "Hi {Name}, I wrote a couple of days ago about your {Property}. I know messages can get buried.\n\nIs it still available? If you would rather handle it yourself, I completely understand and will leave it with you."
+    },
+    {
+      "id": "s-sl-04",
+      "category": "Owner Selling (House/Apt)",
+      "title": "4 · Property basics",
+      "body": "Thank you, {Name}. So I can understand the property properly, may I ask a few things?\n\n• How many bedrooms and bathrooms does it have?\n• What is the land size in perches (for a house), or the floor area (for an apartment)?\n• Is there parking, and what condition is it in? Has anything been renovated recently?\n• Is it furnished, and is it occupied or vacant?\n\nShort answers or a voice note are fine."
+    },
+    {
+      "id": "s-sl-05",
+      "category": "Owner Selling (House/Apt)",
+      "title": "5 · Motivation & timeline",
+      "body": "That's helpful, {Name}. May I ask what has led you to consider selling, and when you would ideally like it completed?\n\nAnd if it took longer than you planned, what would that mean for you?"
+    },
+    {
+      "id": "s-sl-06",
+      "category": "Owner Selling (House/Apt)",
+      "title": "6 · Price expectation",
+      "body": "Thank you, {Name}. Do you have a price in mind? And how did you arrive at that figure, for example a recent valuation, or similar sales you've heard about?\n\nWhatever you share, I will give you my honest view, based on what is selling in {Area}, so we price it with confidence."
+    },
+    {
+      "id": "s-sl-07",
+      "category": "Owner Selling (House/Apt)",
+      "title": "7 · Decision makers",
+      "body": "Is anyone else involved in the decision about the sale, such as co-owners or family members, perhaps some living abroad?\n\nIf so, it helps to include them early. They are welcome to join our call or the visit, in person or by video, so everyone hears the same plan."
+    },
+    {
+      "id": "s-sl-08",
+      "category": "Owner Selling (House/Apt)",
+      "title": "8 · Past experience",
+      "body": "Has the property been listed before, with an agent or on your own? What happened?\n\nAnd if you could change one thing about how it was handled, what would it be? That tells me what to get right for you. If this is your first time selling it, simply say so and we'll start fresh."
+    },
+    {
+      "id": "s-sl-09",
+      "category": "Owner Selling (House/Apt)",
+      "title": "9 · Book a visit",
+      "body": "Thank you for sharing all that, {Name}. The natural next step is a short visit, so I can see the property and walk you through how we would present and market it. You can then decide whether it feels right.\n\nWhich day and time would suit you this week?"
+    },
+    {
+      "id": "s-sl-10",
+      "category": "Owner Selling (House/Apt)",
+      "title": "10 · Confirm visit",
+      "body": "Confirmed, {Name}. I will see you at the {Property} on {Date} at {Time}.\n\nIf convenient, please keep copies of the deed and survey plan ready. If you don't have them to hand, that's fine.\n\nWho will be there on the day, and is there anything I should know about access or parking?"
+    },
+    {
+      "id": "s-sl-11",
+      "category": "Owner Selling (House/Apt)",
+      "title": "11 · Proposal after visit",
+      "body": "Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n• Suggested asking price: {Price}, with my reasoning for us to discuss\n• Professional photos and video\n• One consistent listing, so the property is presented clearly\n• Buyers qualified before viewings (budget, funding, timeline)\n• Viewings handled by us\n• Negotiation and paperwork support\n• Regular updates\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
+    },
+    {
+      "id": "s-sl-12",
+      "category": "Owner Selling (House/Apt)",
+      "title": "12 · Proposal follow-up",
+      "body": "Hi {Name}, I'm checking in on the proposal I sent for the {Property}. It's a big decision, and it's natural to want time, or to talk it over with family.\n\nIs there anything you would like me to clarify, such as the price, the terms or how we would handle viewings? A short call would also work, whenever it suits you."
+    },
+    {
+      "id": "s-sl-13",
+      "category": "Owner Selling (House/Apt)",
+      "title": "13 · Documents & access",
+      "body": "Thank you, {Name}. To get started, these will help:\n\n• Deed (a copy is fine)\n• Survey plan\n• Approvals or COC, if available\n• A recent utility bill\n• Key and access arrangements\n• Days that suit you for viewings\n\nSend what you have for now, and we can add the rest as we go. Which day would suit you for the photo shoot?"
+    },
+    {
+      "id": "s-sl-14",
+      "category": "Owner Selling (House/Apt)",
+      "title": "14 · Listing is live",
+      "body": "Hi {Name}, your {Property} is now live: {Link}\n\nFrom here, we respond to every enquiry, check the buyer's position, and only then arrange a viewing, so you are not disturbed unnecessarily. I will send you an update every week, and sooner if anything important comes in.\n\nDoes everything in the listing look right to you?"
+    },
+    {
+      "id": "s-sl-15",
+      "category": "Owner Selling (House/Apt)",
+      "title": "15 · Weekly update",
+      "body": "Hi {Name}, here is this week's update on the {Property}:\n\n• Enquiries: {Enquiries}\n• Viewings: {Viewings}\n• Buyer feedback: {Feedback}\n\nNext, we will follow up with those who have shown interest and arrange further viewings.\n\nIs there anything you would like us to adjust?"
+    },
+    {
+      "id": "s-sl-16",
+      "category": "Owner Selling (House/Apt)",
+      "title": "16 · Viewing request",
+      "body": "Hi {Name}, a buyer would like to view the {Property} on {Date} at {Time}.\n\nI have already spoken with them and checked their budget and funding, and I will be there throughout.\n\nWould that time suit you, and can someone give us access?"
+    },
+    {
+      "id": "s-sl-17",
+      "category": "Owner Selling (House/Apt)",
+      "title": "17 · Viewing feedback",
+      "body": "Hi {Name}, we had a viewing at the {Property} today. In short, the feedback was:\n\n{Feedback}\n\nFeedback like this is useful, because it shows what buyers notice. I will share my view on what it means, and the next step I would suggest, when we speak.\n\nWould a short call this week suit you?"
+    },
+    {
+      "id": "s-sl-18",
+      "category": "Owner Selling (House/Apt)",
+      "title": "18 · Offer received",
+      "body": "Hi {Name}, we have received an offer on the {Property}.\n\n*Offer:* {Offer}\n*Terms:* {Buyer terms}\n\nMy view in one line: it deserves careful thought, because the terms matter as much as the figure. You have three options: accept, counter, or hold for now.\n\nI'd recommend we talk it through before replying. When are you free for a short call?"
+    },
+    {
+      "id": "s-sl-19",
+      "category": "Owner Selling (House/Apt)",
+      "title": "19 · Price review",
+      "body": "Hi {Name}, it has been a few weeks since we listed the {Property}, so I would like us to review where we stand.\n\nHere is what the market is telling us: {Enquiries} enquiries, {Viewings} viewings, and this feedback: {Feedback}\n\nWe have three options: adjust the price, improve the presentation, or hold for now. Each is reasonable, and the decision is yours. Could we speak this week to go through them?"
+    },
+    {
+      "id": "s-sl-20",
+      "category": "Owner Selling (House/Apt)",
+      "title": "20 · Sale agreed - next steps",
+      "body": "Congratulations, {Name}. We have an agreed sale on the {Property}.\n\nHere is what happens next:\n• The sale agreement and advance\n• Lawyers check the deed\n• We agree the timeline to transfer\n• Handover of the property\n\nWe will coordinate each step and keep you updated. Shall we speak tomorrow to confirm the timeline?"
+    },
+    {
+      "id": "s-sl-21",
+      "category": "Owner Selling (House/Apt)",
+      "title": "21 · Thank you + referral",
+      "body": "Thank you, {Name}. It was a pleasure working with you on the {Property}.\n\nDo you know anyone who is buying, selling or renting in Colombo? I would be glad to help them in the same way. And if you ever need anything, please message me anytime."
+    },
+    {
+      "id": "s-sl-22",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · Your fee is too high",
+      "body": "I understand, {Name}, and it's right to ask. The fee covers professional presentation, buyers checked before they view, negotiation that protects your price, and the paperwork through to handover.\n\nWhich part of the service matters most to you?"
+    },
+    {
+      "id": "s-sl-23",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · I'll sell it myself",
+      "body": "That's completely fair, and many owners start that way. What they often find hard is screening callers, viewings at odd hours, negotiating directly, and the paperwork.\n\nI can help with only the parts you want, or simply stay in touch. Would it be useful if I checked back in a few weeks?"
+    },
+    {
+      "id": "s-sl-24",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · I've given it to many agents",
+      "body": "Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, buyers can see it at different prices in different places, and that often makes them doubt it and negotiate harder.\n\nOne well-managed listing with one price can look stronger. Would you consider that with us for an agreed period?"
+    },
+    {
+      "id": "s-sl-25",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · Why exclusive?",
+      "body": "A fair question. With one listing there is one price and one standard of presentation, and we put our full effort and spend behind it. You also know exactly who is accountable.\n\nWe agree the period together, and you can end it if we don't perform. Does that seem fair?"
+    },
+    {
+      "id": "s-sl-26",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · Another agent quoted higher",
+      "body": "That may well be possible. A high quote can win a listing, but only the buyer decides the price.\n\nWe can let the market guide us, with a review date agreed up front. May I show you what similar properties are really selling for?"
+    },
+    {
+      "id": "s-sl-27",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · Just send me buyers",
+      "body": "Happy to introduce buyers. We qualify them first, and we agree basic terms with you so that both sides are protected.\n\nA simple written agreement is enough. Shall I send one over for you to review?"
+    },
+    {
+      "id": "s-sl-28",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · Need to talk to family",
+      "body": "Of course. It is an important decision, and everyone should feel comfortable.\n\nWould a short call with all the decision makers help? I can explain how we would work once and answer everyone's questions. When would suit the family?"
+    },
+    {
+      "id": "s-sl-29",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · Not in a hurry / testing the market",
+      "body": "That's perfectly fine, there is no need to rush. If the right offer came along, what price would make you decide to move now?\n\nOne option is a quiet, discreet listing, shared only with buyers we already know, so the property is not over-exposed. Would that suit you?"
+    },
+    {
+      "id": "s-sl-30",
+      "category": "Owner Selling (House/Apt)",
+      "title": "Q · I want a higher price",
+      "body": "I understand, and it is your property to price. We can start where you are comfortable and agree a review point together.\n\nI would only add that buyers compare it with similar properties on the market. May I show you how it sits against those?"
+    },
+    {
+      "id": "s-ll-01",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "1 · Reply to landlord enquiry",
+      "body": "Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you rent your property. May I ask a couple of quick things?\n\n• Is it a house or an apartment, and where is it?\n• When will it be available?"
+    },
+    {
+      "id": "s-ll-02",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "2 · Outreach to owner's rental ad",
+      "body": "Hi {Name}, this is {MyName} from {Company}. I saw your advertisement for the {Property}.\n\nWe work with expat, diplomatic and corporate tenants who are looking in {Area}.\n\nWould you be open to us introducing suitable, screened tenants? There is no obligation at all."
+    },
+    {
+      "id": "s-ll-03",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "3 · Follow-up (no reply)",
+      "body": "Hi {Name}, I wrote a few days ago about your {Property}. Is it still available for rent?\n\nIf you have already found a tenant, congratulations, and I will leave it with you."
+    },
+    {
+      "id": "s-ll-04",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "4 · Property basics",
+      "body": "Thank you, {Name}. To describe the property properly, may I ask a few things?\n\n• How many bedrooms and bathrooms does it have?\n• Is it furnished, semi-furnished or unfurnished?\n• Is there parking and air conditioning?\n• What backup power and water supply is there?\n• From what date is it available?\n\nA short voice note is fine too."
+    },
+    {
+      "id": "s-ll-05",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "5 · Rent & terms",
+      "body": "Thank you, {Name}. May I ask what monthly rent you have in mind, and how you arrived at that figure?\n\nAnd what advance and lease period would you prefer? Many expat and corporate tenants look for flexible terms, so it helps to know where you're comfortable."
+    },
+    {
+      "id": "s-ll-06",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "6 · Tenant preference",
+      "body": "That's helpful, {Name}. What kind of tenant would you be most comfortable with, such as a family, a professional, a company or an embassy? And are there any rules we should know about, like pets?\n\nPlease also tell me how involved you would like to be. Some owners prefer to leave everything to us, and others like to approve each step."
+    },
+    {
+      "id": "s-ll-07",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "7 · Vacancy cost",
+      "body": "May I ask how long the property has been vacant, or when your last tenant left?\n\nEvery empty month is a month of rent not earned, so it helps to know what matters more to you right now: letting it quickly, or holding out for the highest rent?"
+    },
+    {
+      "id": "s-ll-08",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "8 · Book a visit / photos",
+      "body": "Thank you, {Name}. I would like to visit the property, see it for myself and take proper photos, so it is presented well to tenants. The visit should be short.\n\nWhich day and time would suit you?"
+    },
+    {
+      "id": "s-ll-09",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "9 · Confirm visit",
+      "body": "Confirmed, {Name}. I will see you at the {Property} on {Date} at {Time}.\n\nWho will be meeting me there, and will we have keys for all the rooms? If the lights, AC and water are on, the photos will turn out better."
+    },
+    {
+      "id": "s-ll-10",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "10 · Proposal / terms",
+      "body": "Thank you for your time, {Name}. Here is the plan I suggest for renting the {Property}:\n\n• Suggested rent: {Rent}, with my reasoning for us to discuss\n• Proper photos and a clear listing\n• Tenants screened first: employer, references and ability to pay the advance\n• Viewings handled by us\n• Lease agreement support\n• Inventory and handover\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
+    },
+    {
+      "id": "s-ll-11",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "11 · Listing checklist",
+      "body": "To get the listing ready, these will help:\n\n• Keys and access arrangements\n• Inventory list (furniture and appliances)\n• Recent utility bills\n• Meter numbers\n• House rules, if any\n• Times that suit you for viewings\n\nSend what you have for now. Shall I go through the inventory with you at the property?"
+    },
+    {
+      "id": "s-ll-12",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "12 · Listing is live",
+      "body": "Hi {Name}, your {Property} is now live: {Link}\n\nFrom here, we screen every enquiry, and only suitable tenants will be brought to view. I will send you an update every week.\n\nDoes everything in the listing look right to you?"
+    },
+    {
+      "id": "s-ll-13",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "13 · Weekly update",
+      "body": "Hi {Name}, here is this week's update on the {Property}:\n\n• Enquiries: {Enquiries}\n• Viewings: {Viewings}\n• Tenant feedback: {Feedback}\n\nNext, we will follow up with those who have shown interest and keep screening new enquiries.\n\nIs there anything you would like us to adjust?"
+    },
+    {
+      "id": "s-ll-14",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "14 · Viewing request",
+      "body": "Hi {Name}, a screened tenant would like to view the {Property} on {Date} at {Time}.\n\nWe have spoken with them and checked the basics beforehand, and I will be there throughout.\n\nWould that time suit you, and can someone give us access?"
+    },
+    {
+      "id": "s-ll-15",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "15 · Tenant found - for approval",
+      "body": "Hi {Name}, we have found a tenant for the {Property}, and I would like your approval.\n\n*Tenant:* {Tenant profile}\n*Rent:* {Rent}\n*Advance:* {Advance}\n*Lease:* {Lease term}\n*Move-in:* {Move-in date}\n\nMy view: this looks like a sound match for the property, and I am comfortable recommending it.\n\nShall I proceed?"
+    },
+    {
+      "id": "s-ll-16",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "16 · Lease & handover",
+      "body": "Thank you, {Name}. Here is what happens next:\n\n• We prepare the lease agreement draft for your review\n• The advance and deposit are received, with a receipt\n• The inventory is signed off, with photos\n• Meter readings are recorded\n• Keys are handed over\n\nWe will coordinate each step and keep you updated. Shall I send you the draft lease first?"
+    },
+    {
+      "id": "s-ll-17",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "17 · Offer tenancy management",
+      "body": "Now that the property is let, {Name}, there is an optional service I'd like you to know about: tenancy management.\n\n• Rent follow-up\n• Maintenance coordination\n• Tenant communication\n• Periodic inspection\n• A monthly report\n\nThe fee is {Management fee}. Would that be useful to you?"
+    },
+    {
+      "id": "s-ll-18",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "18 · Renewal reminder",
+      "body": "Hi {Name}, the lease on the {Property} ends in a few months, so it is a good time to plan.\n\nYou can renew with the same tenant, or re-let the property. We can handle either. Which would you prefer?"
+    },
+    {
+      "id": "s-ll-19",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "19 · Thank you + referral",
+      "body": "Thank you, {Name}. It was a pleasure working with you on the {Property}.\n\nDo you know anyone who is buying, selling or renting in Colombo? I would be glad to help them in the same way. And if you ever need anything, please message me anytime."
+    },
+    {
+      "id": "s-ll-20",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · I'll find a tenant myself",
+      "body": "That's fair, and some owners do it well. What they often find hard is screening applicants, checking an employer and ability to pay, preparing the lease, and settling inventory disagreements later.\n\nIf you prefer, I can help with only the screening and the lease. Would that be useful?"
+    },
+    {
+      "id": "s-ll-21",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · Your fee is too high",
+      "body": "I understand. The fee covers finding the right tenant, protecting your property, a lease and handover done properly, and keeping empty months short.\n\nMany owners find a reliable tenant matters more than the saving. Which part of the service matters most to you?"
+    },
+    {
+      "id": "s-ll-22",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · I've given it to many agents",
+      "body": "Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, tenants can see it at different rents in different places, which can confuse them and weaken your position.\n\nOne well-presented listing can look stronger. Would you consider that with us for an agreed period?"
+    },
+    {
+      "id": "s-ll-23",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · I want one year advance",
+      "body": "I understand, and wanting that security makes sense. Many quality tenants, especially expat and corporate ones, prefer shorter advances, and may choose another home if the advance is too long.\n\nThere are two options: a shorter advance with a deposit, or a company lease. Which would you consider?"
+    },
+    {
+      "id": "s-ll-24",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · My rent is higher than offers",
+      "body": "I understand, and you know your property well. There are three options: hold and wait, make a small adjustment, or add value, such as furnishing or repairs.\n\nHow long are you prepared to wait for the right tenant?"
+    },
+    {
+      "id": "s-ll-25",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · Worried about damage",
+      "body": "That is a sensible concern. We screen tenants, take a deposit, prepare a detailed inventory with photos, and, with our management service, inspect the property periodically.\n\nDid you have a difficult experience before?"
+    },
+    {
+      "id": "s-ll-26",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · Just send me tenants",
+      "body": "Happy to. We screen tenants first, and then agree terms with you in a simple written agreement, so both sides are protected.\n\nShall I send one over for you to review?"
+    },
+    {
+      "id": "s-ll-27",
+      "category": "Landlord Renting (House/Apt)",
+      "title": "Q · Can you manage it for me?",
+      "body": "Yes, we can. We follow up the rent, coordinate maintenance, stay in touch with the tenant, inspect periodically and send you a monthly report.\n\nThe fee is {Management fee}. When does the lease start?"
     }
   ],
 
@@ -576,6 +920,114 @@ window.ASCEND_STARTER = {
           "notes": "House details (bedrooms, floor area, condition, documents) are still being confirmed. Say \"I'll check with the owner\" rather than guessing. End with a clear next step."
         }
       ]
+    },
+    {
+      "id": "s-f-sell",
+      "title": "Owner Selling Call",
+      "steps": [
+        {
+          "id": "s-f-sell-1",
+          "title": "Connect & permission",
+          "say": "Hello {Name}, this is {MyName} from {Company}. I'm calling about the sale of your property. Is now a good time for a few minutes?",
+          "notes": "Slow down and smile. If it is a bad time, agree a specific call-back time before you hang up. Listen to the tone: curious and open, or guarded?"
+        },
+        {
+          "id": "s-f-sell-2",
+          "title": "Situation",
+          "say": "Tell me a little about the property. Is it a house or an apartment, and how big is it? What condition is it in, and is it lived in or empty?",
+          "notes": "Note bedrooms, land in perches or floor area, parking, renovations, furnished or not. If a tenant is living there, viewings need their cooperation. Do not talk price yet."
+        },
+        {
+          "id": "s-f-sell-3",
+          "title": "Motivation",
+          "say": "What has led you to think about selling, and why now?",
+          "notes": "Motivation is the first thing to qualify. Strong reasons: relocation, family or estate matters, funds needed, upgrading. \"Just testing the market\" means low urgency. Let them talk, then repeat back what you heard."
+        },
+        {
+          "id": "s-f-sell-4",
+          "title": "Consequence & timeline",
+          "say": "Ideally, when would you like the sale completed? And if it took longer than that, what would it mean for you?",
+          "notes": "Listen for a real deadline (move abroad, school year, loan, estate) versus a flexible wish. A real consequence means they will act. No consequence and no date means a slow listing."
+        },
+        {
+          "id": "s-f-sell-5",
+          "title": "Price & how they arrived",
+          "say": "Do you have a price in mind? And how did you arrive at that figure?",
+          "notes": "Listen for the source: a valuation, similar sales, a neighbour's price, or a hope. Do not agree or disagree yet. Red flag: an unrealistic price with no urgency. Say you will give an honest view based on what is selling."
+        },
+        {
+          "id": "s-f-sell-6",
+          "title": "Past experience & decision makers",
+          "say": "Has the property been listed before, and how did that go? And is anyone else involved in the decision, such as co-owners or family abroad?",
+          "notes": "Past listings with many agents often explain a stale price. Never criticise another agent. Authority: everyone who must sign should hear the plan, so invite them to the visit or a video call."
+        },
+        {
+          "id": "s-f-sell-7",
+          "title": "How we would sell it",
+          "say": "What we would do is create one clear listing with professional photos, check each buyer's position before any viewing, and handle viewings and negotiation for you. Would that help with what you've told me?",
+          "notes": "Keep it under thirty seconds. No statistics, no promises on price or speed. If they ask about the fee, say we will go through terms in the proposal after the visit."
+        },
+        {
+          "id": "s-f-sell-8",
+          "title": "Commitment",
+          "say": "The next step is a short visit, so I can see the property and show you how we would present it. Which day and time would suit you?",
+          "notes": "Offer two options and book it on the call. Send the confirmation message straight after. If they hesitate, ask \"What would you need to see to feel comfortable?\" If there is no urgency and an unrealistic price, offer a call to review in a few weeks instead of taking the listing."
+        }
+      ]
+    },
+    {
+      "id": "s-f-let",
+      "title": "Landlord Renting Call",
+      "steps": [
+        {
+          "id": "s-f-let-1",
+          "title": "Connect & permission",
+          "say": "Hello {Name}, this is {MyName} from {Company}. I'm calling about renting out your property. Is now a good time for a few minutes?",
+          "notes": "Slow down and smile. If it is a bad time, agree a call-back time. Note whether they sound open to an agent or protective of the property."
+        },
+        {
+          "id": "s-f-let-2",
+          "title": "Property & availability",
+          "say": "Tell me about the property. Is it a house or an apartment, and where is it? How many bedrooms, and is it furnished? When will it be available?",
+          "notes": "Note bedrooms, bathrooms, furnished level, parking, AC, backup power and water. Is it vacant now, or is a tenant leaving? Ask about the condition."
+        },
+        {
+          "id": "s-f-let-3",
+          "title": "Rent & how they arrived",
+          "say": "What monthly rent do you have in mind, and how did you arrive at that figure?",
+          "notes": "Listen for the source: a previous tenant, a neighbour's rent, or an online ad. Do not argue the figure. Say you will give an honest view based on what tenants are looking for in the area."
+        },
+        {
+          "id": "s-f-let-4",
+          "title": "Terms",
+          "say": "What advance and lease period would you prefer? Many expat and corporate tenants look for flexible terms, so it helps to know where you are comfortable.",
+          "notes": "Owners often ask for a long advance plus a deposit. Expat, diplomatic and corporate tenants usually prefer shorter advances. Do not push yet. Note how firm they are and why."
+        },
+        {
+          "id": "s-f-let-5",
+          "title": "Tenant preference",
+          "say": "What kind of tenant would you be most comfortable with? And are there any rules, like pets?",
+          "notes": "Family, professional, company or embassy. Note pets, smoking and any house rules. Also ask how involved they want to be day to day."
+        },
+        {
+          "id": "s-f-let-6",
+          "title": "Vacancy consequence & priority",
+          "say": "How long has it been vacant? Every empty month is a month of rent not earned, so what matters more to you right now: letting it quickly, or the highest rent?",
+          "notes": "Their answer sets the strategy. Speed means flexible on rent and terms. Highest rent means patience and a better-presented property. Do not judge either choice."
+        },
+        {
+          "id": "s-f-let-7",
+          "title": "How we would let it",
+          "say": "We would take proper photos, screen tenants for employer, references and ability to pay, handle the viewings, and help with the lease and handover. If you want, we can also manage the tenancy afterwards. Would that help?",
+          "notes": "Keep it short. Mention management only as an option. No promises on speed or rent. If they ask about the fee, say we will go through terms in the proposal after the visit."
+        },
+        {
+          "id": "s-f-let-8",
+          "title": "Commitment",
+          "say": "The next step is a short visit, so I can see the property and take proper photos. Which day and time would suit you?",
+          "notes": "Offer two options and book it on the call. Send the confirmation message straight after. If they hesitate, ask what would need to be true for them to feel comfortable. Red flag: a rent far above the market with no urgency."
+        }
+      ]
     }
   ],
 
@@ -619,6 +1071,78 @@ window.ASCEND_STARTER = {
     {
       id: "s-o10", category: "Price", title: "Can you get the owner to reduce the price?",
       answer: "I can certainly ask, and I will present your position clearly. Owners respond best to a serious, well-reasoned proposal, so it helps to know what you would be comfortable with and how quickly you could proceed. Shall we put together what a reasonable offer looks like?"
+    },
+    {
+      "id": "s-os-01",
+      "category": "Sellers",
+      "title": "Your fee is too high for a sale.",
+      "answer": "I understand, and it's right to question it. The fee pays for professional presentation, buyers checked before they view, negotiation that protects your price, and the paperwork through to handover. Which part of that matters most to you?"
+    },
+    {
+      "id": "s-os-02",
+      "category": "Sellers",
+      "title": "I'll sell it myself.",
+      "answer": "That's completely reasonable, and many owners try. The parts they usually find hardest are screening callers, viewings at odd hours, negotiating directly and the paperwork. I can help with only the parts you want, or simply stay in touch. Would it be useful if I checked back in a few weeks?"
+    },
+    {
+      "id": "s-os-03",
+      "category": "Sellers",
+      "title": "I've already given it to many agents.",
+      "answer": "Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, buyers often see it at different prices in different places, and that can make them doubt it and negotiate harder. One well-managed listing with one price can look stronger. Would you consider that with us for an agreed period?"
+    },
+    {
+      "id": "s-os-04",
+      "category": "Sellers",
+      "title": "Why does it have to be exclusive?",
+      "answer": "Because it lets us put our full effort and spend behind one clear listing, with one price and one standard of presentation. You also know exactly who is accountable. We agree the period together, and you can end it if we don't perform. Does that seem fair to you?"
+    },
+    {
+      "id": "s-os-05",
+      "category": "Sellers",
+      "title": "Someone else quoted me a higher figure.",
+      "answer": "That may be possible, and I wouldn't want to talk you down. A high quote can win a listing, but only a buyer confirms the price. Shall I show you what similar properties are really selling for, so we can set a figure and a review date together?"
+    },
+    {
+      "id": "s-os-06",
+      "category": "Sellers",
+      "title": "I need to talk to my family first.",
+      "answer": "Of course, a decision like this should involve everyone. Would a short call with all the decision makers help? I can explain how we would work once and answer everyone's questions. When would suit you all?"
+    },
+    {
+      "id": "s-ol-01",
+      "category": "Landlords",
+      "title": "I'll find a tenant myself.",
+      "answer": "That's fair, and some owners do it well. The hard parts are usually screening applicants, checking an employer and ability to pay, and settling inventory disagreements later. I can help with just the screening and the lease if you prefer. Would that be useful?"
+    },
+    {
+      "id": "s-ol-02",
+      "category": "Landlords",
+      "title": "Your fee is too high for a rental.",
+      "answer": "I understand. The fee covers finding the right tenant, protecting your property, a proper lease and handover, and keeping empty months short. Many owners find a reliable tenant matters more than the saving. Which part of that matters most to you?"
+    },
+    {
+      "id": "s-ol-03",
+      "category": "Landlords",
+      "title": "I want one year's advance.",
+      "answer": "I understand, and wanting that security makes sense. Many quality tenants, especially expat and corporate ones, prefer shorter advances, and may simply choose another home. We could look at a shorter advance with a deposit, or a company lease. Which would you consider?"
+    },
+    {
+      "id": "s-ol-04",
+      "category": "Landlords",
+      "title": "My rent is higher than the offers.",
+      "answer": "I understand, and you know your property well. We can hold and wait, make a small adjustment, or add value, such as furnishing or repairs. Each is reasonable. How long are you prepared to wait for the right tenant?"
+    },
+    {
+      "id": "s-ol-05",
+      "category": "Landlords",
+      "title": "I'm worried about damage.",
+      "answer": "That's a sensible concern. We screen tenants, take a deposit, prepare a detailed inventory with photos, and with our management service we inspect the property periodically. Did you have a difficult experience before?"
+    },
+    {
+      "id": "s-ol-06",
+      "category": "Landlords",
+      "title": "I've already given it to many agents.",
+      "answer": "Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, tenants can see it at different rents in different places, which can confuse them and weaken your position. One well-presented listing can look stronger. Would you consider that with us for an agreed period?"
     }
   ]
 };
