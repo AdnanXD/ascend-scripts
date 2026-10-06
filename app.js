@@ -146,6 +146,17 @@
     if (!window.ASCEND_STARTER) return;
     if (!S.meta || !Array.isArray(S.meta.seenStarter)) S.meta = { seenStarter: ORIGINAL_STARTER_IDS.slice() };
     var seen = S.meta.seenStarter, st = starter();
+    // Starter text revisions: update a starter message only if it still has an older shipped body
+    // (i.e. the user hasn't edited it). Add the previous body here whenever a starter body changes.
+    var REVISIONS = {
+      's-c3-03': ["These are the photos of the living and dining area, bedrooms, courtyard, balconies, bathrooms, parking and outside of the house.\n\nMay I ask, are you looking for yourself or your family, or for a client?"]
+    };
+    S.messages.forEach(function (m) {
+      var old = REVISIONS[m.id];
+      if (!old || old.indexOf(m.body) < 0) return;
+      var cur = st.messages.filter(function (x) { return x.id === m.id; })[0];
+      if (cur) { m.body = cur.body; m.updatedAt = Date.now(); }
+    });
     function fresh(arr, mine) {
       return arr.filter(function (x) {
         return seen.indexOf(x.id) < 0 && !mine.some(function (y) { return y.id === x.id; });

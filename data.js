@@ -112,7 +112,7 @@ window.ASCEND_STARTER = {
     {
       id: "s-c3-03", category: "Col 3 House for Sale 175Mn", title: "3 · After photos",
       body:
-"These are the photos of the living and dining area, bedrooms, courtyard, balconies, bathrooms, parking and outside of the house.\n\nMay I ask, are you looking for yourself or your family, or for a client?"
+"These are the photos of the living and dining area, bedrooms, courtyard, balconies, bathrooms, parking and outside of the house.\n\nDoes this look like the kind of home you're looking for?"
     },
     {
       id: "s-c3-04", category: "Col 3 House for Sale 175Mn", title: "4 · Location & budget",
