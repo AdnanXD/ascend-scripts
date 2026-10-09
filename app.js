@@ -167,7 +167,17 @@
       });
     }
     var addM = fresh(st.messages, S.messages), addF = fresh(st.flows, S.flows), addO = fresh(st.objections, S.objections);
-    addM.forEach(function (m) { S.messages.push(m); });
+    // Place each new message right after the nearest earlier starter message of the same category that
+    // the user still has, so it lands in its intended spot in the list; otherwise append at the end.
+    addM.forEach(function (m) {
+      var si = st.messages.indexOf(m), at = -1;
+      for (var k = si - 1; k >= 0 && at < 0; k--) {
+        var prev = st.messages[k];
+        if (prev.category !== m.category) continue;
+        for (var j = 0; j < S.messages.length; j++) if (S.messages[j].id === prev.id) { at = j + 1; break; }
+      }
+      if (at < 0) S.messages.push(m); else S.messages.splice(at, 0, m);
+    });
     addF.forEach(function (f) { S.flows.push(f); });
     addO.forEach(function (o) { S.objections.push(o); });
     // A starter category is added only while delivering a new item that belongs to it, so a category

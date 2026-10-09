@@ -170,6 +170,11 @@ window.ASCEND_STARTER = {
 "Hi, just checking if you had a chance to look at the photos of the Colombo 3 house.\n\nDoes it suit what you're looking for? Happy to answer any questions."
     },
     {
+      id: "s-c3-26", category: "Col 3 House for Sale 175Mn", title: "14b · Ask their requirements",
+      body:
+"Hi, following up on the 4-bedroom house in Kollupitiya, Colombo 3.\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
+    },
+    {
       id: "s-c3-15", category: "Col 3 House for Sale 175Mn", title: "15 · Last follow-up",
       body:
 "Hi, following up one last time on the Kollupitiya house. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar homes in Colombo?"
@@ -309,6 +314,12 @@ window.ASCEND_STARTER = {
       "category": "Col 5 Siripa Lane House",
       "title": "14 · No reply after details",
       "body": "Hi, just checking if you had a chance to look at the Siripa Lane property in Colombo 5.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+    },
+    {
+      "id": "s-c5-31",
+      "category": "Col 5 Siripa Lane House",
+      "title": "14b · Ask their requirements",
+      "body": "Hi, following up on the house on Siripa Lane, Colombo 5.\n\nIf it isn't quite what you need, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Land size or number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
     },
     {
       "id": "s-c5-15",

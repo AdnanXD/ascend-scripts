@@ -1,6 +1,6 @@
 /* Ascend Scripts service worker: cache-first app shell.
    Bump CACHE whenever any app file changes. */
-const CACHE = 'ascend-scripts-v8';
+const CACHE = 'ascend-scripts-v9';
 const SHELL = [
   './', './index.html', './styles.css', './app.js', './data.js',
   './manifest.webmanifest', './icon.svg', './logo.svg', './icon-192.png', './icon-512.png'
