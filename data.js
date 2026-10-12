@@ -773,7 +773,7 @@ window.ASCEND_STARTER = {
       "id": "s-ma-25",
       "category": "Meta Ad - House Owners",
       "title": "1b · Ask for full house details",
-      "body": "Thank you, {Name}. To match your house with the right buyers, could you share a few details?\n\n• Location (area and road)\n• Land size (perches)\n• Number of floors\n• Bedrooms and bathrooms\n• Parking\n• Condition (any recent renovation)\n• Price you have in mind\n• When you'd like to sell\n\nA few photos and the location pin would also help. Short answers or a voice note are fine."
+      "body": "Hi {Name}, this is {MyName} from {Company}. Thank you for reaching out about your house.\n\nTo match it with the right buyers, could you share a few details?\n\n• Location (area and road)\n• Land size (perches)\n• Number of floors\n• Bedrooms and bathrooms\n• Parking\n• Condition (any recent renovation)\n• Price you have in mind\n• When you'd like to sell\n\nA few photos and the location pin would also help. Short answers or a voice note are fine."
     },
     {
       "id": "s-ma-02",
