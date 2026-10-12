@@ -905,7 +905,7 @@ window.ASCEND_STARTER = {
       "id": "s-ma-23",
       "category": "Meta Ad - House Owners",
       "title": "Q · Outside our areas",
-      "body": "Thank you for reaching out, {Name}, and for considering us.\n\nAt the moment we focus on Colombo 3 to 7, Nawala, Rajagiriya and Battaramulla, so we wouldn't be the right fit for a house in {Area}. I'd rather be honest with you than keep you waiting.\n\nIf you ever have a property in these areas, or know someone who does, I'd be glad to help."
+      "body": "Thank you for reaching out, {Name}, and for considering us.\n\nI specialise in properties in Colombo and the nearby suburbs, so a house in {Area} is outside my area of expertise. I'd rather be honest with you than keep you waiting.\n\nMy suggestion: look on ikman.lk, LankaPropertyWeb and Facebook to see which agents are most active in {Area}, and reach out to the strongest ones. A good local agent will already know the buyers there and how best to market your house, which gives you the best chance of a good sale.\n\nI truly wish you all the best with the sale."
     },
     {
       "id": "s-ma-24",
