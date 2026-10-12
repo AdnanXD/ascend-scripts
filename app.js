@@ -149,6 +149,7 @@
     // Starter text revisions: update a starter message only if it still has an older shipped body
     // (i.e. the user hasn't edited it). Add the previous body here whenever a starter body changes.
     var REVISIONS = {
+      "s-ma-01": ["Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask a few quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n• When you'd like to sell\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"],
       "s-sl-11": ["Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n\u2022 Suggested asking price: {Price}, with my reasoning for us to discuss\n\u2022 Professional photos and video\n\u2022 One consistent listing, so the property is presented clearly\n\u2022 Buyers qualified before viewings (budget, funding, timeline)\n\u2022 Viewings handled by us\n\u2022 Negotiation and paperwork support\n\u2022 Regular updates\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"],
       "s-ll-10": ["Thank you for your time, {Name}. Here is the plan I suggest for renting the {Property}:\n\n\u2022 Suggested rent: {Rent}, with my reasoning for us to discuss\n\u2022 Proper photos and a clear listing\n\u2022 Tenants screened first: employer, references and ability to pay the advance\n\u2022 Viewings handled by us\n\u2022 Lease agreement support\n\u2022 Inventory and handover\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"],
       "s-sl-04": ["Thank you, {Name}. So I can understand the property properly, may I ask a few things?\n\n\u2022 How many bedrooms and bathrooms does it have?\n\u2022 What is the land size in perches (for a house), or the floor area (for an apartment)?\n\u2022 Is there parking, and what condition is it in? Has anything been renovated recently?\n\u2022 Is it furnished, and is it occupied or vacant?\n\nShort answers or a voice note are fine."],
@@ -159,7 +160,7 @@
       var old = REVISIONS[m.id];
       if (!old || old.indexOf(m.body) < 0) return;
       var cur = st.messages.filter(function (x) { return x.id === m.id; })[0];
-      if (cur) { m.body = cur.body; m.updatedAt = Date.now(); }
+      if (cur) { m.body = cur.body; m.title = cur.title; m.updatedAt = Date.now(); }
     });
     function fresh(arr, mine) {
       return arr.filter(function (x) {

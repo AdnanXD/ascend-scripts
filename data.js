@@ -766,8 +766,8 @@ window.ASCEND_STARTER = {
     {
       "id": "s-ma-01",
       "category": "Meta Ad - House Owners",
-      "title": "1 · They answered area & price",
-      "body": "Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask a few quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n• When you'd like to sell\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"
+      "title": "1 · They answered area & timing",
+      "body": "Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask two quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"
     },
     {
       "id": "s-ma-02",
