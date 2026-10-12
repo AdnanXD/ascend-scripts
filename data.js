@@ -888,6 +888,24 @@ window.ASCEND_STARTER = {
       "category": "Meta Ad - House Owners",
       "title": "Q · Just checking the market",
       "body": "That's perfectly fine. Many owners start by finding out what their house could sell for.\n\nIf the right offer came along, would you consider selling in the next few months?"
+    },
+    {
+      "id": "s-ma-22",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Broker enquiring",
+      "body": "Thank you for reaching out. Are you representing the owner directly, or through another agent?\n\nWe're happy to work with brokers on houses in our areas. Could you share:\n\n• Area and land size\n• Bedrooms and floors\n• Asking price\n• Photos and the location pin\n\nWe don't share buyer details, and we agree co-broking terms in writing before introducing any buyer."
+    },
+    {
+      "id": "s-ma-23",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Outside our areas",
+      "body": "Thank you for reaching out, {Name}, and for considering us.\n\nAt the moment we focus on Colombo 3 to 7, Nawala, Rajagiriya and Battaramulla, so we wouldn't be the right fit for a house in {Area}. I'd rather be honest with you than keep you waiting.\n\nIf you ever have a property in these areas, or know someone who does, I'd be glad to help."
+    },
+    {
+      "id": "s-ma-24",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · It's an apartment",
+      "body": "Thank you, {Name}. This campaign is for houses, but we help apartment owners too.\n\nWhich building is it in, and how many bedrooms? I'll let you know honestly how we can help."
     }
   ],
 
