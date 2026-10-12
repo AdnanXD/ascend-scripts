@@ -770,6 +770,12 @@ window.ASCEND_STARTER = {
       "body": "Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask two quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"
     },
     {
+      "id": "s-ma-25",
+      "category": "Meta Ad - House Owners",
+      "title": "1b · Ask for full house details",
+      "body": "Thank you, {Name}. To match your house with the right buyers, could you share a few details?\n\n• Location (area and road)\n• Land size (perches)\n• Number of floors\n• Bedrooms and bathrooms\n• Parking\n• Condition (any recent renovation)\n• Price you have in mind\n• When you'd like to sell\n\nA few photos and the location pin would also help. Short answers or a voice note are fine."
+    },
+    {
       "id": "s-ma-02",
       "category": "Meta Ad - House Owners",
       "title": "2 · They didn't answer the greeting",
