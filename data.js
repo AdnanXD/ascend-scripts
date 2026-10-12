@@ -3,7 +3,7 @@
    IDs prefixed "s-" are starter IDs: "Restore starter templates" re-adds any that are missing. */
 window.ASCEND_STARTER = {
   version: 1,
-  categories: ["Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
+  categories: ["Meta Ad - House Owners", "Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
   callNotes: "",
@@ -760,6 +760,134 @@ window.ASCEND_STARTER = {
       "category": "Landlord Renting (House/Apt)",
       "title": "Q · Can you manage it for me?",
       "body": "Yes, we can. We follow up the rent, coordinate maintenance, stay in touch with the tenant, inspect periodically and send you a monthly report.\n\nThe fee is {Management fee}. When does the lease start?"
+    },
+
+    /* ---------- Meta Ad - House Owners ---------- */
+    {
+      "id": "s-ma-01",
+      "category": "Meta Ad - House Owners",
+      "title": "1 · They answered area & price",
+      "body": "Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask a few quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n• When you'd like to sell\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"
+    },
+    {
+      "id": "s-ma-02",
+      "category": "Meta Ad - House Owners",
+      "title": "2 · They didn't answer the greeting",
+      "body": "Hi, this is {MyName} from {Company}. Thank you for your message.\n\nI'd be glad to help you sell your house. Which area is it in?"
+    },
+    {
+      "id": "s-ma-03",
+      "category": "Meta Ad - House Owners",
+      "title": "3 · Ask for a call",
+      "body": "Thank you, {Name}. The easiest next step is a short call, about 10 minutes.\n\nI'll ask a few questions about the house and your timing, and explain how we work with buyers. Which time suits you best?"
+    },
+    {
+      "id": "s-ma-04",
+      "category": "Meta Ad - House Owners",
+      "title": "4 · Call confirmed",
+      "body": "Thank you, {Name}. I'll call you on {Date} at {Time}.\n\nIf anything changes, just message me here."
+    },
+    {
+      "id": "s-ma-05",
+      "category": "Meta Ad - House Owners",
+      "title": "5 · Ask for photos & location",
+      "body": "Could you send a few photos of the house when convenient? The front, the living area and a bedroom are enough for now, along with the location pin.\n\nIt helps me understand the property before we speak about price."
+    },
+    {
+      "id": "s-ma-06",
+      "category": "Meta Ad - House Owners",
+      "title": "6 · Price: see it first",
+      "body": "Thank you for sharing your price, {Name}. I'd rather not guess a value from photos.\n\nOnce I've seen the house, I'll give you my honest view based on what similar houses in {Area} are selling for. Would a short visit this week suit you?"
+    },
+    {
+      "id": "s-ma-07",
+      "category": "Meta Ad - House Owners",
+      "title": "7 · Book a visit",
+      "body": "The best next step is a short visit, so I can see the house and explain how we would present it to buyers.\n\nWhich day and time would suit you this week?"
+    },
+    {
+      "id": "s-ma-08",
+      "category": "Meta Ad - House Owners",
+      "title": "8 · Confirm visit",
+      "body": "Confirmed, {Name}. I'll see you at the house on {Date} at {Time}.\n\nIf convenient, please keep copies of the deed and survey plan ready. Who will be there on the day?"
+    },
+    {
+      "id": "s-ma-09",
+      "category": "Meta Ad - House Owners",
+      "title": "9 · After the visit",
+      "body": "Thank you for your time today, {Name}. It was good to see the house.\n\nI'll send you my suggested price and how we'd market it by {Date}. Is there anything else you'd like me to include?"
+    },
+    {
+      "id": "s-ma-10",
+      "category": "Meta Ad - House Owners",
+      "title": "10 · No reply (next day)",
+      "body": "Hi, just following up on your message about selling your house.\n\nWhich area is it in? I'm happy to guide you, with no obligation."
+    },
+    {
+      "id": "s-ma-11",
+      "category": "Meta Ad - House Owners",
+      "title": "11 · No reply (3 days)",
+      "body": "Hi, I know selling a house is a big decision, and there's no rush.\n\nMay I ask roughly when you're thinking of selling? Even a rough idea helps."
+    },
+    {
+      "id": "s-ma-12",
+      "category": "Meta Ad - House Owners",
+      "title": "12 · Last follow-up (7 days)",
+      "body": "Hi, following up one last time about selling your house.\n\nIf now isn't the right time, that's completely fine. Shall I check back with you in a month or two?"
+    },
+    {
+      "id": "s-ma-13",
+      "category": "Meta Ad - House Owners",
+      "title": "13 · Not ready yet",
+      "body": "That's completely fine, {Name}. There's no pressure at all.\n\nI'll check back in a month or two. If anything changes before then, just message me here."
+    },
+    {
+      "id": "s-ma-14",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Who is the buyer?",
+      "body": "We work with buyers looking in Colombo 3 to 7 and the nearby suburbs in this price range. Their details stay private until there's a real fit, the same way yours will.\n\nOnce I understand your house, I'll tell you honestly whether it suits them. Could you share the land size and number of bedrooms?"
+    },
+    {
+      "id": "s-ma-15",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · What's your fee?",
+      "body": "Good question. Our terms are {Fee terms}.\n\nBefore that, I'd like to understand your house and make sure we can genuinely help. Would a short call suit you?"
+    },
+    {
+      "id": "s-ma-16",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Price outside 200-500M",
+      "body": "Thank you, {Name}. Our ad mentions that range, but we're happy to look at houses outside it too.\n\nCould you share the area and land size? I'll tell you honestly whether we can help."
+    },
+    {
+      "id": "s-ma-17",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Area outside the list",
+      "body": "Our main focus is Colombo 3 to 7 and the nearby suburbs, but I'm happy to take a look.\n\nWhere exactly is the house, and what's the land size?"
+    },
+    {
+      "id": "s-ma-18",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · What is my house worth?",
+      "body": "I'd rather not guess from a message. A fair view depends on the land, the condition of the house and what similar houses nearby are selling for.\n\nOnce I've seen it, I'll give you my honest view. Would a short visit suit you this week?"
+    },
+    {
+      "id": "s-ma-19",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Already with other agents",
+      "body": "That's fine, and thank you for telling me. May I ask how long it's been listed, and what kind of interest you've had so far?\n\nThat helps me see whether we can add anything useful."
+    },
+    {
+      "id": "s-ma-20",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Just bring the buyer",
+      "body": "Happy to. We check each buyer before any viewing, and we agree basic terms with you first, so both sides are protected.\n\nA simple written agreement is enough. Shall I send one for you to review?"
+    },
+    {
+      "id": "s-ma-21",
+      "category": "Meta Ad - House Owners",
+      "title": "Q · Just checking the market",
+      "body": "That's perfectly fine. Many owners start by finding out what their house could sell for.\n\nIf the right offer came along, would you consider selling in the next few months?"
     }
   ],
 
@@ -1037,6 +1165,60 @@ window.ASCEND_STARTER = {
           "title": "Commitment",
           "say": "The next step is a short visit, so I can see the property and take proper photos. Which day and time would suit you?",
           "notes": "Offer two options and book it on the call. Send the confirmation message straight after. If they hesitate, ask what would need to be true for them to feel comfortable. Red flag: a rent far above the market with no urgency."
+        }
+      ]
+    },
+    {
+      "id": "s-f-ma",
+      "title": "Meta Ad Owner Call",
+      "steps": [
+        {
+          "id": "s-f-ma-1",
+          "title": "Open",
+          "say": "Hi {Name}, this is {MyName} from {Company}. You messaged us about selling your house. Is now a good time for about 10 minutes?",
+          "notes": "They came from the ad, so they expect the call. If it's a bad time, agree a specific call-back time."
+        },
+        {
+          "id": "s-f-ma-2",
+          "title": "The house",
+          "say": "Tell me a little about the house. Where is it, and what's the land size? How many bedrooms and floors?",
+          "notes": "Note area, perches, bedrooms, floors, condition, parking, occupied or vacant. Don't discuss price yet."
+        },
+        {
+          "id": "s-f-ma-3",
+          "title": "Why sell, why now",
+          "say": "What has made you think about selling, and why now?",
+          "notes": "Motivation is the first thing to qualify. Strong reasons: relocation, estate, upgrading, funds needed. \"Just checking the market\" means low urgency. Let them talk."
+        },
+        {
+          "id": "s-f-ma-4",
+          "title": "Timing",
+          "say": "Ideally, when would you like the sale completed? And if it took longer than that, what would it mean for you?",
+          "notes": "A real deadline means they will act. No deadline and a high price usually means a slow listing."
+        },
+        {
+          "id": "s-f-ma-5",
+          "title": "Price",
+          "say": "Do you have a price in mind? How did you arrive at it?",
+          "notes": "Listen for the source: a valuation, a neighbour's sale, an ad they saw, or a hope. Don't agree or argue. Say you'll give an honest view after seeing it."
+        },
+        {
+          "id": "s-f-ma-6",
+          "title": "Others involved",
+          "say": "Is anyone else part of the decision, such as family or co-owners? And is the house with any other agents at the moment?",
+          "notes": "Everyone who must sign should hear the plan. If it's with many agents, ask what interest they've had. Never criticise other agents."
+        },
+        {
+          "id": "s-f-ma-7",
+          "title": "How we work",
+          "say": "We match houses with buyers looking in this range, check each buyer before any viewing, and handle the viewings and negotiation for you. Would that help?",
+          "notes": "Under 30 seconds. Don't name or describe specific buyers. No promises on price or speed. If asked about the fee, say we'll cover terms after the visit."
+        },
+        {
+          "id": "s-f-ma-8",
+          "title": "Next step",
+          "say": "The best next step is a short visit, so I can see the house and give you an honest view on price. Which day and time suit you this week?",
+          "notes": "Book it on the call and send the confirmation message straight after. If they're not ready, ask for photos and the location pin, and agree a date to follow up."
         }
       ]
     }
