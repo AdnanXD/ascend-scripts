@@ -916,6 +916,18 @@ window.ASCEND_STARTER = {
 
     /* ---------- Col 5 Land Requirement ---------- */
     {
+      "id": "s-cl-41",
+      "category": "Col 5 Land Requirement",
+      "title": "Meta setup · Welcome message",
+      "body": "Thank you for contacting Ascend Properties. This is Adnan.\n\nWhere in Colombo 5 is your property, and roughly how many perches is it?"
+    },
+    {
+      "id": "s-cl-42",
+      "category": "Col 5 Land Requirement",
+      "title": "Meta setup · Pre-filled message",
+      "body": "Hi, I have a property in Colombo 5. Can we discuss?"
+    },
+    {
       "id": "s-cl-01",
       "category": "Col 5 Land Requirement",
       "title": "1A · First reply (no details yet)",

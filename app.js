@@ -217,6 +217,13 @@
         if (prev.category !== m.category) continue;
         for (var j = 0; j < S.messages.length; j++) if (S.messages[j].id === prev.id) { at = j + 1; break; }
       }
+      if (at < 0) {
+        // No earlier sibling: go before the first later starter message of this category the user has.
+        for (var n = si + 1; n < st.messages.length && at < 0; n++) {
+          if (st.messages[n].category !== m.category) continue;
+          for (var q = 0; q < S.messages.length; q++) if (S.messages[q].id === st.messages[n].id) { at = q; break; }
+        }
+      }
       if (at < 0) S.messages.push(m); else S.messages.splice(at, 0, m);
     });
     addF.forEach(function (f) { S.flows.push(f); });
