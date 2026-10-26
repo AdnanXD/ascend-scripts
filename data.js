@@ -919,13 +919,13 @@ window.ASCEND_STARTER = {
       "id": "s-cl-01",
       "category": "Col 5 Land Requirement",
       "title": "1A · First reply (no details yet)",
-      "body": "Hi, thank you for getting in touch. I'm Adnan, Senior Property Advisor at Ascend Properties.\n\nWe're currently acting for a buyer looking for 20 to 30 perches in Colombo 5. Land is preferred, though a house on the right land would also be considered.\n\nCould you share where the property is and the land extent?"
+      "body": "Hi, thank you for getting in touch. I'm Adnan, Senior Property Advisor & Real Estate Agent at Ascend Properties.\n\nWe're looking for 20 to 30 perches in Colombo 5 for a buyer. Land is preferred, but a house on the right land will also be considered.\n\nWhere is the property, and how many perches is it?"
     },
     {
       "id": "s-cl-02",
       "category": "Col 5 Land Requirement",
-      "title": "1B · First reply (they gave location/extent)",
-      "body": "Hi, thank you for the details. I'm Adnan, Senior Property Advisor at Ascend Properties.\n\nWe're currently acting for a buyer looking for 20 to 30 perches in Colombo 5, so this may be a good fit.\n\nMay I ask, are you the owner, or are you helping the owner with the sale?"
+      "title": "1B · First reply (details given)",
+      "body": "Hi, thank you for the details. I'm Adnan, Senior Property Advisor & Real Estate Agent at Ascend Properties.\n\nWe have a buyer looking for 20 to 30 perches in Colombo 5, so this may suit.\n\nAre you the owner, a family member of the owner, or a broker?"
     },
     {
       "id": "s-cl-03",
@@ -936,194 +936,212 @@ window.ASCEND_STARTER = {
     {
       "id": "s-cl-04",
       "category": "Col 5 Land Requirement",
-      "title": "2A · Owner, family or broker?",
-      "body": "Thank you. May I ask, are you the owner, or are you helping the owner with the sale?"
-    },
-    {
-      "id": "s-cl-05",
-      "category": "Col 5 Land Requirement",
-      "title": "2B · Owner, family or broker? (direct)",
-      "body": "Is the property in your name, or are you enquiring for family or a client?"
+      "title": "2 · Owner, family or broker?",
+      "body": "Thank you. Are you the owner, a family member of the owner, or a broker?"
     },
     {
       "id": "s-cl-06",
       "category": "Col 5 Land Requirement",
-      "title": "3 · Owner: type & price",
-      "body": "Thank you. Is it bare land, or is there a house on it at the moment?\n\nAnd what price do you have in mind?"
+      "title": "3 · Owner: land or house & price",
+      "body": "Thank you. Is it bare land, or is there a house on it?\n\nAnd what price are you expecting?"
+    },
+    {
+      "id": "s-cl-36",
+      "category": "Col 5 Land Requirement",
+      "title": "3b · Suggest a call (recommended)",
+      "body": "Thank you. It may be easier to go through the rest on a quick call, about 10 minutes.\n\nWhat time suits you today or tomorrow?"
     },
     {
       "id": "s-cl-07",
       "category": "Col 5 Land Requirement",
       "title": "3 · Family member: who decides",
-      "body": "Thank you for letting me know. Who else is involved in the decision?\n\nIt helps to know who I should keep informed, so everyone hears the same thing."
+      "body": "Thank you. Who will make the final decision on the sale?\n\nI'd like to keep the right person updated."
     },
     {
       "id": "s-cl-08",
       "category": "Col 5 Land Requirement",
       "title": "3 · Broker: mandate & terms",
-      "body": "Thank you. Do you have a direct mandate from the owner, or is it through another agent?\n\nIf it suits my buyer, I'm happy to work with you. We'd agree co-broking terms in writing before any viewing, and I keep my buyer's details confidential until there's a clear fit."
+      "body": "Thank you. Are you working directly with the owner, or through another agent?\n\nIf it suits my buyer, I'm happy to work with you. We'll agree the commission split in writing before any viewing."
     },
     {
       "id": "s-cl-09",
       "category": "Col 5 Land Requirement",
-      "title": "3 · Broker: details request",
-      "body": "Could you share the location pin, land extent, frontage, asking price and a few photos?\n\nI'll come back to you once I've reviewed it with my buyer."
+      "title": "3 · Broker: details",
+      "body": "Please share the location pin, land extent, asking price and a few photos.\n\nI'll review it with my buyer and get back to you."
     },
     {
       "id": "s-cl-10",
       "category": "Col 5 Land Requirement",
       "title": "4 · Land: access & frontage",
-      "body": "Thank you. What's the road access like, and roughly how wide is the frontage?"
+      "body": "Thank you. How is the road access, and roughly how wide is the frontage?"
     },
     {
       "id": "s-cl-11",
       "category": "Col 5 Land Requirement",
       "title": "4 · House: age & occupancy",
-      "body": "Thank you. Roughly how old is the house, and is anyone living there at the moment?\n\nMy buyer is mainly focused on the land, so the condition matters less, but it helps to know."
+      "body": "Thank you. How old is the house, and is anyone living there now?\n\nMy buyer is mainly interested in the land, but it helps to know."
     },
     {
       "id": "s-cl-12",
       "category": "Col 5 Land Requirement",
       "title": "4 · Asking price",
-      "body": "And what price is the owner looking for?"
+      "body": "What price is the owner expecting?"
     },
     {
       "id": "s-cl-13",
       "category": "Col 5 Land Requirement",
-      "title": "5A · Motivation & timeline",
-      "body": "May I ask what's prompting the sale, and is there a timeline you're working towards?"
+      "title": "5A · Reason & timeline",
+      "body": "May I ask why you're selling, and when you'd like to complete the sale?"
     },
     {
       "id": "s-cl-14",
       "category": "Col 5 Land Requirement",
       "title": "5B · Timeline (softer)",
-      "body": "Is there a particular timeframe you have in mind for the sale?"
+      "body": "Do you have a timeframe in mind for the sale?"
     },
     {
       "id": "s-cl-15",
       "category": "Col 5 Land Requirement",
-      "title": "6 · Pin, photos & title",
-      "body": "Thank you, that's very helpful. To present it accurately to my buyer, could you share:\n\n• The location pin\n• A few photos\n• The survey plan, if available\n\nAnd is the title clear and in the owner's name?"
+      "title": "6 · Pin, photos & deed",
+      "body": "Thank you, that's helpful. Please share:\n\n• Location pin\n• A few photos\n• Survey plan, if available\n\nIs the deed clear and in the owner's name?"
+    },
+    {
+      "id": "s-cl-37",
+      "category": "Col 5 Land Requirement",
+      "title": "7 · Confirm 3% commission",
+      "body": "Before I take this further, I'd like to be clear about our fee.\n\nOur commission is 3% of the final sale price, paid by the seller when the sale is completed.\n\nIs that okay with you?"
+    },
+    {
+      "id": "s-cl-38",
+      "category": "Col 5 Land Requirement",
+      "title": "8 · Ask for email",
+      "body": "Thank you. Could you share your email address?\n\nI'll send a short agreement confirming the 3% commission, so everything is clear in writing."
     },
     {
       "id": "s-cl-16",
       "category": "Col 5 Land Requirement",
-      "title": "7A · Next step: visit",
-      "body": "Thank you. From what you've shared, this could suit my buyer well.\n\nThe next step would be for me to see the property. Would {Day 1} or {Day 2} work for a short visit?"
-    },
-    {
-      "id": "s-cl-17",
-      "category": "Col 5 Land Requirement",
-      "title": "7B · Next step: call",
-      "body": "Would a short call be easier? Ten minutes is enough for me to understand the property properly.\n\nWhat time suits you?"
+      "title": "9A · Book a visit",
+      "body": "Thank you. This could suit my buyer well, so I'd like to see the property.\n\nWould {Day 1} or {Day 2} work?"
     },
     {
       "id": "s-cl-18",
       "category": "Col 5 Land Requirement",
-      "title": "7C · Visit confirmed",
-      "body": "Confirmed for {Date} at {Time}. I'll see you at the property.\n\nIf anything changes, just message me here."
+      "title": "9B · Visit confirmed",
+      "body": "Confirmed for {Date} at {Time}. See you at the property.\n\nIf anything changes, just message me here."
+    },
+    {
+      "id": "s-cl-40",
+      "category": "Col 5 Land Requirement",
+      "title": "10 · After-call recap",
+      "body": "Thank you for your time on the call. As discussed:\n\n• Commission: 3% of the final sale price, paid when the sale is completed\n• Visit: {Date} at {Time}\n\nI'll email the agreement to you. Please send the location pin and a few photos when you can."
     },
     {
       "id": "s-cl-19",
       "category": "Col 5 Land Requirement",
-      "title": "8 · Holding message",
-      "body": "Thank you for your time, and for being open with me.\n\nI'll be in touch as soon as I've spoken with my buyer."
+      "title": "11 · Holding message",
+      "body": "Thank you for your time. I'll come back to you once I've spoken with my buyer."
     },
     {
       "id": "s-cl-20",
       "category": "Col 5 Land Requirement",
       "title": "Q · Incomplete reply",
-      "body": "Thank you. Just so I have the full picture, could you also confirm the {Missing detail}?"
+      "body": "Thank you. Could you also share the {Missing detail}?"
     },
     {
       "id": "s-cl-21",
       "category": "Col 5 Land Requirement",
       "title": "Q · Only photos or a voice note",
-      "body": "Thanks for sending these. Could you confirm the exact location and the land extent?\n\nThat's what my buyer looks at first."
+      "body": "Thank you for these. Could you confirm the exact location and land extent?\n\nThat's what my buyer checks first."
     },
     {
       "id": "s-cl-22",
       "category": "Col 5 Land Requirement",
       "title": "Q · What's the buyer's budget?",
-      "body": "The buyer has a realistic budget for this size of land in Colombo 5.\n\nIt would help to hear the owner's expectation first, so I can tell you honestly whether it's a match."
+      "body": "My buyer has a realistic budget for this size of land in Colombo 5.\n\nIt would help to know your expected price first, so I can tell you honestly if it's a match."
     },
     {
       "id": "s-cl-23",
       "category": "Col 5 Land Requirement",
       "title": "Q · Who is the buyer?",
-      "body": "A private buyer. They've asked me to keep their details confidential at this stage, as I would for you.\n\nOnce there's a clear fit, we'd arrange for both sides to meet."
+      "body": "A private buyer. Their details are confidential for now, just as yours will be.\n\nOnce there's a clear fit, we can arrange a meeting."
     },
     {
       "id": "s-cl-24",
       "category": "Col 5 Land Requirement",
       "title": "Q · Is the buyer genuine?",
-      "body": "Fair question. I only bring a buyer to a viewing once I've confirmed their budget and timeline.\n\nI'd rather not waste the owner's time either."
+      "body": "Fair question. I only bring a buyer for a viewing once I've confirmed their budget and timeline.\n\nI don't want to waste your time either."
+    },
+    {
+      "id": "s-cl-39",
+      "category": "Col 5 Land Requirement",
+      "title": "Q · Why 3% / can you reduce it?",
+      "body": "The 3% covers finding and checking the buyer, arranging viewings, handling the negotiation, and supporting you until the sale is completed.\n\nYou only pay it when the sale goes through."
     },
     {
       "id": "s-cl-25",
       "category": "Col 5 Land Requirement",
       "title": "Q · Not sure about selling",
-      "body": "That's completely fine. Many owners like to understand their options first.\n\nIf the right buyer came along at a fair price, would the family consider it?"
+      "body": "That's completely fine. If the right buyer offered a fair price, would you consider it?"
     },
     {
       "id": "s-cl-26",
       "category": "Col 5 Land Requirement",
       "title": "Q · Just want to know the value",
-      "body": "Understandable. I'd rather not guess a value from a message.\n\nIf you share the extent and location, I can tell you whether my buyer would be interested, which is often the most useful indication."
+      "body": "I'd rather not guess a value over message. If you share the location and extent, I can tell you if my buyer would be interested.\n\nThat's often the best indication."
     },
     {
       "id": "s-cl-27",
       "category": "Col 5 Land Requirement",
       "title": "Q · Need to discuss with family",
-      "body": "Of course, take your time.\n\nWould it help if I spoke with everyone together on a short call? I'm happy to answer any questions."
+      "body": "Of course, take your time. If it helps, I'm happy to have a short call with the family to answer any questions."
     },
     {
       "id": "s-cl-28",
       "category": "Col 5 Land Requirement",
       "title": "Q · Doesn't want agents",
-      "body": "That's understandable. I'm acting for the buyer, and any terms would be agreed clearly in writing before a viewing, so there are no surprises.\n\nWould you be open to sharing the basic details?"
+      "body": "I understand. Everything, including our fee, will be agreed clearly in writing before any viewing, so there are no surprises.\n\nWould you be open to sharing the basic details?"
     },
     {
       "id": "s-cl-29",
       "category": "Col 5 Land Requirement",
       "title": "Q · Not a fit: size",
-      "body": "Thank you for sharing this. My buyer is specifically looking for 20 to 30 perches, so this one isn't a match right now.\n\nI'll keep your details, and if a suitable requirement comes up, I'll get in touch with you first."
+      "body": "Thank you for sharing this. My buyer needs 20 to 30 perches, so this one isn't a match for now.\n\nI'll keep your details and contact you if a suitable buyer comes up."
     },
     {
       "id": "s-cl-30",
       "category": "Col 5 Land Requirement",
       "title": "Q · Not a fit: outside Colombo 5",
-      "body": "Thank you for reaching out. This requirement is specifically for Colombo 5, so this one isn't a fit right now.\n\nI'll keep your details on file and let you know if something suitable comes up."
+      "body": "Thank you for reaching out. This requirement is only for Colombo 5, so this one isn't a fit for now.\n\nI'll keep your details and let you know if something suitable comes up."
     },
     {
       "id": "s-cl-31",
       "category": "Col 5 Land Requirement",
       "title": "Q · Not a fit: price too high",
-      "body": "Thank you for being clear on the price. It's above what my buyer is working with at the moment.\n\nIf the owner's position changes, I'd be glad to revisit it."
+      "body": "Thank you for being clear on the price. It's above what my buyer is looking at right now.\n\nIf your price changes, I'd be happy to look at it again."
     },
     {
       "id": "s-cl-32",
       "category": "Col 5 Land Requirement",
       "title": "F1 · No reply (next day)",
-      "body": "Hi, just following up on your message about the property in Colombo 5.\n\nCould you share the location and land extent when convenient?"
+      "body": "Hi, following up on your message about the Colombo 5 property.\n\nCould you share the location and land extent when you have a moment?"
     },
     {
       "id": "s-cl-33",
       "category": "Col 5 Land Requirement",
       "title": "F2 · No reply (3 days)",
-      "body": "Hi, my buyer is still looking in Colombo 5. If the property is available, I'd be glad to take a look.\n\nIs it still for sale?"
+      "body": "Hi, my buyer is still looking in Colombo 5. Is your property still available?"
     },
     {
       "id": "s-cl-34",
       "category": "Col 5 Land Requirement",
       "title": "F3 · Last follow-up (7 days)",
-      "body": "Hi, following up one last time. If now isn't the right time, that's completely fine.\n\nShall I keep your details and check back in a few weeks?"
+      "body": "Hi, following up one last time. If now isn't the right time, no problem.\n\nShall I check back in a few weeks?"
     },
     {
       "id": "s-cl-35",
       "category": "Col 5 Land Requirement",
       "title": "F4 · Keep warm (30 days)",
-      "body": "Hi, hope you're well. I'm still working with buyers looking in Colombo 5.\n\nIf you're considering selling at any point, I'd be glad to help."
+      "body": "Hi, hope you're well. I'm still working with buyers in Colombo 5.\n\nIf you ever decide to sell, I'd be happy to help."
     }
   ],
 
@@ -1455,6 +1473,60 @@ window.ASCEND_STARTER = {
           "title": "Next step",
           "say": "The best next step is a short visit, so I can see the house and give you an honest view on price. Which day and time suit you this week?",
           "notes": "Book it on the call and send the confirmation message straight after. If they're not ready, ask for photos and the location pin, and agree a date to follow up."
+        }
+      ]
+    },
+    {
+      "id": "s-f-cl",
+      "title": "Col 5 Land Call",
+      "steps": [
+        {
+          "id": "s-f-cl-1",
+          "title": "Open",
+          "say": "Hi, this is Adnan from Ascend Properties. Thank you for your message about the property in Colombo 5. Is this a good time for about 10 minutes?",
+          "notes": "If it's a bad time, agree a specific call-back time."
+        },
+        {
+          "id": "s-f-cl-2",
+          "title": "Owner, family or broker",
+          "say": "Just to confirm, are you the owner, a family member of the owner, or a broker?",
+          "notes": "Family member: ask who makes the final decision. Broker: ask if they work directly with the owner, then move them back to WhatsApp for details and agree the commission split in writing."
+        },
+        {
+          "id": "s-f-cl-3",
+          "title": "The property",
+          "say": "Could you tell me about the property? Where exactly is it, how many perches, and is it bare land or is there a house?",
+          "notes": "Note road access and frontage. If there's a house: age and whether anyone lives there."
+        },
+        {
+          "id": "s-f-cl-4",
+          "title": "Price",
+          "say": "What price are you expecting?",
+          "notes": "Don't reveal the budget. If asked: \"My buyer has a realistic budget for this size of land. It helps to know your price first.\" Don't argue the figure."
+        },
+        {
+          "id": "s-f-cl-5",
+          "title": "Reason & timeline",
+          "say": "May I ask why you're selling, and when you'd like to complete the sale?",
+          "notes": "A clear reason and a real timeline mean they will act. \"Just checking\" means low urgency."
+        },
+        {
+          "id": "s-f-cl-6",
+          "title": "Deed & documents",
+          "say": "Is the deed clear and in the owner's name? And do you have a survey plan?",
+          "notes": "If there are several owners, everyone must agree to sell. Note it."
+        },
+        {
+          "id": "s-f-cl-7",
+          "title": "Commission",
+          "say": "Before we go further, I'd like to be clear about our fee. Our commission is 3% of the final sale price, paid by the seller when the sale is completed. Is that okay with you?",
+          "notes": "Say it plainly, then stop and wait. If they push back, explain what it covers. Don't discount on the first call."
+        },
+        {
+          "id": "s-f-cl-8",
+          "title": "Email & next step",
+          "say": "Thank you. Could I have your email address? I'll send a short agreement confirming this. And I'd like to see the property. Would {Day 1} or {Day 2} work?",
+          "notes": "After the call, send \"10 · After-call recap\" on WhatsApp and ask for the location pin and photos."
         }
       ]
     }

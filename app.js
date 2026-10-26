@@ -149,6 +149,38 @@
     // Starter text revisions: update a starter message only if it still has an older shipped body
     // (i.e. the user hasn't edited it). Add the previous body here whenever a starter body changes.
     var REVISIONS = {
+      "s-cl-01": ["Hi, thank you for getting in touch. I'm Adnan, Senior Property Advisor at Ascend Properties.\n\nWe're currently acting for a buyer looking for 20 to 30 perches in Colombo 5. Land is preferred, though a house on the right land would also be considered.\n\nCould you share where the property is and the land extent?"],
+      "s-cl-02": ["Hi, thank you for the details. I'm Adnan, Senior Property Advisor at Ascend Properties.\n\nWe're currently acting for a buyer looking for 20 to 30 perches in Colombo 5, so this may be a good fit.\n\nMay I ask, are you the owner, or are you helping the owner with the sale?"],
+      "s-cl-04": ["Thank you. May I ask, are you the owner, or are you helping the owner with the sale?"],
+      "s-cl-06": ["Thank you. Is it bare land, or is there a house on it at the moment?\n\nAnd what price do you have in mind?"],
+      "s-cl-07": ["Thank you for letting me know. Who else is involved in the decision?\n\nIt helps to know who I should keep informed, so everyone hears the same thing."],
+      "s-cl-08": ["Thank you. Do you have a direct mandate from the owner, or is it through another agent?\n\nIf it suits my buyer, I'm happy to work with you. We'd agree co-broking terms in writing before any viewing, and I keep my buyer's details confidential until there's a clear fit."],
+      "s-cl-09": ["Could you share the location pin, land extent, frontage, asking price and a few photos?\n\nI'll come back to you once I've reviewed it with my buyer."],
+      "s-cl-10": ["Thank you. What's the road access like, and roughly how wide is the frontage?"],
+      "s-cl-11": ["Thank you. Roughly how old is the house, and is anyone living there at the moment?\n\nMy buyer is mainly focused on the land, so the condition matters less, but it helps to know."],
+      "s-cl-12": ["And what price is the owner looking for?"],
+      "s-cl-13": ["May I ask what's prompting the sale, and is there a timeline you're working towards?"],
+      "s-cl-14": ["Is there a particular timeframe you have in mind for the sale?"],
+      "s-cl-15": ["Thank you, that's very helpful. To present it accurately to my buyer, could you share:\n\n• The location pin\n• A few photos\n• The survey plan, if available\n\nAnd is the title clear and in the owner's name?"],
+      "s-cl-16": ["Thank you. From what you've shared, this could suit my buyer well.\n\nThe next step would be for me to see the property. Would {Day 1} or {Day 2} work for a short visit?"],
+      "s-cl-18": ["Confirmed for {Date} at {Time}. I'll see you at the property.\n\nIf anything changes, just message me here."],
+      "s-cl-19": ["Thank you for your time, and for being open with me.\n\nI'll be in touch as soon as I've spoken with my buyer."],
+      "s-cl-20": ["Thank you. Just so I have the full picture, could you also confirm the {Missing detail}?"],
+      "s-cl-21": ["Thanks for sending these. Could you confirm the exact location and the land extent?\n\nThat's what my buyer looks at first."],
+      "s-cl-22": ["The buyer has a realistic budget for this size of land in Colombo 5.\n\nIt would help to hear the owner's expectation first, so I can tell you honestly whether it's a match."],
+      "s-cl-23": ["A private buyer. They've asked me to keep their details confidential at this stage, as I would for you.\n\nOnce there's a clear fit, we'd arrange for both sides to meet."],
+      "s-cl-24": ["Fair question. I only bring a buyer to a viewing once I've confirmed their budget and timeline.\n\nI'd rather not waste the owner's time either."],
+      "s-cl-25": ["That's completely fine. Many owners like to understand their options first.\n\nIf the right buyer came along at a fair price, would the family consider it?"],
+      "s-cl-26": ["Understandable. I'd rather not guess a value from a message.\n\nIf you share the extent and location, I can tell you whether my buyer would be interested, which is often the most useful indication."],
+      "s-cl-27": ["Of course, take your time.\n\nWould it help if I spoke with everyone together on a short call? I'm happy to answer any questions."],
+      "s-cl-28": ["That's understandable. I'm acting for the buyer, and any terms would be agreed clearly in writing before a viewing, so there are no surprises.\n\nWould you be open to sharing the basic details?"],
+      "s-cl-29": ["Thank you for sharing this. My buyer is specifically looking for 20 to 30 perches, so this one isn't a match right now.\n\nI'll keep your details, and if a suitable requirement comes up, I'll get in touch with you first."],
+      "s-cl-30": ["Thank you for reaching out. This requirement is specifically for Colombo 5, so this one isn't a fit right now.\n\nI'll keep your details on file and let you know if something suitable comes up."],
+      "s-cl-31": ["Thank you for being clear on the price. It's above what my buyer is working with at the moment.\n\nIf the owner's position changes, I'd be glad to revisit it."],
+      "s-cl-32": ["Hi, just following up on your message about the property in Colombo 5.\n\nCould you share the location and land extent when convenient?"],
+      "s-cl-33": ["Hi, my buyer is still looking in Colombo 5. If the property is available, I'd be glad to take a look.\n\nIs it still for sale?"],
+      "s-cl-34": ["Hi, following up one last time. If now isn't the right time, that's completely fine.\n\nShall I keep your details and check back in a few weeks?"],
+      "s-cl-35": ["Hi, hope you're well. I'm still working with buyers looking in Colombo 5.\n\nIf you're considering selling at any point, I'd be glad to help."],
       "s-ma-23": ["Thank you for reaching out, {Name}, and for considering us.\n\nI specialise in properties in Colombo and the nearby suburbs, so a house in {Area} is outside my area of expertise. I'd rather be honest with you than keep you waiting.\n\nMy suggestion: look on ikman.lk, LankaPropertyWeb and Facebook to see which agents are most active in {Area}, and reach out to the strongest ones. A good local agent will already know the buyers there and how best to market your house, which gives you the best chance of a good sale.\n\nI truly wish you all the best with the sale.", "Thank you for reaching out, {Name}, and for considering us.\n\nAt the moment we focus on Colombo 3 to 7, Nawala, Rajagiriya and Battaramulla, so we wouldn't be the right fit for a house in {Area}. I'd rather be honest with you than keep you waiting.\n\nIf you ever have a property in these areas, or know someone who does, I'd be glad to help."],
       "s-ma-25": ["Thank you, {Name}. To match your house with the right buyers, could you share a few details?\n\n• Location (area and road)\n• Land size (perches)\n• Number of floors\n• Bedrooms and bathrooms\n• Parking\n• Condition (any recent renovation)\n• Price you have in mind\n• When you'd like to sell\n\nA few photos and the location pin would also help. Short answers or a voice note are fine."],
       "s-ma-01": ["Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask a few quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n• When you'd like to sell\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"],
@@ -164,6 +196,12 @@
       var cur = st.messages.filter(function (x) { return x.id === m.id; })[0];
       if (cur) { m.body = cur.body; m.title = cur.title; m.updatedAt = Date.now(); }
     });
+    // Starter messages removed from the app: drop them only if the user never edited them.
+    var RETIRED = {
+      "s-cl-05": ["Is the property in your name, or are you enquiring for family or a client?"],
+      "s-cl-17": ["Would a short call be easier? Ten minutes is enough for me to understand the property properly.\n\nWhat time suits you?"]
+    };
+    S.messages = S.messages.filter(function (m) { return !(RETIRED[m.id] && RETIRED[m.id].indexOf(m.body) >= 0); });
     function fresh(arr, mine) {
       return arr.filter(function (x) {
         return seen.indexOf(x.id) < 0 && !mine.some(function (y) { return y.id === x.id; });
