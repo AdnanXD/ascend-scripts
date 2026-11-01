@@ -3,11 +3,163 @@
    IDs prefixed "s-" are starter IDs: "Restore starter templates" re-adds any that are missing. */
 window.ASCEND_STARTER = {
   version: 1,
-  categories: ["Col 5 Land Requirement", "Meta Ad - House Owners", "Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
+  categories: ["Rajagiriya Commercial 40K Sqft", "Col 5 Land Requirement", "Meta Ad - House Owners", "Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
   callNotes: "",
   messages: [
+    /* ---------- Rajagiriya Commercial 40K Sqft (starter ids s-rc-*) ---------- */
+    {
+      "id": "s-rc-01",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "1 · First reply (agent check)",
+      "body": "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for your interest in the 40,000 sqft commercial building in Rajagiriya.\n\nBefore I share the details, may I ask — are you enquiring directly, or are you an agent representing a client?"
+    },
+    {
+      "id": "s-rc-02",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "2 · Property details",
+      "body": "Here are the details:\n\n*40,000 Sqft Commercial Building for Rent - Rajagiriya*\n\n• Location: Rajagiriya, near the Rajagiriya Flyover\n• Total area: 40,000 sqft across 5 typical floors\n• Asking rent: Approx. LKR 300/sqft/month + taxes (Approx. LKR 11 Mn + taxes)\n• Dedicated parking floor — 25 cars\n• 2 lifts\n• 400 kV generator\n• Modern air conditioning system\n• Rooftop terrace\n\nThe building also includes a luxury furnished 4-bedroom apartment on the 7th floor with 4 bathrooms and a rooftop terrace.\n\nI'll send the photos now."
+    },
+    {
+      "id": "s-rc-03",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "3 · After photos",
+      "body": "These are the photos of the building, office floors, parking, and the apartment.\n\nDoes this look like the kind of space you're looking for?"
+    },
+    {
+      "id": "s-rc-04",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "4 · Nature of business",
+      "body": "Thank you. May I ask what your business does, and roughly how many people would be using the space?\n\nThat helps me confirm whether the layout and facilities are a good fit."
+    },
+    {
+      "id": "s-rc-05",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "5 · Space requirement",
+      "body": "Do you need the full 40,000 sqft, or are you looking for a smaller portion?\n\nThe building has 5 floors, so there may be flexibility depending on what suits you."
+    },
+    {
+      "id": "s-rc-06",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "6 · Budget & timeline",
+      "body": "May I ask what budget you have in mind for the rent, and when you'd like to move in?\n\nKnowing both helps me check what terms the owner would consider."
+    },
+    {
+      "id": "s-rc-07",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "7 · Who decides",
+      "body": "Will anyone else be part of the decision — a business partner, management, or a facilities team?\n\nIt's helpful if they can join the viewing too."
+    },
+    {
+      "id": "s-rc-08",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "8 · Offer a viewing",
+      "body": "From what you've shared, this could work well for you. Would you like to see the building in person?\n\nWhich day and time would suit you? I'll check with the owner and confirm."
+    },
+    {
+      "id": "s-rc-09",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "9 · Confirm viewing",
+      "body": "Your viewing is confirmed:\n\n*40,000 Sqft Commercial Building - Rajagiriya*\nDate: {Date}\nTime: {Time}\nLocation: {Location pin}\n\nPlease let me know who will be joining you. I'll meet you there. If anything changes, just message me."
+    },
+    {
+      "id": "s-rc-10",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "10 · Viewing reminder",
+      "body": "Hi {Name}, just a reminder of the Rajagiriya building viewing today at *{Time}*.\n\nI'll meet you at the entrance. Here is the location: {Location pin}"
+    },
+    {
+      "id": "s-rc-11",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "11 · After viewing",
+      "body": "Hi {Name}, thank you for coming to see the building today.\n\nWhat did you think? Was there anything that stood out, or anything that didn't feel right for your needs?"
+    },
+    {
+      "id": "s-rc-12",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "12 · Interested after viewing",
+      "body": "Great to hear, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, the lease terms, fit-out options, or a second visit with your team.\n\nWhen you're ready, I can arrange a meeting with the owner to discuss terms."
+    },
+    {
+      "id": "s-rc-13",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "13 · Not a fit after viewing",
+      "body": "Thank you for letting me know, {Name}. I really appreciate your honest feedback.\n\nMay I ask what didn't suit your needs? If I come across another commercial space in the area, I'll let you know."
+    },
+    {
+      "id": "s-rc-14",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "14 · No reply after details",
+      "body": "Hi, just checking if you had a chance to look at the details and photos of the Rajagiriya building.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+    },
+    {
+      "id": "s-rc-15",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "15 · Last follow-up",
+      "body": "Hi, following up one last time on the Rajagiriya commercial building. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar commercial spaces?"
+    },
+    {
+      "id": "s-rc-16",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Where exactly is it?",
+      "body": "It's in Rajagiriya, near the Rajagiriya Flyover, with convenient access to surrounding commercial areas.\n\nI share the exact location before a viewing. Would you like to arrange one?"
+    },
+    {
+      "id": "s-rc-17",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · What's the best rent?",
+      "body": "The asking rent is approximately LKR 300 per sqft per month plus taxes, which comes to around LKR 11 Mn plus taxes for the full building.\n\nIf you've seen the building and would like to discuss terms, I'm happy to present your proposal to the owner."
+    },
+    {
+      "id": "s-rc-18",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Is the rent negotiable?",
+      "body": "The owner has set the asking rent at LKR 300/sqft/month plus taxes. Any proposal would go to the owner for a decision.\n\nOnce you've seen the building, you can send me your proposal and I'll present it. Shall we arrange a viewing?"
+    },
+    {
+      "id": "s-rc-19",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Can I rent part of the building?",
+      "body": "That's a good question. The building has 5 floors, so depending on what you need, there may be room to discuss a partial arrangement.\n\nCould you tell me how much space you need? I'll check with the owner and come back to you."
+    },
+    {
+      "id": "s-rc-20",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Tell me about the apartment",
+      "body": "The apartment is on the 7th floor of the building. It's a luxury furnished unit with:\n\n• 4 bedrooms\n• 4 bathrooms\n• Rooftop terrace access\n\nIt's ideal if you or a senior member of the team needs to be close to the office. Would you like to see it during the viewing?"
+    },
+    {
+      "id": "s-rc-21",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · What about parking?",
+      "body": "The building has a dedicated parking floor with space for 25 cars.\n\nWould that be enough for your team, or would you need additional parking?"
+    },
+    {
+      "id": "s-rc-22",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Is there a generator / power backup?",
+      "body": "Yes, the building has a 400 kV generator, so you'll have power backup.\n\nWould you like to know anything else about the building's facilities?"
+    },
+    {
+      "id": "s-rc-23",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Agent with a client",
+      "body": "Thank you. May I ask a few quick things?\n\n1. What does your client's business do?\n2. How much space do they need?\n3. When do they plan to move in?\n\nBefore arranging a viewing, let's confirm our co-broking and commission terms."
+    },
+    {
+      "id": "s-rc-24",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · My budget is lower",
+      "body": "Thank you for being upfront. May I ask what rent you'd be comfortable with?\n\nIf this building isn't the right fit, I can keep an eye out for other commercial spaces in the area."
+    },
+    {
+      "id": "s-rc-25",
+      "category": "Rajagiriya Commercial 40K Sqft",
+      "title": "Q · Lease terms / duration",
+      "body": "The standard lease details, including duration, deposit and advance terms, would be discussed directly with the owner once you've seen the building and confirmed your interest.\n\nWould you like to arrange a viewing first?"
+    },
+
     /* ---------- New Inquiry ---------- */
     {
       id: "s-m01", category: "New Inquiry", title: "First reply - rental inquiry",
