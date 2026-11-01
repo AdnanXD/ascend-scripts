@@ -13,7 +13,7 @@ window.ASCEND_STARTER = {
       "id": "s-rc-01",
       "category": "Rajagiriya Commercial 40K Sqft",
       "title": "1 · First reply (agent check)",
-      "body": "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for your interest in the 40,000 sqft commercial building in Rajagiriya.\n\nBefore I share the details, may I ask — are you enquiring directly, or are you an agent representing a client?"
+      "body": "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for reaching out about the commercial building in Rajagiriya.\n\nMay I ask — are you looking for space for your own business, or are you enquiring on behalf of a client?"
     },
     {
       "id": "s-rc-02",
