@@ -3,7 +3,7 @@
   'use strict';
 
   var KEY = 'ascendScripts.v1';
-  var VERSION = '1.0.0';
+  var VERSION = '1.1.0';
   var AUTO = { MyName: 1, Company: 1 };
   var FIELD_RE = /\{([^{}\n]{1,30})\}/g;
 
@@ -47,6 +47,8 @@
     search: svg('<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>'),
     note: svg('<path d="M6 3.5h8.5L19 8v12.5H6z"/><path d="M9 12.5h7M9 16.5h5"/>'),
     shield: svg('<path d="M12 3l7 3v5.2c0 4.6-3 7.6-7 9.8-4-2.2-7-5.2-7-9.8V6z"/><path d="M9.2 12l2 2 3.6-4"/>'),
+    check: svg('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),
+    sort: svg('<path d="M8 5v14M4.5 8.5L8 5l3.5 3.5M16 19V5M12.5 15.5L16 19l3.5-3.5"/>'),
     restart: svg('<path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5"/><path d="M4 4v4.5h4.5"/>'),
     star: function (on) {
       return svg('<path d="M12 3.6l2.6 5.3 5.8.9-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.9z"/>', on ? 'fill' : '');
@@ -66,6 +68,21 @@
     return m && t === m[0] ? m[1] : t;
   }
 
+  /* Best guess at when a message was created: user ids embed a timestamp, starter ids map to the date their
+     set was added (ASCEND_STARTER.added, longest matching prefix). 0 = unknown (sorts as oldest). */
+  function inferCreated(mid) {
+    var m = /^m-([0-9a-z]{6,})$/.exec(mid);
+    if (m) {
+      var t = parseInt(m[1].slice(0, -5), 36);
+      if (t >= Date.UTC(2024, 0, 1) && t <= Date.now() + 86400000) return t;
+    }
+    var added = (window.ASCEND_STARTER && window.ASCEND_STARTER.added) || {}, best = '';
+    Object.keys(added).forEach(function (k) { if (mid.indexOf(k) === 0 && k.length > best.length) best = k; });
+    if (best) { var d = Date.parse(added[best]); if (isFinite(d)) return d; }
+    return 0;
+  }
+  var SORTS = ['cat', 'new', 'old', 'used', 'most'];
+
   function normalize(p) {
     if (!p || typeof p !== 'object' || !Array.isArray(p.messages) || !Array.isArray(p.flows) || !Array.isArray(p.objections)) {
       throw new Error('This file is not an Ascend Scripts backup.');
@@ -80,9 +97,11 @@
     function obj(v) { return v && typeof v === 'object' ? v : {}; }
 
     var messages = p.messages.filter(obj).map(function (m) {
+      var mid = id(m.id, 'm');
       return {
-        id: id(m.id, 'm'), title: str(m.title), category: str(m.category, 'Other') || 'Other', body: str(m.body),
-        fav: !!m.fav, uses: num(m.uses), lastUsed: num(m.lastUsed), updatedAt: num(m.updatedAt)
+        id: mid, title: str(m.title), category: str(m.category, 'Other') || 'Other', body: str(m.body),
+        fav: !!m.fav, uses: num(m.uses), lastUsed: num(m.lastUsed), updatedAt: num(m.updatedAt),
+        createdAt: num(m.createdAt) || inferCreated(mid)
       };
     });
     var flows = p.flows.filter(obj).map(function (f) {
@@ -118,7 +137,7 @@
       settings: { myName: str(st.myName, 'Adnan'), company: str(st.company, 'Ascend Properties') },
       callNotes: str(p.callNotes),
       meta: { seenStarter: seenStarter },
-      ui: { mode: u.mode === 'call' ? 'call' : 'messages', flowId: str(u.flowId), steps: steps }
+      ui: { mode: u.mode === 'call' ? 'call' : 'messages', flowId: str(u.flowId), steps: steps, sort: SORTS.indexOf(u.sort) >= 0 ? u.sort : 'cat' }
     };
   }
 
@@ -569,8 +588,9 @@
   function renderMessagesShell() {
     $('#app').innerHTML =
       '<section class="msgs">' +
-      '<div class="tools"><div class="search">' + I.search +
+      '<div class="tools"><div class="search-row"><div class="search">' + I.search +
       '<input type="search" id="q" placeholder="Search scripts\u2026" aria-label="Search scripts" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></div>' +
+      '<button type="button" class="icon-btn sort-btn" id="sortBtn" data-act="sort-open" aria-label="Sort scripts" aria-pressed="' + (S.ui.sort !== 'cat') + '">' + I.sort + '</button></div>' +
       '<div class="chips" id="chips" role="group" aria-label="Categories"></div></div>' +
       '<div id="clientbar"></div><div class="list" id="list"></div></section>';
     $('#q').value = ui.q;
@@ -617,8 +637,20 @@
       }
       return true;
     });
+    var order = a.map(function (m, i) { return { m: m, i: i }; }), sort = S.ui.sort || 'cat';
+    if (sort !== 'cat') {
+      // No favourite pinning; ties keep the original array order.
+      order.sort(function (x, y) {
+        var mx = x.m, my = y.m, d = 0;
+        if (sort === 'new') d = my.createdAt - mx.createdAt;
+        else if (sort === 'old') d = mx.createdAt - my.createdAt;
+        else if (sort === 'used') { d = my.lastUsed - mx.lastUsed; if (!d && !mx.lastUsed) d = my.createdAt - mx.createdAt; }
+        else { d = my.uses - mx.uses; if (!d) d = my.lastUsed - mx.lastUsed; }
+        return d || x.i - y.i;
+      });
+      return order.map(function (o) { return o.m; });
+    }
     // Stable order: favourites, then category order, then array order (uncategorised last).
-    var order = a.map(function (m, i) { return { m: m, i: i }; });
     function ci(m) { var k = S.categories.indexOf(m.category); return k < 0 ? 9999 : k; }
     order.sort(function (x, y) {
       if (!!x.m.fav !== !!y.m.fav) return x.m.fav ? -1 : 1;
@@ -626,6 +658,32 @@
       return x.i - y.i;
     });
     return order.map(function (o) { return o.m; });
+  }
+
+  var SORT_LABEL = { cat: 'By category', 'new': 'Newest first', old: 'Oldest first', used: 'Recently used', most: 'Most used' };
+  var SORT_DESC = { cat: 'Grouped, favourites first' };
+  function fmtDate(ts, year) {
+    var o = { day: 'numeric', month: 'short' };
+    if (year) o.year = 'numeric';
+    try { return new Date(ts).toLocaleDateString('en-GB', o); } catch (e) { return ''; }
+  }
+
+  function openSortSheet() {
+    var sh = openSheet({ label: 'Sort by' });
+    sh.set(head('Sort by') + '<div class="sheet-scroll"><div class="list-btns" role="radiogroup" aria-label="Sort by">' +
+      SORTS.map(function (k) {
+        var on = (S.ui.sort || 'cat') === k;
+        return '<button type="button" class="opt-row' + (on ? ' on' : '') + '" role="radio" aria-checked="' + on + '" data-act="sort-pick" data-sort="' + k + '">' +
+          '<span class="t"><b>' + esc(SORT_LABEL[k]) + '</b>' + (SORT_DESC[k] ? '<small>' + esc(SORT_DESC[k]) + '</small>' : '') + '</span>' + (on ? I.check : '') + '</button>';
+      }).join('') + '</div></div>');
+    sh.acts['sort-pick'] = function (t) {
+      S.ui.sort = t.dataset.sort;
+      save();
+      sh.close(true);
+      var b = $('#sortBtn'); if (b) b.setAttribute('aria-pressed', String(S.ui.sort !== 'cat'));
+      renderList();
+    };
+    sh.focus('.opt-row.on');
   }
 
   function renderList() {
@@ -640,26 +698,30 @@
         msg = '<h3>No favourites yet</h3><p>Open a script and tap the star to pin it to the top.</p>';
       } else if (q) {
         msg = '<h3>No scripts match \u201C' + esc(q) + '\u201D</h3>' +
-          (ui.cat !== '__all__' ? '<button type="button" class="btn" data-act="cat" data-cat="__all__">Search all categories</button>' : '<button type="button" class="btn" data-act="new-script">Create a new script</button>');
+          (ui.cat !== '__all__' ? '<button type="button" class="btn" data-act="cat" data-cat="__all__">Search all categories</button>' : '<button type="button" class="btn" data-act="new-script-direct">Create a new script</button>');
       } else {
         msg = '<h3>Nothing in this category</h3><p>Tap + to add a script here.</p>';
       }
       el.innerHTML = '<div class="empty">' + msg + '</div>';
       return;
     }
-    var grouped = ui.cat === '__all__' && !ui.q.trim(), lastKey = null;
-    el.innerHTML = a.map(function (m) {
+    var sort = S.ui.sort || 'cat', grouped = sort === 'cat' && ui.cat === '__all__' && !ui.q.trim(), lastKey = null;
+    var sortLine = sort === 'cat' ? '' : '<div class="sortline"><span>Sorted: ' + esc(SORT_LABEL[sort]) + '</span>' +
+      '<button type="button" class="btn text" data-act="sort-open">Change</button></div>';
+    el.innerHTML = sortLine + a.map(function (m) {
       var key = m.fav ? '__fav__' : m.category, h = '';
       if (grouped && key !== lastKey) {
         h = '<h2 class="group-h">' + (m.fav ? '\u2605 Favourites' : esc(m.category)) + '</h2>';
         lastKey = key;
       }
-      var showCat = !grouped || m.fav;
+      var showCat = !grouped || m.fav, catLine = m.category;
+      if (sort === 'new' || sort === 'old') { if (m.createdAt) catLine += ' \u00B7 ' + fmtDate(m.createdAt, false); }
+      else if (sort === 'used' || sort === 'most') catLine += ' \u00B7 ' + (m.uses ? 'Used ' + m.uses + '\u00D7' : 'Not used yet');
       return h + '<article class="card" data-id="' + esc(m.id) + '">' +
         '<div class="card-main" role="button" tabindex="0" data-act="view" aria-label="Open script: ' + esc(m.title) + '">' +
         '<div class="card-top"><h3 class="card-title">' + esc(m.title || 'Untitled') + '</h3>' +
         (m.fav ? '<span class="fav-mark" aria-label="Favourite">' + I.star(true) + '</span>' : '') + '</div>' +
-        (showCat ? '<div class="card-cat">' + esc(m.category) + '</div>' : '') +
+        (showCat ? '<div class="card-cat">' + esc(catLine) + '</div>' : '') +
         '<p class="card-prev">' + fmt(m.body, { mode: 'template', format: 'strip' }) + '</p></div>' +
         '<div class="card-actions">' +
         '<button type="button" class="btn primary" data-act="copy">' + I.copy + '<span>Copy</span></button>' +
@@ -687,6 +749,13 @@
   }
 
   /* ---------------- Script view ---------------- */
+  function viewMeta(m) {
+    var p = [];
+    if (m.createdAt) p.push('Added ' + fmtDate(m.createdAt, true));
+    if (m.uses > 0) p.push('Used ' + m.uses + '\u00D7');
+    return p.length ? '<div class="meta">' + esc(p.join(' \u00B7 ')) + '</div>' : '';
+  }
+
   function openView(id) {
     var cur = id;
     var sh = openSheet({ full: true, label: 'Script' });
@@ -697,6 +766,7 @@
         head(m.title || 'Untitled', { left: 'back', right: '<span class="sp"></span>' }) +
         '<div class="sheet-scroll">' +
         '<div class="label-sm">' + esc(m.category) + '</div>' +
+        viewMeta(m) +
         '<div class="bubble">' + fmt(m.body, { mode: 'template' }) + '</div>' +
         (promptFields(m.body).length ? '<p class="hint">Highlighted fill-ins are filled in when you copy or send.</p>' : '') +
         '</div>' +
@@ -719,7 +789,7 @@
     sh.acts.edit = function () { openEditor(cur); };
     sh.acts.dup = function () {
       var m = getMsg(cur);
-      var c = { id: uid('m'), title: m.title + ' (copy)', category: m.category, body: m.body, fav: false, uses: 0, lastUsed: 0, updatedAt: Date.now() };
+      var c = { id: uid('m'), title: m.title + ' (copy)', category: m.category, body: m.body, fav: false, uses: 0, lastUsed: 0, updatedAt: Date.now(), createdAt: Date.now() };
       S.messages.splice(S.messages.indexOf(m) + 1, 0, c);
       save(); cur = c.id; paint(); refreshAll();
       toast('Duplicated. You are now viewing the copy.');
@@ -848,6 +918,7 @@
       '</div>' +
       '<textarea id="eBody" class="body-ta in" placeholder="Write your message\u2026" autocapitalize="sentences">' + esc(m.body) + '</textarea></div>' +
       '<p class="hint">Use {Field} for fill-ins. *bold* _italic_ work in WhatsApp.</p>' +
+      '<div class="chk" id="eChk"></div>' +
       '</div>');
     var title = sh.q('#eTitle'), sel = sh.q('#eCat'), nw = sh.q('#eNew'), nwWrap = sh.q('#eNewWrap'), ta = sh.q('#eBody');
     grow(ta);
@@ -865,7 +936,10 @@
       nwWrap.hidden = !isN;
       if (isN) nw.focus();
     });
-    ta.addEventListener('input', function () { grow(ta); });
+    var chk = sh.q('#eChk'), chkTimer = null;
+    function runChk() { chk.innerHTML = checkerHtml(ta.value); }
+    runChk();
+    ta.addEventListener('input', function () { grow(ta); clearTimeout(chkTimer); chkTimer = setTimeout(runChk, 250); });
     title.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); ta.focus(); } });
     // keep the textarea focused/selection intact when tapping helper chips
     sh.el.addEventListener('mousedown', function (e) { if (e.target.closest('.ins')) e.preventDefault(); });
@@ -883,7 +957,7 @@
       if (S.categories.indexOf(cat) < 0) S.categories.push(cat);
       var saved;
       if (isNew) {
-        saved = { id: uid('m'), title: t, category: cat, body: b, fav: false, uses: 0, lastUsed: 0, updatedAt: Date.now() };
+        saved = { id: uid('m'), title: t, category: cat, body: b, fav: false, uses: 0, lastUsed: 0, updatedAt: Date.now(), createdAt: Date.now() };
         S.messages.unshift(saved);
       } else {
         saved = getMsg(id);
@@ -897,6 +971,419 @@
     };
     sh.focus(isNew ? '#eTitle' : null);
     return sh;
+  }
+
+  /* =====================================================================
+     Create: menu, listing pack, paste, script checker
+     ===================================================================== */
+  var CLAUDE_PROMPT = [
+    'Write WhatsApp sales scripts for Ascend Properties, a boutique real estate brokerage in Colombo, Sri Lanka.',
+    '',
+    'The property / situation:',
+    '[describe it here: type, area, price, key details, who the client is]',
+    '',
+    'Follow these rules:',
+    '- Write for one specific client. Many read English as a second language: short, simple, professional sentences. No jargon or idioms.',
+    '- Warm but not familiar. Confident, not pushy. Honest over clever.',
+    '- One message, one purpose. Short paragraphs (2-3 lines) for a phone screen.',
+    '- End with one clear question or next step. Ask one question at a time.',
+    '- Give value before asking for anything. Price comes after rapport and qualification.',
+    '- No exclamation marks in a first message. Always leave the door open.',
+    '- Use {Name} for the client\'s name, {MyName} and {Company} for me, and {Field} for any other fill-in.',
+    '',
+    'Format every script exactly like this, and nothing else:',
+    '## 1 · Short title',
+    '```',
+    'message text',
+    '```'
+  ].join('\n');
+
+  /* Insert a block of new scripts at the start of the list, sharing one createdAt. */
+  function addScripts(items, catName) {
+    var now = Date.now(), cat = catName;
+    var hit = S.categories.filter(function (c) { return c.toLowerCase() === catName.toLowerCase(); })[0];
+    if (hit) cat = hit; else S.categories.unshift(cat);
+    var block = items.map(function (it) {
+      return { id: uid('m'), title: it.title, category: cat, body: it.body, fav: false, uses: 0, lastUsed: 0, updatedAt: now, createdAt: now };
+    });
+    S.messages = block.concat(S.messages);
+    save();
+    ui.cat = cat; ui.q = '';
+    var q = $('#q'); if (q) q.value = '';
+    return block.length;
+  }
+  function catExists(name) {
+    var n = String(name || '').trim().toLowerCase();
+    return !!n && S.categories.some(function (c) { return c.toLowerCase() === n; });
+  }
+
+  function openCreateMenu() {
+    var sh = openSheet({ label: 'Create' });
+    function row(act, t, d) {
+      return '<button type="button" class="opt-row lg" data-act="' + act + '"><span class="t"><b>' + esc(t) + '</b><small>' + esc(d) + '</small></span>' + I.next + '</button>';
+    }
+    sh.set(head('Create') + '<div class="sheet-scroll"><div class="list-btns">' +
+      row('c-script', 'New script', 'Write a single message') +
+      row('c-pack', 'New listing pack', 'A full set of scripts for a property, built on your proven flow') +
+      row('c-paste', 'Paste scripts', 'Add several at once from a Claude reply or your notes') +
+      '</div></div>');
+    sh.acts['c-script'] = function () { sh.close(true); openEditor(null, { category: S.categories.indexOf(ui.cat) >= 0 ? ui.cat : null }); };
+    sh.acts['c-pack'] = function () { sh.close(true); openPackWizard(); };
+    sh.acts['c-paste'] = function () { sh.close(true); openPaste(); };
+    sh.focus();
+  }
+
+  /* ---------------- Listing pack generator ---------------- */
+  function capWords(s) { return String(s).replace(/(^|[\s\-])([a-z])/g, function (m, a, b) { return a + b.toUpperCase(); }); }
+
+  /* input: { deal: 'sale'|'rent', type: 'house'|'apartment'|'land'|'commercial', short, area, detail, price, details }
+     Returns [{ title, body }] in flow order. */
+  function buildPack(input) {
+    var sale = input.deal !== 'rent', type = input.type || 'house';
+    var com = type === 'commercial', res = type === 'house' || type === 'apartment', land = type === 'land';
+    var sn = String(input.short || '').trim(), area = String(input.area || '').trim();
+    var detail = String(input.detail || '').trim(), price = String(input.price || '').trim();
+    var B = '• ';
+    var head = capWords(sn) + (sale ? ' for Sale - ' : ' for Rent - ') + area;
+    var what = sn + ' in ' + area;
+    var noun = com ? 'building' : type;
+    var kind = land ? 'land' : (com ? 'space' : 'home');
+    var PL = sale ? 'Price' : 'Rent', pword = sale ? 'asking price' : 'rent';
+    var who = com ? 'looking for space for your own business' : (sale ? 'looking to buy for yourself or your family' : 'looking to rent for yourself or your family');
+    var when = sale ? 'buy' : 'move in';
+    var size = res ? 'Number of bedrooms' : (land ? 'Land size (perches)' : 'Space needed (sqft)');
+    var client = sale ? 'buyer' : 'tenant';
+    var lines = String(input.details || '').split(/\r?\n/).map(function (l) { return l.replace(/^[\s•\-*]+/, '').trim(); }).filter(Boolean);
+    var out = [];
+    function add(title, body) { out.push({ title: title, body: body }); }
+
+    add('1 · First reply', "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for reaching out about the " + what + ".\n\nMay I ask, are you " + who + ", or are you enquiring on behalf of a client?");
+    add('2 · Property details', "Here are the details:\n\n*" + head + "*\n\n" + B + "Location: " + (detail || area) + "\n" + B + PL + ": *" + price + "*\n" +
+      lines.map(function (l) { return B + l + "\n"; }).join('') + "\nI'll send the photos now.");
+    add('3 · After photos', "Here are the photos of the " + noun + ".\n\nDoes this look like the kind of " + kind + " you're looking for?");
+    add('4 · Location & budget', "Thank you, {Name}. Does " + area + " suit you as a location?\n\nAnd is the " + pword + " within the range you're comfortable with?");
+    if (res) add('5 · Main requirements', "What are the main things you need in a home? For example, number of bedrooms, parking, or space for the family.\n\nThat way I can tell you honestly if this one is a good fit.");
+    else if (land) add('5 · Main requirements', "What are the main things you need? For example, land size, road access, or what you plan to build.\n\nThat way I can tell you honestly if this one is a good fit.");
+    else add('5 · Main requirements', "May I ask what your business does, and roughly how many people would use the space?\n\nThat way I can tell you honestly if this one is a good fit.");
+    if (sale) add('6 · Timing & funding', "May I ask when you're hoping to buy?\n\nAnd will you be using your own funds, a bank loan, or money from selling another property?");
+    else add('6 · Move-in & lease', "When would you like to move in, and how long a lease are you looking for?");
+    if (com) add('7 · Who decides', "Will anyone else be part of the decision, such as a partner, director or facilities team? It's best if they can join the viewing too.");
+    else add('7 · Who decides', "Will anyone else be part of the decision, like your spouse or family? It's best if they can join the viewing too.");
+    add('8 · Offer a viewing', "From what you've shared, this " + noun + " could suit you well. Would you like to see it in person?\n\nWhich day and time would work best for you? I'll check with the owner and confirm.");
+    add('9 · Confirm viewing', "Your viewing is confirmed:\n\n*" + head + "*\nDate: {Date}\nTime: {Time}\nLocation: {Location pin}\n\nPlease let me know who will be joining you. I'll meet you there. If anything changes, just message me.");
+    add('10 · Viewing reminder', "Hi {Name}, just a reminder of the viewing today at *{Time}* for the " + noun + " in " + area + ".\n\nI'll meet you there. Here is the location: {Location pin}");
+    add('11 · After viewing', "Hi {Name}, thank you for coming to see the " + noun + " today.\n\nWhat did you think? Was there anything you liked, or anything that didn't feel right?");
+    if (sale) add('12 · Interested after viewing', "Great to hear you liked it, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, documents, a second visit, or questions for the owner.\n\nWhen you're ready, you can send me your offer in writing here and I'll present it to the owner.");
+    else add('12 · Interested after viewing', "Great to hear you liked it, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, the lease terms, a second visit, or questions for the owner.\n\nWhen you're ready, send me your proposed rent and move-in date here and I'll present it to the owner.");
+    add('13 · Not a fit after viewing', "Thank you for letting me know, {Name}. I really appreciate your honest feedback.\n\nMay I ask what didn't suit you? If I come across something that fits better, I'll let you know.");
+    add('14 · No reply after details', "Hi, just checking if you had a chance to look at the details of the " + noun + " in " + area + ".\n\nDoes it suit what you're looking for? Happy to answer any questions.");
+    add('14b · Ask their requirements', "Hi, following up on the " + what + ".\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n" + B + "Area\n" + B + "Budget\n" + B + size + "\n" + B + "When you plan to " + when + "\n\nShort answers are fine. I'll let you know when something suitable comes up.");
+    add('15 · Last follow-up', "Hi, following up one last time on the " + noun + " in " + area + ". If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar properties?");
+    add('Q · Where exactly is it?', "It's in " + area + "." + (detail ? " " + detail.replace(/[.\s]+$/, '') + "." : "") + "\n\nI share the exact location before a viewing. Would you like to arrange one?");
+    if (sale) add("Q · What's the best price?", "The asking price is *" + price + "*.\n\nIf you like the " + noun + " after seeing it, I'm happy to present your offer to the owner. Would you like to view it first?");
+    else add("Q · What's the best rent?", "The asking rent is *" + price + "*.\n\nOnce you've seen the " + noun + ", I'm happy to present your proposal to the owner. Would you like to view it first?");
+    if (sale) add('Q · Is it negotiable?', "The owner has listed it at *" + price + "*, and any offer would go to the owner for a decision.\n\nOnce you've seen the " + noun + ", you can send me your offer in writing and I'll present it. Shall we arrange a viewing?");
+    else add('Q · Is it negotiable?', "The asking rent is *" + price + "*, and any proposal would go to the owner for a decision.\n\nOnce you've seen the " + noun + ", send me your proposal in writing and I'll present it. Shall we arrange a viewing?");
+    add('Q · My budget is lower', "Thank you for being open with me. May I ask what range you would be comfortable with?\n\nIf this one isn't the right fit, I can look for other options that match your budget.");
+    add('Q · Can I view it?', "Yes, of course. Which day and time would suit you? I'll check with the owner and confirm.\n\nWill anyone be joining you for the viewing?");
+    if (sale) add('Q · I need a bank loan', "That's fine, many buyers use a bank loan. Have you already spoken to your bank, or would you like to get a pre-approval first?\n\nKnowing your loan amount helps us plan the next steps smoothly.");
+    if (sale && !com) add('Q · Need to sell my property first', "That makes sense. May I ask where your current property is, and whether it's already on the market?\n\nI'd be happy to help you sell it too, so both can move together.");
+    if (!sale) add('Q · Lease terms', "Lease details, such as the term, deposit and advance, are agreed with the owner once you've seen the " + noun + " and confirmed your interest.\n\nWould you like to arrange a viewing first?");
+    if (!com) add('Q · Living overseas', "No problem, we often work with clients living overseas.\n\nI can do a live video call of the " + noun + " so you can see it properly. A family member here is also welcome to view it in person for you.\n\nWhen would suit you for a video call?");
+    add('Q · Agent with a client', "Thank you. May I ask a few quick things?\n\n1. Do you have a specific " + client + " for this " + noun + "?\n2. Have they seen the " + pword + " and photos?\n3. Will they attend the viewing?\n\nBefore arranging a viewing, let's confirm our co-broking and commission terms.");
+    if (sale) add('Q · Offer / wants to meet owner', "Thank you, {Name}. I'm working with the owner on this sale, so I can pass your offer on directly.\n\nPlease send me your offer in writing here, with:\n" + B + "Your offer price\n" + B + "How you plan to pay (own funds or bank loan)\n" + B + "Your preferred timeline\n\nI'll present it to the owner and come back to you.");
+    else add('Q · Offer / wants to meet owner', "Thank you, {Name}. I'm working with the owner on this, so I can pass your proposal on directly.\n\nPlease send me in writing:\n" + B + "Your proposed rent\n" + B + "The lease term you'd like\n" + B + "Your preferred move-in date\n\nI'll present it to the owner and come back to you.");
+    return out;
+  }
+
+  function openPackWizard() {
+    var st = { step: 1, inp: { name: '', deal: 'sale', type: 'house', short: '', area: '', detail: '', price: '', details: '' }, items: [] };
+    var sh = openSheet({ full: true, label: 'New listing pack' });
+    function segHtml(g, label, opts) {
+      return '<div class="field"><span class="label-sm" id="wl-' + g + '">' + label + '</span><div class="seg wz" role="radiogroup" aria-labelledby="wl-' + g + '">' +
+        opts.map(function (o) {
+          return '<button type="button" role="radio" aria-checked="' + (st.inp[g] === o[0]) + '" data-act="seg" data-g="' + g + '" data-v="' + o[0] + '">' + o[1] + '</button>';
+        }).join('') + '</div></div>';
+    }
+    function pricePh() { return st.inp.deal === 'rent' ? 'LKR 300/sqft/month + taxes' : 'LKR 175 Mn'; }
+    function paint1() {
+      var v = st.inp;
+      st.step = 1;
+      sh.set('<div class="sheet-head"><button type="button" class="btn text" data-act="cancel">Cancel</button>' +
+        '<h2 class="sheet-title" style="text-align:center">New listing pack</h2>' +
+        '<button type="button" class="btn primary" data-act="next">Next</button></div>' +
+        '<div class="sheet-scroll">' +
+        '<label class="field" style="margin-top:4px"><span class="label-sm">Pack name</span><input id="w-name" type="text" value="' + esc(v.name) + '" placeholder="Col 3 House for Sale 175Mn" autocomplete="off" autocapitalize="words"></label>' +
+        '<p class="hint" id="w-hint"' + (catExists(v.name) ? '' : ' hidden') + '>Scripts will be added to the existing category.</p>' +
+        segHtml('deal', 'Deal', [['sale', 'For sale'], ['rent', 'For rent']]) +
+        segHtml('type', 'Type', [['house', 'House'], ['apartment', 'Apartment'], ['land', 'Land'], ['commercial', 'Commercial']]) +
+        '<label class="field"><span class="label-sm">Short name</span><input id="w-short" type="text" value="' + esc(v.short) + '" placeholder="4-bedroom house" autocomplete="off"></label>' +
+        '<p class="hint">Used in sentences, e.g. the 4-bedroom house in…</p>' +
+        '<label class="field"><span class="label-sm">Area</span><input id="w-area" type="text" value="' + esc(v.area) + '" placeholder="Kollupitiya, Colombo 3" autocomplete="off" autocapitalize="words"></label>' +
+        '<label class="field"><span class="label-sm">Location detail (optional)</span><input id="w-detail" type="text" value="' + esc(v.detail) + '" placeholder="Off Galle Road, with easy access from Galle Road and Marine Drive" autocomplete="off"></label>' +
+        '<label class="field"><span class="label-sm">Price / rent</span><input id="w-price" type="text" value="' + esc(v.price) + '" placeholder="' + esc(pricePh()) + '" autocomplete="off"></label>' +
+        '<label class="field"><span class="label-sm">Key details (optional, one per line)</span><textarea id="w-details" class="in" style="min-height:120px" placeholder="4 bedrooms\n4 bathrooms\nParking for 2 vehicles" autocapitalize="sentences">' + esc(v.details) + '</textarea></label>' +
+        '</div>');
+    }
+    function read() {
+      ['name', 'short', 'area', 'detail', 'price', 'details'].forEach(function (k) {
+        var e = sh.q('#w-' + k);
+        if (e) st.inp[k] = e.value;
+      });
+    }
+    function count() { return st.items.filter(function (x) { return x.on; }).length; }
+    function syncCreate() {
+      var b = sh.q('#wCreate'), n = count();
+      if (!b) return;
+      b.textContent = 'Create ' + n;
+      b.disabled = n === 0;
+    }
+    function paintList() {
+      sh.q('#pvlist').innerHTML = st.items.map(function (it, i) {
+        return '<div class="pv-item"><div class="pv-head"><label class="pv-chk"><input type="checkbox" data-i="' + i + '"' + (it.on ? ' checked' : '') + ' aria-label="Include ' + esc(it.title) + '"></label>' +
+          '<button type="button" class="pv-t" data-act="tog" data-i="' + i + '" aria-expanded="' + !!it.open + '"><span>' + esc(it.title) + '</span>' + I.down + '</button></div>' +
+          (it.open ? '<div class="bubble sm pv-body">' + fmt(it.body, { mode: 'template' }) + '</div>' : '') + '</div>';
+      }).join('');
+    }
+    function paint2() {
+      st.step = 2;
+      sh.set('<div class="sheet-head"><button type="button" class="btn text" data-act="back">Back</button>' +
+        '<h2 class="sheet-title" style="text-align:center">Preview</h2>' +
+        '<button type="button" class="btn primary" id="wCreate" data-act="create">Create</button></div>' +
+        '<div class="sheet-scroll"><p class="hint" style="margin-top:0">Tap a title to preview it. Untick any you do not want.</p><div id="pvlist"></div></div>');
+      paintList();
+      syncCreate();
+    }
+    sh.acts.cancel = function () { sh.close(); };
+    sh.acts.seg = function (t) {
+      st.inp[t.dataset.g] = t.dataset.v;
+      $$('[data-g="' + t.dataset.g + '"]', sh.inner).forEach(function (b) { b.setAttribute('aria-checked', String(b === t)); });
+      if (t.dataset.g === 'deal') { var p = sh.q('#w-price'); if (p) p.placeholder = pricePh(); }
+    };
+    sh.acts.next = function () {
+      read();
+      var v = st.inp, checks = [['name', 'Add a pack name'], ['short', 'Add a short name'], ['area', 'Add the area'], ['price', 'Add the price or rent']];
+      for (var i = 0; i < checks.length; i++) {
+        if (!v[checks[i][0]].trim()) { toast(checks[i][1]); sh.q('#w-' + checks[i][0]).focus(); return; }
+      }
+      st.items = buildPack(v).map(function (x) { return { title: x.title, body: x.body, on: true, open: false }; });
+      paint2();
+      sh.sheet.focus({ preventScroll: true });
+    };
+    sh.acts.back = function () { paint1(); };
+    sh.acts.tog = function (t) { var it = st.items[+t.dataset.i]; it.open = !it.open; paintList(); };
+    sh.acts.create = function () {
+      var chosen = st.items.filter(function (x) { return x.on; });
+      if (!chosen.length) { toast('Tick at least one script'); return; }
+      var n = addScripts(chosen, st.inp.name.trim());
+      sh.close(true);
+      refreshAll();
+      window.scrollTo(0, 0);
+      toast('Created ' + n + ' scripts');
+    };
+    sh.el.addEventListener('change', function (e) {
+      var t = e.target;
+      if (t.type === 'checkbox' && t.dataset.i != null) { st.items[+t.dataset.i].on = t.checked; syncCreate(); }
+    });
+    sh.el.addEventListener('input', function (e) {
+      if (e.target.id === 'w-name') { var h = sh.q('#w-hint'); if (h) h.hidden = !catExists(e.target.value); }
+    });
+    paint1();
+    sh.focus('#w-name');
+    return sh;
+  }
+
+  /* ---------------- Paste scripts ---------------- */
+  function cleanTitle(t) {
+    t = String(t).trim();
+    t = t.replace(/^\*\*(.+)\*\*$/, '$1').trim();
+    t = t.replace(/:\s*$/, '').trim();
+    t = t.replace(/^\*\*(.+)\*\*$/, '$1').trim();
+    return t;
+  }
+  function firstLineTitle(body) {
+    var l = String(body).split('\n').filter(function (x) { return x.trim(); })[0] || '';
+    return l.trim().slice(0, 40);
+  }
+  /* Parse Claude-style replies ("## Title" + fenced block) or plain text into [{ title, body }]. */
+  function parseScripts(text) {
+    var lines = String(text == null ? '' : text).replace(/\r\n?/g, '\n').split('\n');
+    var secs = [{ title: null, fences: [], plain: [] }], cur = secs[0], inFence = false, buf = null, i, line, tr, h;
+    for (i = 0; i < lines.length; i++) {
+      line = lines[i]; tr = line.trim();
+      if (tr.indexOf('```') === 0) {
+        if (!inFence) { inFence = true; buf = []; } else { inFence = false; cur.fences.push(buf.join('\n')); buf = null; }
+        continue;
+      }
+      if (inFence) { buf.push(line); continue; }
+      if (/^(-{3,}|\*{3,})$/.test(tr)) continue;
+      h = /^#{1,4}\s+(.+)$/.exec(line.replace(/\s+$/, '')) || /^\*\*(.+?)\*\*:?\s*$/.exec(line);
+      if (h) { cur = { title: h[1], fences: [], plain: [] }; secs.push(cur); continue; }
+      cur.plain.push(line);
+    }
+    if (inFence && buf) cur.fences.push(buf.join('\n'));
+    var out = [], hasHead = secs.length > 1, anyFence = secs.some(function (s) { return s.fences.length > 0; });
+    function push(title, body) {
+      body = String(body).replace(/^\s+|\s+$/g, '');
+      if (body) out.push({ title: cleanTitle(title) || firstLineTitle(body) || 'Untitled script', body: body });
+    }
+    if (!hasHead && !anyFence) {
+      push(firstLineTitle(secs[0].plain.join('\n')), secs[0].plain.join('\n'));
+      return out;
+    }
+    secs.forEach(function (s, k) {
+      if (k === 0) { s.fences.forEach(function (f) { push(firstLineTitle(f), f); }); return; }
+      if (s.fences.length) {
+        s.fences.forEach(function (f, n) { push(s.fences.length > 1 ? cleanTitle(s.title) + ' (' + (n + 1) + ')' : s.title, f); });
+      } else {
+        push(s.title, s.plain.join('\n'));
+      }
+    });
+    return out;
+  }
+
+  function openPaste() {
+    var cats = S.categories.slice();
+    var def = S.categories.indexOf(ui.cat) >= 0 ? ui.cat : (cats[0] || 'Other');
+    if (cats.indexOf(def) < 0) cats.push(def);
+    var items = [], off = {};
+    var sh = openSheet({ full: true, label: 'Paste scripts' });
+    sh.set('<div class="sheet-head"><button type="button" class="btn text" data-act="cancel">Cancel</button>' +
+      '<h2 class="sheet-title" style="text-align:center">Paste scripts</h2>' +
+      '<button type="button" class="btn primary" id="pAdd" data-act="add" disabled>Add 0</button></div>' +
+      '<div class="sheet-scroll">' +
+      '<label class="field" style="margin-top:4px"><span class="label-sm">Category</span><select id="pCat">' +
+      cats.map(function (c) { return '<option value="' + esc(c) + '"' + (c === def ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('') +
+      '<option value="__new__">New category…</option></select></label>' +
+      '<label class="field" id="pNewWrap" hidden><span class="label-sm">New category name</span><input id="pNew" type="text" autocomplete="off" autocapitalize="words"></label>' +
+      '<button type="button" class="btn block" style="margin-top:16px" data-act="prompt">' + I.copy + 'Copy prompt for Claude</button>' +
+      '<label class="field"><span class="label-sm">Paste here</span><textarea id="pText" class="in paste-ta" placeholder="Paste Claude’s reply or your own scripts…" autocapitalize="sentences"></textarea></label>' +
+      '<div class="section" style="margin-top:18px"><div class="pv-count" id="pCount" aria-live="polite">Found 0 scripts</div><div id="pList"></div></div>' +
+      '</div>');
+    var ta = sh.q('#pText'), sel = sh.q('#pCat'), nw = sh.q('#pNew'), wrapN = sh.q('#pNewWrap');
+    function key(it) { return it.title + '\u0000' + it.body; }
+    function count() { return items.filter(function (x) { return x.on; }).length; }
+    function syncAdd() {
+      var b = sh.q('#pAdd'), n = count();
+      b.textContent = 'Add ' + n;
+      b.disabled = n === 0;
+    }
+    function paintList() {
+      sh.q('#pCount').textContent = 'Found ' + items.length + ' script' + (items.length === 1 ? '' : 's');
+      sh.q('#pList').innerHTML = items.map(function (it, i) {
+        return '<div class="pv-item"><div class="pv-head"><label class="pv-chk"><input type="checkbox" data-i="' + i + '"' + (it.on ? ' checked' : '') + ' aria-label="Include ' + esc(it.title) + '"></label>' +
+          '<div class="pv-t static"><span>' + esc(it.title) + '</span></div></div>' +
+          '<p class="pv-prev">' + esc(it.body) + '</p></div>';
+      }).join('');
+      syncAdd();
+    }
+    function reparse() {
+      items = parseScripts(ta.value).map(function (x) { return { title: x.title, body: x.body, on: !off[key(x)] }; });
+      paintList();
+    }
+    ta.addEventListener('input', reparse);
+    sel.addEventListener('change', function () {
+      var isN = sel.value === '__new__';
+      wrapN.hidden = !isN;
+      if (isN) nw.focus();
+    });
+    sh.el.addEventListener('change', function (e) {
+      var t = e.target;
+      if (t.type === 'checkbox' && t.dataset.i != null) {
+        var it = items[+t.dataset.i];
+        it.on = t.checked;
+        if (it.on) delete off[key(it)]; else off[key(it)] = 1;
+        syncAdd();
+      }
+    });
+    sh.acts.cancel = function () { sh.close(); };
+    sh.acts.prompt = function () {
+      copyText(CLAUDE_PROMPT).then(function (ok) {
+        toast(ok ? 'Prompt copied. Add the property details, then paste Claude’s reply here.' : 'Could not copy the prompt', { ms: 4000 });
+      });
+    };
+    sh.acts.add = function () {
+      var chosen = items.filter(function (x) { return x.on; });
+      if (!chosen.length) { toast('Nothing to add yet'); return; }
+      var cat = sel.value === '__new__' ? nw.value.trim() : sel.value;
+      if (!cat) { toast('Name the new category, or pick an existing one'); nw.focus(); return; }
+      var n = addScripts(chosen, cat);
+      sh.close(true);
+      refreshAll();
+      window.scrollTo(0, 0);
+      toast('Added ' + n + ' script' + (n === 1 ? '' : 's'));
+    };
+    sh.focus('#pText');
+    return sh;
+  }
+
+  /* ---------------- Script checker ---------------- */
+  var PLAIN = [
+    ['kindly revert', 'please reply'], ['revert back', 'reply'], ['do the needful', 'please help'], ['at this point in time', 'now'],
+    ['prior to', 'before'], ['in terms of', 'for'], ['per se', null],
+    ['utilise', 'use'], ['utilize', 'use'], ['leverage', 'use'], ['facilitate', 'help'], ['commence', 'start'],
+    ['endeavour', 'try'], ['endeavor', 'try'], ['revert', 'reply'], ['hereby', null], ['aforementioned', 'this'],
+    ['optimal', 'best'], ['synergy', null], ['cognizant', 'aware']
+  ];
+  function syllables(w) {
+    w = w.toLowerCase().replace(/[^a-z]/g, '');
+    if (!w) return 0;
+    var n = (w.match(/[aeiouy]+/g) || []).length;
+    if (n > 1 && /e$/.test(w)) n--;
+    return Math.max(1, n);
+  }
+  /* Returns null for empty text, else { items: [{ k: 'warn'|'tip', t }], reading: { t, warn } | null }. */
+  function checkScript(raw) {
+    var t = String(raw || '').replace(FIELD_RE, '').replace(/[*_]/g, '');
+    var words = t.split(/\s+/).filter(function (w) { return /[A-Za-z0-9]/.test(w); });
+    if (!words.length) return null;
+    var items = [], n = words.length;
+    if (n > 120) items.push({ k: 'warn', t: 'Long message (' + n + ' words). Aim for under 80.' });
+    else if (n > 80) items.push({ k: 'tip', t: n + ' words. Shorter messages get read.' });
+    var q = (t.match(/\?/g) || []).length;
+    if (!q) items.push({ k: 'tip', t: 'No question. End with one clear next step.' });
+    else if (q >= 3) items.push({ k: 'warn', t: q + ' questions. Ask one at a time.' });
+    if (t.indexOf('!') >= 0) items.push({ k: 'tip', t: 'Exclamation marks can read as eager.' });
+    var sents = t.replace(/([.!?]+)(\s|$)/g, '$1\u0001').split(/[\u0001\n]+/).filter(function (s) { return /[A-Za-z]/.test(s); });
+    var maxS = 0;
+    sents.forEach(function (s) {
+      var c = s.split(/\s+/).filter(function (w) { return /[A-Za-z0-9]/.test(w); }).length;
+      if (c > maxS) maxS = c;
+    });
+    if (maxS > 25) items.push({ k: 'warn', t: 'A sentence has ' + maxS + ' words. Split it.' });
+    var maxP = 0;
+    t.split(/\n\s*\n/).forEach(function (p) {
+      if (/(^|\n)\s*(•|[-*]|\d+[.)])\s/.test(p)) return;
+      var c = p.replace(/([.!?]+)(\s|$)/g, '$1\u0001').split(/[\u0001\n]+/).filter(function (s) { return /[A-Za-z]/.test(s); }).length;
+      if (c > maxP) maxP = c;
+    });
+    if (maxP > 3) items.push({ k: 'tip', t: 'A paragraph has ' + maxP + ' sentences. Keep to 2-3.' });
+    var work = t;
+    PLAIN.forEach(function (p) {
+      var re = new RegExp('\\b' + p[0].replace(/ /g, '\\s+') + '\\b', 'i'), m = re.exec(work);
+      if (!m) return;
+      var w = m[0].toLowerCase().replace(/\s+/g, ' ');
+      items.push({ k: 'warn', t: p[1] ? 'Say "' + p[1] + '" instead of "' + w + '".' : 'Drop "' + w + '".' });
+      work = work.replace(new RegExp('\\b' + p[0].replace(/ /g, '\\s+') + '\\b', 'ig'), ' ');
+    });
+    var reading = null;
+    if (n >= 8) {
+      var syl = 0;
+      words.forEach(function (w) { syl += syllables(w); });
+      var fre = 206.835 - 1.015 * (n / Math.max(1, sents.length)) - 84.6 * (syl / n);
+      reading = fre >= 70 ? { t: 'Reading: Easy', warn: false } : (fre >= 50 ? { t: 'Reading: OK', warn: false } : { t: 'Reading: Hard — use shorter words and sentences', warn: true });
+    }
+    return { items: items, reading: reading };
+  }
+  function checkerHtml(text) {
+    var r = checkScript(text), h = '<div class="label-sm">Check</div>';
+    if (!r) return h + '<p class="chk-empty">Tips appear as you type.</p>';
+    var rows = r.items.slice();
+    if (!rows.length && !(r.reading && r.reading.warn)) rows.push({ k: 'ok', t: 'Looks good ✓' });
+    if (r.reading) rows.push({ k: r.reading.warn ? 'warn' : 'tip', t: r.reading.t });
+    return h + '<ul class="chk-list">' + rows.map(function (x) {
+      return '<li class="' + x.k + '"><span class="dot" aria-hidden="true"></span><span>' + esc(x.t) + '</span></li>';
+    }).join('') + '</ul>';
   }
 
   /* =====================================================================
@@ -1457,7 +1944,9 @@
   var ACTS = {
     mode: function (t) { setMode(t.dataset.mode); },
     settings: function () { openSettings(); },
-    'new-script': function () { openEditor(null, { category: S.categories.indexOf(ui.cat) >= 0 ? ui.cat : null }); },
+    'new-script': function () { openCreateMenu(); },
+    'new-script-direct': function () { openEditor(null, { category: S.categories.indexOf(ui.cat) >= 0 ? ui.cat : null }); },
+    'sort-open': function () { openSortSheet(); },
     cat: function (t) { ui.cat = t.dataset.cat; renderChips(); renderList(); },
     view: function (t) { var c = t.closest('[data-id]'); if (c) openView(c.dataset.id); },
     copy: function (t) { var c = t.closest('[data-id]'); if (c) actCopy(getMsg(c.dataset.id)); },

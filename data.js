@@ -3,6 +3,16 @@
    IDs prefixed "s-" are starter IDs: "Restore starter templates" re-adds any that are missing. */
 window.ASCEND_STARTER = {
   version: 1,
+  // Date each starter set was added (used for "Date created" sorting). New starter sets must add their id prefix + date here.
+  added: {
+    "s-m0": "2026-10-06T06:53:27+05:30", "s-m1": "2026-10-06T06:53:27+05:30",
+    "s-c3-": "2026-10-06T10:34:28+05:30",
+    "s-c5-": "2026-10-06T15:33:31+05:30",
+    "s-sl-": "2026-10-06T15:52:57+05:30", "s-ll-": "2026-10-06T15:52:57+05:30",
+    "s-ma-": "2026-10-12T12:46:41+05:30",
+    "s-cl-": "2026-10-26T06:52:43+05:30",
+    "s-rc-": "2026-11-01T21:37:12+05:30"
+  },
   categories: ["Rajagiriya Commercial 40K Sqft", "Col 5 Land Requirement", "Meta Ad - House Owners", "Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
