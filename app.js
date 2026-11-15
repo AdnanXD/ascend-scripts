@@ -3,7 +3,7 @@
   'use strict';
 
   var KEY = 'ascendScripts.v1';
-  var VERSION = '1.1.0';
+  var VERSION = '1.1.1';
   var AUTO = { MyName: 1, Company: 1 };
   var FIELD_RE = /\{([^{}\n]{1,30})\}/g;
 
@@ -81,7 +81,7 @@
     if (best) { var d = Date.parse(added[best]); if (isFinite(d)) return d; }
     return 0;
   }
-  var SORTS = ['cat', 'new', 'old', 'used', 'most'];
+  var SORTS = ['cat', 'edit', 'new', 'old', 'used', 'most'];
 
   function normalize(p) {
     if (!p || typeof p !== 'object' || !Array.isArray(p.messages) || !Array.isArray(p.flows) || !Array.isArray(p.objections)) {
@@ -642,7 +642,8 @@
       // No favourite pinning; ties keep the original array order.
       order.sort(function (x, y) {
         var mx = x.m, my = y.m, d = 0;
-        if (sort === 'new') d = my.createdAt - mx.createdAt;
+        if (sort === 'edit') d = (my.updatedAt || my.createdAt) - (mx.updatedAt || mx.createdAt);
+        else if (sort === 'new') d = my.createdAt - mx.createdAt;
         else if (sort === 'old') d = mx.createdAt - my.createdAt;
         else if (sort === 'used') { d = my.lastUsed - mx.lastUsed; if (!d && !mx.lastUsed) d = my.createdAt - mx.createdAt; }
         else { d = my.uses - mx.uses; if (!d) d = my.lastUsed - mx.lastUsed; }
@@ -660,8 +661,8 @@
     return order.map(function (o) { return o.m; });
   }
 
-  var SORT_LABEL = { cat: 'By category', 'new': 'Newest first', old: 'Oldest first', used: 'Recently used', most: 'Most used' };
-  var SORT_DESC = { cat: 'Grouped, favourites first' };
+  var SORT_LABEL = { cat: 'By category', edit: 'Recently edited', 'new': 'Newest first', old: 'Oldest first', used: 'Recently used', most: 'Most used' };
+  var SORT_DESC = { cat: 'Grouped, favourites first', edit: 'Last changed first', 'new': 'By date added' };
   function fmtDate(ts, year) {
     var o = { day: 'numeric', month: 'short' };
     if (year) o.year = 'numeric';
@@ -715,7 +716,8 @@
         lastKey = key;
       }
       var showCat = !grouped || m.fav, catLine = m.category;
-      if (sort === 'new' || sort === 'old') { if (m.createdAt) catLine += ' \u00B7 ' + fmtDate(m.createdAt, false); }
+      if (sort === 'edit') { if (m.updatedAt) catLine += ' \u00B7 Edited ' + fmtDate(m.updatedAt, false); else if (m.createdAt) catLine += ' \u00B7 Added ' + fmtDate(m.createdAt, false); }
+      else if (sort === 'new' || sort === 'old') { if (m.createdAt) catLine += ' \u00B7 ' + fmtDate(m.createdAt, false); }
       else if (sort === 'used' || sort === 'most') catLine += ' \u00B7 ' + (m.uses ? 'Used ' + m.uses + '\u00D7' : 'Not used yet');
       return h + '<article class="card" data-id="' + esc(m.id) + '">' +
         '<div class="card-main" role="button" tabindex="0" data-act="view" aria-label="Open script: ' + esc(m.title) + '">' +
@@ -752,6 +754,7 @@
   function viewMeta(m) {
     var p = [];
     if (m.createdAt) p.push('Added ' + fmtDate(m.createdAt, true));
+    if (m.updatedAt && m.updatedAt - m.createdAt > 60000) p.push('Edited ' + fmtDate(m.updatedAt, true));
     if (m.uses > 0) p.push('Used ' + m.uses + '\u00D7');
     return p.length ? '<div class="meta">' + esc(p.join(' \u00B7 ')) + '</div>' : '';
   }
