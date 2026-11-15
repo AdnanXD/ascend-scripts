@@ -11,13 +11,197 @@ window.ASCEND_STARTER = {
     "s-sl-": "2026-10-06T15:52:57+05:30", "s-ll-": "2026-10-06T15:52:57+05:30",
     "s-ma-": "2026-10-12T12:46:41+05:30",
     "s-cl-": "2026-10-26T06:52:43+05:30",
-    "s-rc-": "2026-11-01T21:37:12+05:30"
+    "s-rc-": "2026-11-01T21:37:12+05:30",
+    "s-m17": "2026-11-15T22:00:00+05:30", "s-m18": "2026-11-15T22:00:00+05:30",
+    "s-pl-": "2026-11-15T22:05:00+05:30"
   },
-  categories: ["Rajagiriya Commercial 40K Sqft", "Col 5 Land Requirement", "Meta Ad - House Owners", "Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
+  categories: ["Col 5 Polhengoda Land 194.66Mn", "Rajagiriya Commercial 40K Sqft", "Col 5 Land Requirement", "Meta Ad - House Owners", "Col 3 House for Sale 175Mn", "Col 5 Siripa Lane House", "Owner Selling (House/Apt)", "Landlord Renting (House/Apt)", "New Inquiry", "Viewings", "Follow-up", "Landlords & Sellers", "Closing"],
   settings: { myName: "Adnan", company: "Ascend Properties" },
   fields: {},
   callNotes: "",
   messages: [
+    /* ---------- Col 5 Polhengoda Land 194.66Mn (starter ids s-pl-*) ---------- */
+    {
+      "id": "s-pl-01",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "1 · First reply",
+      "body": "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for reaching out about the 26.85-perch land off Polhengoda Road, Colombo 5.\n\nMay I ask, are you looking to buy for yourself or your family, or are you enquiring on behalf of a client?"
+    },
+    {
+      "id": "s-pl-02",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "2 · Property details",
+      "body": "Here are the details:\n\n*26.85 Perches of Bare Land for Sale - Colombo 5*\n\n• Location: Ruwan Seneviratne Mawatha, off Polhengoda Road, Colombo 5\n• Land extent: 26.85 perches\n• Bare land\n• Price: *LKR 194.66 Mn* (LKR 7.25 Mn per perch)\n\nI'll send the photos and location pin now."
+    },
+    {
+      "id": "s-pl-03",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "3 · After photos",
+      "body": "Here are the photos of the land and the road.\n\nIt's a quiet residential area that is still growing, with plenty of room to build a family home. Does this look like what you have in mind?"
+    },
+    {
+      "id": "s-pl-04",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "4 · Plans for the land",
+      "body": "May I ask what you're planning for the land? For example, building a home for your family, or holding it for the long term?\n\nThat helps me tell you honestly if this one is a good fit."
+    },
+    {
+      "id": "s-pl-05",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "5 · Who decides",
+      "body": "Will anyone else be part of the decision, like your spouse or family? It's best if they can join the site visit too."
+    },
+    {
+      "id": "s-pl-06",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "6 · Location & budget",
+      "body": "Thank you, {Name}. Does this part of Colombo 5 suit you?\n\nAnd is LKR 194.66 Mn within the range you're comfortable with?"
+    },
+    {
+      "id": "s-pl-07",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "7 · Timing & funding",
+      "body": "May I ask when you're hoping to buy?\n\nAnd will you be using your own funds, a bank loan, or money from selling another property?"
+    },
+    {
+      "id": "s-pl-08",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "8 · Offer a site visit",
+      "body": "From what you've shared, this land could suit you well. Would you like to see it in person?\n\nWhich day and time would work best for you? I'll check with the owner and confirm."
+    },
+    {
+      "id": "s-pl-09",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "9 · Confirm site visit",
+      "body": "Your site visit is confirmed:\n\n*26.85 Perches - Off Polhengoda Road, Colombo 5*\nDate: {Date}\nTime: {Time}\nLocation: {Location pin}\n\nPlease let me know who will be joining you. I'll meet you there. If anything changes, just message me."
+    },
+    {
+      "id": "s-pl-10",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "10 · Visit reminder",
+      "body": "Hi {Name}, just a reminder of the site visit today at *{Time}* for the land off Polhengoda Road.\n\nI'll meet you there. Here is the location: {Location pin}"
+    },
+    {
+      "id": "s-pl-11",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "11 · After site visit",
+      "body": "Hi {Name}, thank you for coming to see the land today.\n\nWhat did you think? Was there anything you liked, or anything that didn't feel right?"
+    },
+    {
+      "id": "s-pl-12",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "12 · Interested after visit",
+      "body": "Great to hear you liked it, {Name}.\n\nThe next step I'd suggest is checking the deed and survey plan, so you know everything is clean. Shall I ask the owner for copies so your lawyer can check them?"
+    },
+    {
+      "id": "s-pl-13",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "13 · Not a fit after visit",
+      "body": "Thank you for letting me know, {Name}. I really appreciate your honest feedback.\n\nMay I ask what didn't suit you? If I come across land that fits better, I'll let you know."
+    },
+    {
+      "id": "s-pl-14",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "14 · No reply after details",
+      "body": "Hi {Name}, just checking if you had a chance to look at the land off Polhengoda Road.\n\nIf it helps, I can send a short video of the land and the road, so you can see the area. Would that be useful?"
+    },
+    {
+      "id": "s-pl-15",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "14b · Ask their requirements",
+      "body": "Hi {Name}, following up on the 26.85-perch land in Colombo 5.\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Land size (perches)\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
+    },
+    {
+      "id": "s-pl-16",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "15 · Last follow-up",
+      "body": "Hi {Name}, following up one last time on the land off Polhengoda Road. Are you still looking, or should I pause for now?\n\nEither is completely fine. If something similar comes up, I'd be glad to let you know."
+    },
+    {
+      "id": "s-pl-17",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Where exactly is it?",
+      "body": "It's on Ruwan Seneviratne Mawatha, off Polhengoda Road, Colombo 5.\n\nI'll share the exact location pin before a site visit. Would you like to arrange one?"
+    },
+    {
+      "id": "s-pl-18",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · What's the best price?",
+      "body": "The asking price is *LKR 194.66 Mn*, which is LKR 7.25 Mn per perch.\n\nIf you like the land after seeing it, I'm happy to present your offer to the owner. Would you like to see it first?"
+    },
+    {
+      "id": "s-pl-19",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Is it negotiable?",
+      "body": "The owner has listed it at *LKR 194.66 Mn*, and any offer would go to the owner for a decision.\n\nOnce you've seen the land, you can send me your offer in writing and I'll present it. Shall we arrange a site visit?"
+    },
+    {
+      "id": "s-pl-20",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Is it a good investment?",
+      "body": "It's a quieter part of Colombo 5 that is still developing, so it suits someone thinking long term, especially to build a home.\n\nI can't promise how prices will move, but I can share recent land sale prices nearby so you can judge for yourself. Would that help?"
+    },
+    {
+      "id": "s-pl-21",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Can I build a house?",
+      "body": "Yes, it's bare land, so you can plan the home you want. Before you buy, your lawyer and architect should confirm the approvals and building limits with the local council.\n\nI can ask the owner for the deed and survey plan to start those checks. Shall I do that?"
+    },
+    {
+      "id": "s-pl-22",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Is the deed clear?",
+      "body": "Good question. Before you pay any big money, your lawyer should check the deed and the survey plan. They'll also confirm there are no loans or claims on the land.\n\nI can ask the owner for copies so your lawyer can start. Shall I do that?"
+    },
+    {
+      "id": "s-pl-23",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · How is the road access?",
+      "body": "It's on Ruwan Seneviratne Mawatha, just off Polhengoda Road. I'd suggest seeing the road in person, so you can judge the access for yourself.\n\nWould you like to arrange a site visit?"
+    },
+    {
+      "id": "s-pl-24",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · My budget is lower",
+      "body": "Thank you for being open with me. May I ask what range you would be comfortable with?\n\nIf this one isn't the right fit, I can look for other land that matches your budget."
+    },
+    {
+      "id": "s-pl-25",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · I need a bank loan",
+      "body": "That's fine, many buyers use a bank loan. Have you already spoken to your bank, or would you like to get a pre-approval first?\n\nKnowing your loan amount helps us plan the next steps smoothly."
+    },
+    {
+      "id": "s-pl-26",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Need to sell my property first",
+      "body": "That makes sense. May I ask where your current property is, and whether it's already on the market?\n\nI'd be happy to help you sell it too, so both can move together."
+    },
+    {
+      "id": "s-pl-27",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Living overseas",
+      "body": "No problem, we often work with clients living overseas.\n\nI can do a live video call from the land so you can see the plot and the road. A family member here is also welcome to visit for you.\n\nWhen would suit you for a video call?"
+    },
+    {
+      "id": "s-pl-28",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Good time (nakath)",
+      "body": "Of course. Please let me know the good time from your astrologer, and I'll arrange the visit or signing around it."
+    },
+    {
+      "id": "s-pl-29",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Agent with a buyer",
+      "body": "Thank you. Do you have a specific buyer for this land, and have they seen the price and photos?\n\nBefore arranging a site visit, we'll agree our co-broking and commission terms in writing. Is that okay with you?"
+    },
+    {
+      "id": "s-pl-30",
+      "category": "Col 5 Polhengoda Land 194.66Mn",
+      "title": "Q · Offer / wants to meet owner",
+      "body": "Thank you, {Name}. I'm working with the owner on this sale, so I can pass your offer on directly.\n\nPlease send me your offer in writing here, with:\n• Your offer price\n• How you plan to pay (own funds or bank loan)\n• Your preferred timeline\n\nI'll present it to the owner and come back to you."
+    },
+
     /* ---------- Rajagiriya Commercial 40K Sqft (starter ids s-rc-*) ---------- */
     {
       "id": "s-rc-01",
@@ -101,13 +285,13 @@ window.ASCEND_STARTER = {
       "id": "s-rc-14",
       "category": "Rajagiriya Commercial 40K Sqft",
       "title": "14 · No reply after details",
-      "body": "Hi, just checking if you had a chance to look at the details and photos of the Rajagiriya building.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+      "body": "Hi {Name}, just checking if you had a chance to look at the details and photos of the Rajagiriya building.\n\nIn case it helps, there is a dedicated parking floor for 25 cars and a 400 kV generator for power backup.\n\nDoes it suit what you're looking for?"
     },
     {
       "id": "s-rc-15",
       "category": "Rajagiriya Commercial 40K Sqft",
       "title": "15 · Last follow-up",
-      "body": "Hi, following up one last time on the Rajagiriya commercial building. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar commercial spaces?"
+      "body": "Hi {Name}, following up one last time on the Rajagiriya commercial building. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar commercial spaces?"
     },
     {
       "id": "s-rc-16",
@@ -119,7 +303,7 @@ window.ASCEND_STARTER = {
       "id": "s-rc-17",
       "category": "Rajagiriya Commercial 40K Sqft",
       "title": "Q · What's the best rent?",
-      "body": "The asking rent is approximately LKR 300 per sqft per month plus taxes, which comes to around LKR 11 Mn plus taxes for the full building.\n\nIf you've seen the building and would like to discuss terms, I'm happy to present your proposal to the owner."
+      "body": "The asking rent is approximately LKR 300 per sqft per month plus taxes. For the full building, that comes to around LKR 11 Mn plus taxes.\n\nOnce you've seen the building, I'm happy to present your proposal to the owner. Would you like to view it first?"
     },
     {
       "id": "s-rc-18",
@@ -155,7 +339,7 @@ window.ASCEND_STARTER = {
       "id": "s-rc-23",
       "category": "Rajagiriya Commercial 40K Sqft",
       "title": "Q · Agent with a client",
-      "body": "Thank you. May I ask a few quick things?\n\n1. What does your client's business do?\n2. How much space do they need?\n3. When do they plan to move in?\n\nBefore arranging a viewing, let's confirm our co-broking and commission terms."
+      "body": "Thank you. May I ask what your client's business does?\n\nBefore arranging a viewing, we'll agree our co-broking and commission terms in writing. Is that okay with you?"
     },
     {
       "id": "s-rc-24",
@@ -167,19 +351,19 @@ window.ASCEND_STARTER = {
       "id": "s-rc-25",
       "category": "Rajagiriya Commercial 40K Sqft",
       "title": "Q · Lease terms / duration",
-      "body": "The standard lease details, including duration, deposit and advance terms, would be discussed directly with the owner once you've seen the building and confirmed your interest.\n\nWould you like to arrange a viewing first?"
+      "body": "Lease details, such as the term, deposit and advance, are agreed with the owner once you've seen the building and confirmed your interest.\n\nWould you like to arrange a viewing first?"
     },
 
     /* ---------- New Inquiry ---------- */
     {
       id: "s-m01", category: "New Inquiry", title: "First reply - rental inquiry",
       body:
-"Hello {Name}, thank you for your enquiry about *{Property}*.\n\nI'd be delighted to help. It is a lovely address, and I can share the layout, the building's amenities and current availability with you.\n\nSo that I can guide you properly, may I ask:\n- When would you ideally like to move in?\n- How many people will be living there?\n\nKind regards,\n{MyName}\n{Company}"
+"Hello {Name}, thank you for your enquiry about *{Property}*.\n\nI'd be delighted to help. It is a lovely address, and I can share the layout, what the building offers and current availability with you.\n\nSo that I can guide you properly, may I ask:\n- When would you ideally like to move in?\n- How many people will be living there?\n\nKind regards,\n{MyName}\n{Company}"
     },
     {
       id: "s-m02", category: "New Inquiry", title: "First reply - sale inquiry",
       body:
-"Hello {Name}, thank you for your interest in *{Property}*.\n\nI would be glad to walk you through it: the layout, the surroundings and the terms the owner is open to. Homes at this level are often handled discreetly, so I will share details with you directly.\n\nCould I ask whether you are buying for your own use or as an investment, and what timeline you have in mind? That helps me point you towards the right options.\n\nWarm regards,\n{MyName}\n{Company}"
+"Hello {Name}, thank you for your interest in *{Property}*.\n\nI would be glad to walk you through it: the layout, the surroundings and the terms the owner is open to. Many owners prefer privacy, so I will share details with you directly.\n\nCould I ask whether you are buying for your own use or as an investment?\n\nAnd what timeline do you have in mind? That helps me point you towards the right options.\n\nWarm regards,\n{MyName}\n{Company}"
     },
     {
       id: "s-m03", category: "New Inquiry", title: "Qualifying questions",
@@ -204,6 +388,11 @@ window.ASCEND_STARTER = {
 "Hi {Name}, your viewing is confirmed:\n\n*{Property}*\nDate: {Date}\nTime: {Time}\nAddress: {Address}\n\nSome buildings ask for ID at reception, so it is worth having it with you. If you will be driving, tell me and I will check visitor parking with the building beforehand.\n\nLooking forward to meeting you.\n\n{MyName}\n{Company}"
     },
     {
+      id: "s-m17", category: "Viewings", title: "Before viewing - known issue",
+      body:
+"Hi {Name}, before you see *{Property}*, I want to mention one thing: {Known issue}.\n\n{What it takes to fix}\n\nI'd rather you hear it from me first. Shall we go ahead with the viewing as planned?"
+    },
+    {
       id: "s-m07", category: "Viewings", title: "Viewing reminder - day of",
       body:
 "Hi {Name}, a quick reminder of your viewing today at *{Time}* ({Property}).\n\nI will meet you at the lobby. If you are running early or late, just send me a message and I will adjust on my side.\n\nSee you shortly,\n{MyName}"
@@ -218,12 +407,17 @@ window.ASCEND_STARTER = {
     {
       id: "s-m09", category: "Follow-up", title: "Gentle nudge - no reply (2-3 days)",
       body:
-"Hi {Name}, just a gentle follow-up on my earlier message. I know how busy things get.\n\nIf your plans have changed, no problem at all. And if you would still like to go ahead, tell me what would help most: a shortlist, a viewing, or a quick call?\n\n{MyName}"
+"Hi {Name}, just a gentle follow-up on my earlier message. I know how busy things get.\n\nIf your plans have changed, no problem at all. If you are still looking, I can send a short video of the property, or a few similar options. Which would you prefer?\n\n{MyName}"
     },
     {
       id: "s-m10", category: "Follow-up", title: "Check-in - 1 week later",
       body:
 "Hello {Name}, I hope you have had a good week.\n\nA few new properties have come up in {Area} since we last spoke, and one or two may suit your brief. Would you like me to send them across?\n\nIf your requirements have shifted, I am happy to adjust the search.\n\nKind regards,\n{MyName}\n{Company}"
+    },
+    {
+      id: "s-m18", category: "Follow-up", title: "Soft pause - after 5 to 7 follow-ups",
+      body:
+"Hi {Name}, I don't want to keep messaging if the timing isn't right.\n\nAre you still looking, or should I pause for now? Either is completely fine."
     },
     {
       id: "s-m11", category: "Follow-up", title: "New listing alert - past lead",
@@ -235,12 +429,12 @@ window.ASCEND_STARTER = {
     {
       id: "s-m12", category: "Landlords & Sellers", title: "Landlord / owner outreach",
       body:
-"Hello {Name}, I am {MyName} from {Company}, a boutique brokerage in Colombo.\n\nWe work with a select client base of expatriates, diplomats and high-net-worth individuals who are looking for premium homes, and I believe your property at *{Property}* could be a strong match for some of them.\n\nWould you be open to a short conversation about it? There is no obligation, and I would be happy to explain how we handle viewings and tenants discreetly.\n\nKind regards,\n{MyName}"
+"Hello {Name}, I am {MyName} from {Company}, a boutique brokerage in Colombo.\n\nWe work with expat, diplomat and local clients who are looking for quality homes, and I believe your property at *{Property}* could suit some of them.\n\nWould you be open to a short conversation about it? There is no obligation, and I would be happy to explain how we handle viewings and tenants, and keep your details private.\n\nKind regards,\n{MyName}"
     },
     {
       id: "s-m13", category: "Landlords & Sellers", title: "Listing proposal follow-up / mandate",
       body:
-"Hello {Name}, thank you for your time today. It was a pleasure to see *{Property}*.\n\nTo recap how we would market it:\n- Professional photography and a polished presentation\n- A curated list of qualified buyers or tenants from our own network\n- Discreet handling, with viewings by appointment only\n- Regular updates from me, so you always know where things stand\n\nOur proposed fee is {Fee}. I will send the mandate for your review, and I am glad to go through any part of it on a call.\n\nKind regards,\n{MyName}\n{Company}"
+"Hello {Name}, thank you for your time today. It was a pleasure to see *{Property}*.\n\nTo recap how we would market it:\n- Professional photography and a clear presentation\n- A short list of serious buyers or tenants from our own network\n- Private handling, with viewings by appointment only\n- Regular updates from me, so you always know where things stand\n\nOur proposed fee is {Fee}. I will send the agreement for your review, and I am glad to go through any part of it on a call.\n\nKind regards,\n{MyName}\n{Company}"
     },
     {
       id: "s-m14", category: "Landlords & Sellers", title: "Listing live update",
@@ -252,7 +446,7 @@ window.ASCEND_STARTER = {
     {
       id: "s-m15", category: "Closing", title: "Offer received / negotiation update",
       body:
-"Hi {Name}, an update on *{Property}*: we have received an offer of *{Offer}*.\n\nMy suggestion is that we review it together before responding. I will share my read on how serious the other party is, what is on the table beyond price, and where I see room to negotiate.\n\nWhen is a good time for a quick call today?\n\n{MyName}\n{Company}"
+"Hi {Name}, an update on *{Property}*: we have received an offer of *{Offer}*.\n\nMy suggestion is that we review it together before responding. I will share my view on how serious the other side is and what is on the table beyond price.\n\nI'll also tell you where I see room to negotiate. When is a good time for a quick call today?\n\n{MyName}\n{Company}"
     },
     {
       id: "s-m16", category: "Closing", title: "Deal closed - thank you + referral ask",
@@ -329,17 +523,17 @@ window.ASCEND_STARTER = {
     {
       id: "s-c3-14", category: "Col 3 House for Sale 175Mn", title: "14 · No reply after details",
       body:
-"Hi, just checking if you had a chance to look at the photos of the Colombo 3 house.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+"Hi {Name}, just checking if you had a chance to look at the photos of the Colombo 3 house.\n\nIf it's easier, I can do a live video call of the house so you can see every room.\n\nDoes it suit what you're looking for?"
     },
     {
       id: "s-c3-26", category: "Col 3 House for Sale 175Mn", title: "14b · Ask their requirements",
       body:
-"Hi, following up on the 4-bedroom house in Kollupitiya, Colombo 3.\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
+"Hi {Name}, following up on the 4-bedroom house in Kollupitiya, Colombo 3.\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
     },
     {
       id: "s-c3-15", category: "Col 3 House for Sale 175Mn", title: "15 · Last follow-up",
       body:
-"Hi, following up one last time on the Kollupitiya house. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar homes in Colombo?"
+"Hi {Name}, following up one last time on the Kollupitiya house. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar homes in Colombo?"
     },
     {
       id: "s-c3-16", category: "Col 3 House for Sale 175Mn", title: "Q · Where exactly is it?",
@@ -384,7 +578,7 @@ window.ASCEND_STARTER = {
     {
       id: "s-c3-24", category: "Col 3 House for Sale 175Mn", title: "Q · Agent with a buyer",
       body:
-"Thank you. May I ask a few quick things?\n\n1. Do you have a specific buyer for this house?\n2. Have they seen the price and photos?\n3. Will they attend the viewing?\n\nBefore arranging access, let's confirm our co-broking and commission terms."
+"Thank you. Do you have a specific buyer for this house, and have they seen the price and photos?\n\nBefore arranging access, we'll agree our co-broking and commission terms in writing. Is that okay with you?"
     },
     {
       id: "s-c3-25", category: "Col 3 House for Sale 175Mn", title: "Q · Offer / wants to meet owner",
@@ -475,19 +669,19 @@ window.ASCEND_STARTER = {
       "id": "s-c5-14",
       "category": "Col 5 Siripa Lane House",
       "title": "14 · No reply after details",
-      "body": "Hi, just checking if you had a chance to look at the Siripa Lane property in Colombo 5.\n\nDoes it suit what you're looking for? Happy to answer any questions."
+      "body": "Hi {Name}, just checking if you had a chance to look at the Siripa Lane property in Colombo 5.\n\nIf it's easier, I can do a live video call of the property so you can see it properly.\n\nDoes it suit what you're looking for?"
     },
     {
       "id": "s-c5-31",
       "category": "Col 5 Siripa Lane House",
       "title": "14b · Ask their requirements",
-      "body": "Hi, following up on the house on Siripa Lane, Colombo 5.\n\nIf it isn't quite what you need, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Land size or number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
+      "body": "Hi {Name}, following up on the house on Siripa Lane, Colombo 5.\n\nIf it isn't quite what you need, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Land size or number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."
     },
     {
       "id": "s-c5-15",
       "category": "Col 5 Siripa Lane House",
       "title": "15 · Last follow-up",
-      "body": "Hi, following up one last time on the Siripa Lane property. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar properties in Colombo?"
+      "body": "Hi {Name}, following up one last time on the Siripa Lane property. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar properties in Colombo?"
     },
     {
       "id": "s-c5-16",
@@ -523,7 +717,7 @@ window.ASCEND_STARTER = {
       "id": "s-c5-21",
       "category": "Col 5 Siripa Lane House",
       "title": "Q · Low offer (land value only)",
-      "body": "Thank you, {Name}. I'm happy to present any written offer to the owner.\n\nJust to note, this is a house with a garden on 32 perches, not bare land, so it's worth seeing before you decide on a figure. Would you like to arrange a viewing first?"
+      "body": "Thank you, {Name}. I'm happy to present any written offer to the owner.\n\nJust to note, this is a house with a garden on 32 perches, not bare land. It's worth seeing before you decide on a figure. Would you like to arrange a viewing first?"
     },
     {
       "id": "s-c5-22",
@@ -535,7 +729,7 @@ window.ASCEND_STARTER = {
       "id": "s-c5-23",
       "category": "Col 5 Siripa Lane House",
       "title": "Q · Can I build / develop?",
-      "body": "I can't confirm zoning or development approvals yet, so I don't want to promise anything on that.\n\nMay I ask what you have in mind? I'll check with the owner what documents are available, such as the deed and survey plan, so you can do your own checks."
+      "body": "I can't confirm yet what can be built there or which approvals are in place, so I don't want to promise anything on that.\n\nMay I ask what you have in mind? I'll check with the owner what documents are available, such as the deed and survey plan, so you can do your own checks."
     },
     {
       "id": "s-c5-24",
@@ -571,7 +765,7 @@ window.ASCEND_STARTER = {
       "id": "s-c5-29",
       "category": "Col 5 Siripa Lane House",
       "title": "Q · Agent with a buyer",
-      "body": "Thank you. May I ask a few quick things?\n\n1. Do you have a specific buyer for this property?\n2. Have they seen the details and photo?\n3. Will they attend the viewing?\n\nBefore arranging access, let's confirm our co-broking and commission terms."
+      "body": "Thank you. Do you have a specific buyer for this property, and have they seen the details and photo?\n\nBefore arranging access, we'll agree our co-broking and commission terms in writing. Is that okay with you?"
     },
     {
       "id": "s-c5-30",
@@ -585,7 +779,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-01",
       "category": "Owner Selling (House/Apt)",
       "title": "1 · Reply to owner enquiry",
-      "body": "Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you sell your property. To guide you properly, may I ask a few quick things?\n\n• Is it a house or an apartment, and where is it?\n• Roughly how soon would you like to sell?"
+      "body": "Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you sell your property. To guide you properly, I'd like to ask two quick things:\n\n• Is it a house or an apartment, and where is it?\n• Roughly how soon would you like to sell?"
     },
     {
       "id": "s-sl-02",
@@ -597,7 +791,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-03",
       "category": "Owner Selling (House/Apt)",
       "title": "3 · Follow-up (no reply)",
-      "body": "Hi {Name}, I wrote a couple of days ago about your {Property}. I know messages can get buried.\n\nIs it still available? If you would rather handle it yourself, I completely understand and will leave it with you."
+      "body": "Hi {Name}, I wrote a couple of days ago about your {Property}. I know messages can get buried.\n\nIf it would help, I can send you a few recent sale prices for similar properties in {Area}. Is it still available?\n\nIf you would rather handle it yourself, I completely understand and will leave it with you."
     },
     {
       "id": "s-sl-04",
@@ -627,7 +821,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-08",
       "category": "Owner Selling (House/Apt)",
       "title": "8 · Past experience",
-      "body": "Has the property been listed before, with an agent or on your own? What happened?\n\nAnd if you could change one thing about how it was handled, what would it be? That tells me what to get right for you. If this is your first time selling it, simply say so and we'll start fresh."
+      "body": "Has the property been listed before, with an agent or on your own, and how did it go?\n\nIf this is your first time selling it, simply say so and we'll start fresh."
     },
     {
       "id": "s-sl-09",
@@ -645,7 +839,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-11",
       "category": "Owner Selling (House/Apt)",
       "title": "11 · Proposal after visit",
-      "body": "Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n• Suggested asking price: {Price}, with my reasoning for us to discuss\n• Professional photos and video\n• One consistent listing, so the property is presented clearly\n• Buyers qualified before viewings (budget, funding, timeline)\n• Viewings handled by us\n• Negotiation and paperwork support\n• Regular updates\n\nTerms: {Fee terms}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
+      "body": "Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n• Suggested asking price: {Price}, with my reasoning for us to discuss\n• Professional photos and video\n• One consistent listing, so the property is presented clearly\n• Buyers checked before viewings (budget, funding, timeline)\n• Viewings handled by us\n• Negotiation and paperwork support\n• Regular updates\n\nTerms: {Fee terms}\n\nShall we go ahead?\n\n{MyName}\n{Company}"
     },
     {
       "id": "s-sl-12",
@@ -663,7 +857,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-14",
       "category": "Owner Selling (House/Apt)",
       "title": "14 · Listing is live",
-      "body": "Hi {Name}, your {Property} is now live: {Link}\n\nFrom here, we respond to every enquiry, check the buyer's position, and only then arrange a viewing, so you are not disturbed unnecessarily. I will send you an update every week, and sooner if anything important comes in.\n\nDoes everything in the listing look right to you?"
+      "body": "Hi {Name}, your {Property} is now live: {Link}\n\nFrom here, we respond to every enquiry, check that the buyer is serious, and only then arrange a viewing, so you are not disturbed unnecessarily. I will send you an update every week, and sooner if anything important comes in.\n\nDoes everything in the listing look right to you?"
     },
     {
       "id": "s-sl-15",
@@ -723,7 +917,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-24",
       "category": "Owner Selling (House/Apt)",
       "title": "Q · I've given it to many agents",
-      "body": "Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, buyers can see it at different prices in different places, and that often makes them doubt it and negotiate harder.\n\nOne well-managed listing with one price can look stronger. Would you consider that with us for an agreed period?"
+      "body": "Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, buyers can see it at different prices in different places. That often makes them doubt it and negotiate harder.\n\nOne well-managed listing with one price can look stronger. Would you consider that with us for an agreed period?"
     },
     {
       "id": "s-sl-25",
@@ -741,7 +935,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-27",
       "category": "Owner Selling (House/Apt)",
       "title": "Q · Just send me buyers",
-      "body": "Happy to introduce buyers. We qualify them first, and we agree basic terms with you so that both sides are protected.\n\nA simple written agreement is enough. Shall I send one over for you to review?"
+      "body": "Happy to introduce buyers. We check them first, and we agree basic terms with you so that both sides are protected.\n\nA simple written agreement is enough. Shall I send one over for you to review?"
     },
     {
       "id": "s-sl-28",
@@ -753,7 +947,7 @@ window.ASCEND_STARTER = {
       "id": "s-sl-29",
       "category": "Owner Selling (House/Apt)",
       "title": "Q · Not in a hurry / testing the market",
-      "body": "That's perfectly fine, there is no need to rush. If the right offer came along, what price would make you decide to move now?\n\nOne option is a quiet, discreet listing, shared only with buyers we already know, so the property is not over-exposed. Would that suit you?"
+      "body": "That's perfectly fine, there is no need to rush. If the right offer came along, what price would make you decide to move now?\n\nOne option is a quiet listing, shared only with buyers we already know, so the property is not shown everywhere. Would that suit you?"
     },
     {
       "id": "s-sl-30",
@@ -765,7 +959,7 @@ window.ASCEND_STARTER = {
       "id": "s-ll-01",
       "category": "Landlord Renting (House/Apt)",
       "title": "1 · Reply to landlord enquiry",
-      "body": "Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you rent your property. May I ask a couple of quick things?\n\n• Is it a house or an apartment, and where is it?\n• When will it be available?"
+      "body": "Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you rent your property. I'd like to ask two quick things:\n\n• Is it a house or an apartment, and where is it?\n• When will it be available?"
     },
     {
       "id": "s-ll-02",
@@ -777,7 +971,7 @@ window.ASCEND_STARTER = {
       "id": "s-ll-03",
       "category": "Landlord Renting (House/Apt)",
       "title": "3 · Follow-up (no reply)",
-      "body": "Hi {Name}, I wrote a few days ago about your {Property}. Is it still available for rent?\n\nIf you have already found a tenant, congratulations, and I will leave it with you."
+      "body": "Hi {Name}, I wrote a few days ago about your {Property}. If it helps, I can send you the current rents for similar homes in {Area}.\n\nIs it still available for rent? If you have already found a tenant, congratulations, and I will leave it with you."
     },
     {
       "id": "s-ll-04",
@@ -801,7 +995,7 @@ window.ASCEND_STARTER = {
       "id": "s-ll-07",
       "category": "Landlord Renting (House/Apt)",
       "title": "7 · Vacancy cost",
-      "body": "May I ask how long the property has been vacant, or when your last tenant left?\n\nEvery empty month is a month of rent not earned, so it helps to know what matters more to you right now: letting it quickly, or holding out for the highest rent?"
+      "body": "May I ask how long the property has been vacant, or when your last tenant left?\n\nAnd what matters more to you right now: letting it quickly, or holding out for the highest rent?"
     },
     {
       "id": "s-ll-08",
@@ -989,13 +1183,13 @@ window.ASCEND_STARTER = {
       "id": "s-ma-10",
       "category": "Meta Ad - House Owners",
       "title": "10 · No reply (next day)",
-      "body": "Hi, just following up on your message about selling your house.\n\nWhich area is it in? I'm happy to guide you, with no obligation."
+      "body": "Hi, just following up on your message about selling your house.\n\nIf it helps, I can explain how we check every buyer before a viewing, so your house is not shown to just anyone.\n\nWhich area is it in? I'm happy to guide you, with no obligation."
     },
     {
       "id": "s-ma-11",
       "category": "Meta Ad - House Owners",
       "title": "11 · No reply (3 days)",
-      "body": "Hi, I know selling a house is a big decision, and there's no rush.\n\nMay I ask roughly when you're thinking of selling? Even a rough idea helps."
+      "body": "Hi, I know selling a house is a big decision, and there's no rush.\n\nI keep every owner's details private, and I'll tell you honestly if we are a good fit.\n\nMay I ask roughly when you're thinking of selling? Even a rough idea helps."
     },
     {
       "id": "s-ma-12",
@@ -1067,7 +1261,7 @@ window.ASCEND_STARTER = {
       "id": "s-ma-23",
       "category": "Meta Ad - House Owners",
       "title": "Q · Outside our areas",
-      "body": "Hi, thank you so much for reaching out, I really appreciate it.\n\nTo be honest with you, I mainly work with properties in Colombo and the nearby suburbs, so your area is a bit outside what I know well. I wouldn't want to take on your house and not do it justice.\n\nWhat I'd suggest is having a look on ikman, LankaPropertyWeb and Facebook to see which agents are most active in your area. The good local agents usually already have buyers looking there, and they know how to market homes in that area better than most. I think you'd have a much better chance with one of them.\n\nReally wish you all the best with the sale. And if you ever need anything in Colombo, I'm always happy to help."
+      "body": "Hi, thank you so much for reaching out, I really appreciate it.\n\nTo be honest with you, I mainly work with properties in Colombo and the nearby suburbs. Your area is a bit outside what I know well. I wouldn't want to take on your house and not do it justice.\n\nWhat I'd suggest is having a look on ikman, LankaPropertyWeb and Facebook to see which agents are most active in your area.\n\nThe good local agents usually already have buyers looking there, and they know how to market homes in that area better than most.\n\nReally wish you all the best with the sale. And if you ever need anything in Colombo, I'm always happy to help."
     },
     {
       "id": "s-ma-24",
@@ -1243,7 +1437,7 @@ window.ASCEND_STARTER = {
       "id": "s-cl-24",
       "category": "Col 5 Land Requirement",
       "title": "Q · Is the buyer genuine?",
-      "body": "Fair question. I only bring a buyer for a viewing once I've confirmed their budget and timeline.\n\nI don't want to waste your time either."
+      "body": "Fair question. I only bring a buyer for a viewing once I've confirmed their budget and timeline.\n\nI don't want to waste your time either.\n\nCould you share the location and land size, so I can check if it's a match?"
     },
     {
       "id": "s-cl-39",
@@ -1261,7 +1455,7 @@ window.ASCEND_STARTER = {
       "id": "s-cl-26",
       "category": "Col 5 Land Requirement",
       "title": "Q · Just want to know the value",
-      "body": "I'd rather not guess a value over message. If you share the location and extent, I can tell you if my buyer would be interested.\n\nThat's often the best indication."
+      "body": "I'd rather not guess a value over message. If you share the location and extent, I can tell you if my buyer would be interested.\n\nCould you share them?"
     },
     {
       "id": "s-cl-27",
@@ -1297,7 +1491,7 @@ window.ASCEND_STARTER = {
       "id": "s-cl-32",
       "category": "Col 5 Land Requirement",
       "title": "F1 · No reply (next day)",
-      "body": "Hi, following up on your message about the Colombo 5 property.\n\nCould you share the location and land extent when you have a moment?"
+      "body": "Hi, following up on your message about the Colombo 5 property.\n\nCould you share the location and land extent when you have a moment?\n\nIf typing is a hassle, a quick 10-minute call works too."
     },
     {
       "id": "s-cl-33",
@@ -1370,32 +1564,32 @@ window.ASCEND_STARTER = {
         },
         {
           id: "s-f-landlord-2", title: "Understand the property",
-          say: "Tell me about the property: where it is, the size, the condition, and whether it is furnished.\n\nHave there been any recent upgrades or issues I should know about?",
+          say: "Tell me about the property: where it is, the size, the condition, and whether it is furnished.\n\nHave there been any recent upgrades or issues I should know about?\n\nIs it vacant at the moment, or is there a tenant in place?",
           notes: "Note unit type, bedrooms, floor, view, parking, building amenities, condition. Ask about the building and management. Be curious, not evaluative."
         },
         {
           id: "s-f-landlord-3", title: "Their goals",
-          say: "What are you hoping to achieve?\n\nDo you have a price in mind, and a timeline? Is it vacant at the moment, or is there a tenant in place?",
+          say: "What are you hoping to achieve?\n\nDo you have a price in mind, and a timeline?",
           notes: "Listen for motivation: urgent, or testing the market? Note notice periods, co-owners and any title or paperwork questions. Refer legal questions to their lawyer."
         },
         {
           id: "s-f-landlord-4", title: "Credibility",
-          say: "Let me tell you how we work. {Company} focuses on a small number of premium properties, and we work with expatriates, diplomats and high-net-worth clients.\n\nWe market discreetly: professional photography, a curated list of qualified clients, and viewings only by appointment.",
+          say: "Let me tell you how we work. {Company} focuses on a small number of quality homes, and we work with expats, diplomats and families from Sri Lanka and overseas.\n\nWe market your property privately: professional photography, a short list of serious buyers or tenants I have checked, and viewings only by appointment.",
           notes: "Be specific, not boastful. Mention only real past work and never quote numbers you cannot back up. Offer to share references if they ask."
         },
         {
           id: "s-f-landlord-5", title: "Pricing conversation",
-          say: "Here is how I would approach pricing. We look at comparable properties, both current and recently completed, and position yours on its merits.\n\nI will not promise a number I cannot support. I'd rather agree a realistic range with you and adjust with real feedback from the market. How does that sit with you?",
+          say: "Here is how I would approach pricing. We look at similar properties, both for sale now and recently sold, and price yours fairly.\n\nI will not promise a number I cannot support. I'd rather agree a realistic range with you and adjust with real feedback from the market. How does that sit with you?",
           notes: "Anchor on comparables, not hopes. Avoid overpromising to win the listing. If their expectation is far off, ask what they are basing it on before disagreeing."
         },
         {
           id: "s-f-landlord-6", title: "Ask for the mandate / next step",
-          say: "The next step I'd suggest is a visit to see the property and arrange the photography.\n\nIf you are comfortable, we can formalise our arrangement then. Would [day] or [day] suit you?",
+          say: "The next step I'd suggest is a visit to see the property and arrange the photography.\n\nIf you are comfortable, we can put our agreement in writing then. Would [day] or [day] suit you?",
           notes: "Ask plainly for the mandate. Know your fee terms before the call. Offer two specific times rather than an open question."
         },
         {
           id: "s-f-landlord-7", title: "Close & confirm",
-          say: "Thank you for your time. To confirm: I'll visit on [date and time], bring a short proposal and the mandate for you to review, and send a summary on WhatsApp today.\n\nIs there anything else I should know before then?",
+          say: "Thank you for your time. To confirm: I'll visit on [date and time], bring a short proposal and the agreement for you to review, and send a summary on WhatsApp today.\n\nIs there anything else I should know before then?",
           notes: "Repeat the plan back. Send the WhatsApp recap within the hour. Note any follow-ups you promised."
         }
       ]
@@ -1501,7 +1695,7 @@ window.ASCEND_STARTER = {
         {
           "id": "s-f-sell-2",
           "title": "Situation",
-          "say": "Tell me a little about the property. Is it a house or an apartment, and how big is it? What condition is it in, and is it lived in or empty?",
+          "say": "Tell me a little about the property. Is it a house or an apartment, and how big is it?\n\nWhat condition is it in, and is it lived in or empty?",
           "notes": "Note bedrooms, land in perches or floor area, parking, renovations, furnished or not. If a tenant is living there, viewings need their cooperation. Do not talk price yet."
         },
         {
@@ -1525,7 +1719,7 @@ window.ASCEND_STARTER = {
         {
           "id": "s-f-sell-6",
           "title": "Past experience & decision makers",
-          "say": "Has the property been listed before, and how did that go? And is anyone else involved in the decision, such as co-owners or family abroad?",
+          "say": "Has the property been listed before, and how did that go?\n\nIs anyone else involved in the decision, such as co-owners or family abroad?",
           "notes": "Past listings with many agents often explain a stale price. Never criticise another agent. Authority: everyone who must sign should hear the plan, so invite them to the visit or a video call."
         },
         {
@@ -1555,7 +1749,7 @@ window.ASCEND_STARTER = {
         {
           "id": "s-f-let-2",
           "title": "Property & availability",
-          "say": "Tell me about the property. Is it a house or an apartment, and where is it? How many bedrooms, and is it furnished? When will it be available?",
+          "say": "Tell me about the property. Is it a house or an apartment, and where is it?\n\nHow many bedrooms, and is it furnished? When will it be available?",
           "notes": "Note bedrooms, bathrooms, furnished level, parking, AC, backup power and water. Is it vacant now, or is a tenant leaving? Ask about the condition."
         },
         {
@@ -1579,7 +1773,7 @@ window.ASCEND_STARTER = {
         {
           "id": "s-f-let-6",
           "title": "Vacancy consequence & priority",
-          "say": "How long has it been vacant? Every empty month is a month of rent not earned, so what matters more to you right now: letting it quickly, or the highest rent?",
+          "say": "How long has it been vacant?\n\nWhat matters more to you right now: letting it quickly, or the highest rent?",
           "notes": "Their answer sets the strategy. Speed means flexible on rent and terms. Highest rent means patience and a better-presented property. Do not judge either choice."
         },
         {
@@ -1657,7 +1851,7 @@ window.ASCEND_STARTER = {
         {
           "id": "s-f-cl-1",
           "title": "Open",
-          "say": "Hi, this is Adnan from Ascend Properties. Thank you for your message about the property in Colombo 5. Is this a good time for about 10 minutes?",
+          "say": "Hi, this is {MyName} from {Company}. Thank you for your message about the property in Colombo 5. Is this a good time for about 10 minutes?",
           "notes": "If it's a bad time, agree a specific call-back time."
         },
         {
@@ -1709,7 +1903,7 @@ window.ASCEND_STARTER = {
   objections: [
     {
       id: "s-o01", category: "Fees", title: "Your fee is too high.",
-      answer: "I understand. It is an important number, and you should feel it is justified. The fee covers the full service: qualified clients, discreet handling, professional presentation, negotiation, and support right up to handover. I'd rather show you the value than argue about the figure. Which part of the fee feels out of line with what you expected?"
+      answer: "I understand. It is an important number, and you should feel it is justified. The fee covers the full service: buyers or tenants I have checked, private handling, professional presentation, negotiation, and support right up to handover. I'd rather show you the value than argue about the figure. Which part of the fee feels out of line with what you expected?"
     },
     {
       id: "s-o02", category: "Competition", title: "I'll just find it myself / deal directly with the owner.",
@@ -1721,11 +1915,11 @@ window.ASCEND_STARTER = {
     },
     {
       id: "s-o04", category: "Price", title: "The price is too high.",
-      answer: "That is fair, and thank you for being direct. Let us look at it properly: how does it compare with the other places you have seen, and what budget do you have in mind? There may be room to negotiate, or a similar option that suits you better. What would feel like the right level for this property?"
+      answer: "That is fair, and thank you for being direct. Let us look at it properly. There may be room to negotiate, or a similar option that suits you better. What would feel like the right level for this property?"
     },
     {
       id: "s-o05", category: "Stalling", title: "I need to think about it.",
-      answer: "Of course. It is a big decision and you should take your time. So that I can help in the right way, is there something specific you would like to think through, such as the price, the location or the timing? I am happy to send a short summary for you to review. When would you like me to check in?"
+      answer: "Of course. It is a big decision and you should take your time. So that I can help in the right way, tell me if there is something specific you would like to think through, such as the price, the location or the timing. I am happy to send a short summary for you to review. When would you like me to check in?"
     },
     {
       id: "s-o06", category: "Stalling", title: "Just send me the details on WhatsApp.",
@@ -1737,11 +1931,11 @@ window.ASCEND_STARTER = {
     },
     {
       id: "s-o08", category: "Sellers", title: "Why should I give you an exclusive?",
-      answer: "A fair question. With an exclusive, I can invest properly: professional photography, a curated buyer list, discreet handling, and one clear voice to the market, rather than your property being diluted across many agents. You also have one person accountable for results and updates. We can agree a sensible period and review it together. What would you need to see from me to feel confident?"
+      answer: "A fair question. If only we sell it, I can invest properly: professional photography, a list of serious buyers, private handling, and one clear voice to the market, rather than your property being spread across many agents. You also have one person accountable for results and updates. We can agree a sensible period and review it together. What would you need to see from me to feel confident?"
     },
     {
       id: "s-o09", category: "Sellers", title: "Another agent said they can get me a higher price.",
-      answer: "They may be right, and I would never want to talk you out of ambition. What matters is a price that buyers will actually pay, supported by comparable properties. I will show you the comparables and my reasoning, and you can judge for yourself. Did they share how they arrived at that number?"
+      answer: "They may be right, and I would never want to talk you out of ambition. What matters is a price that buyers will actually pay, supported by similar properties that have sold. I will show you those sales and my reasoning, and you can judge for yourself. Did they share how they arrived at that number?"
     },
     {
       id: "s-o10", category: "Price", title: "Can you get the owner to reduce the price?",
@@ -1769,7 +1963,7 @@ window.ASCEND_STARTER = {
       "id": "s-os-04",
       "category": "Sellers",
       "title": "Why does it have to be exclusive?",
-      "answer": "Because it lets us put our full effort and spend behind one clear listing, with one price and one standard of presentation. You also know exactly who is accountable. We agree the period together, and you can end it if we don't perform. Does that seem fair to you?"
+      "answer": "That's a fair question. It lets us put our full effort and spend behind one clear listing, with one price and one standard of presentation. You also know exactly who is accountable. We agree the period together, and you can end it if we don't perform. Does that seem fair to you?"
     },
     {
       "id": "s-os-05",
@@ -1781,7 +1975,7 @@ window.ASCEND_STARTER = {
       "id": "s-os-06",
       "category": "Sellers",
       "title": "I need to talk to my family first.",
-      "answer": "Of course, a decision like this should involve everyone. Would a short call with all the decision makers help? I can explain how we would work once and answer everyone's questions. When would suit you all?"
+      "answer": "Of course, a decision like this should involve everyone. I can explain how we would work once and answer everyone's questions. When would suit you all for a short call?"
     },
     {
       "id": "s-ol-01",

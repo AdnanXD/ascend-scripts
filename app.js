@@ -3,7 +3,7 @@
   'use strict';
 
   var KEY = 'ascendScripts.v1';
-  var VERSION = '1.1.1';
+  var VERSION = '1.2.1';
   var AUTO = { MyName: 1, Company: 1 };
   var FIELD_RE = /\{([^{}\n]{1,30})\}/g;
 
@@ -188,33 +188,118 @@
       "s-cl-21": ["Thanks for sending these. Could you confirm the exact location and the land extent?\n\nThat's what my buyer looks at first."],
       "s-cl-22": ["The buyer has a realistic budget for this size of land in Colombo 5.\n\nIt would help to hear the owner's expectation first, so I can tell you honestly whether it's a match."],
       "s-cl-23": ["A private buyer. They've asked me to keep their details confidential at this stage, as I would for you.\n\nOnce there's a clear fit, we'd arrange for both sides to meet."],
-      "s-cl-24": ["Fair question. I only bring a buyer to a viewing once I've confirmed their budget and timeline.\n\nI'd rather not waste the owner's time either."],
+      "s-cl-24": ["Fair question. I only bring a buyer to a viewing once I've confirmed their budget and timeline.\n\nI'd rather not waste the owner's time either.", "Fair question. I only bring a buyer for a viewing once I've confirmed their budget and timeline.\n\nI don't want to waste your time either."],
       "s-cl-25": ["That's completely fine. Many owners like to understand their options first.\n\nIf the right buyer came along at a fair price, would the family consider it?"],
-      "s-cl-26": ["Understandable. I'd rather not guess a value from a message.\n\nIf you share the extent and location, I can tell you whether my buyer would be interested, which is often the most useful indication."],
+      "s-cl-26": ["Understandable. I'd rather not guess a value from a message.\n\nIf you share the extent and location, I can tell you whether my buyer would be interested, which is often the most useful indication.", "I'd rather not guess a value over message. If you share the location and extent, I can tell you if my buyer would be interested.\n\nThat's often the best indication."],
       "s-cl-27": ["Of course, take your time.\n\nWould it help if I spoke with everyone together on a short call? I'm happy to answer any questions."],
       "s-cl-28": ["That's understandable. I'm acting for the buyer, and any terms would be agreed clearly in writing before a viewing, so there are no surprises.\n\nWould you be open to sharing the basic details?"],
       "s-cl-29": ["Thank you for sharing this. My buyer is specifically looking for 20 to 30 perches, so this one isn't a match right now.\n\nI'll keep your details, and if a suitable requirement comes up, I'll get in touch with you first."],
       "s-cl-30": ["Thank you for reaching out. This requirement is specifically for Colombo 5, so this one isn't a fit right now.\n\nI'll keep your details on file and let you know if something suitable comes up."],
       "s-cl-31": ["Thank you for being clear on the price. It's above what my buyer is working with at the moment.\n\nIf the owner's position changes, I'd be glad to revisit it."],
-      "s-cl-32": ["Hi, just following up on your message about the property in Colombo 5.\n\nCould you share the location and land extent when convenient?"],
+      "s-cl-32": ["Hi, just following up on your message about the property in Colombo 5.\n\nCould you share the location and land extent when convenient?", "Hi, following up on your message about the Colombo 5 property.\n\nCould you share the location and land extent when you have a moment?"],
       "s-cl-33": ["Hi, my buyer is still looking in Colombo 5. If the property is available, I'd be glad to take a look.\n\nIs it still for sale?"],
       "s-cl-34": ["Hi, following up one last time. If now isn't the right time, that's completely fine.\n\nShall I keep your details and check back in a few weeks?"],
       "s-cl-35": ["Hi, hope you're well. I'm still working with buyers looking in Colombo 5.\n\nIf you're considering selling at any point, I'd be glad to help."],
-      "s-ma-23": ["Thank you for reaching out, {Name}, and for considering us.\n\nI specialise in properties in Colombo and the nearby suburbs, so a house in {Area} is outside my area of expertise. I'd rather be honest with you than keep you waiting.\n\nMy suggestion: look on ikman.lk, LankaPropertyWeb and Facebook to see which agents are most active in {Area}, and reach out to the strongest ones. A good local agent will already know the buyers there and how best to market your house, which gives you the best chance of a good sale.\n\nI truly wish you all the best with the sale.", "Thank you for reaching out, {Name}, and for considering us.\n\nAt the moment we focus on Colombo 3 to 7, Nawala, Rajagiriya and Battaramulla, so we wouldn't be the right fit for a house in {Area}. I'd rather be honest with you than keep you waiting.\n\nIf you ever have a property in these areas, or know someone who does, I'd be glad to help."],
+      "s-ma-23": ["Hi, thank you so much for reaching out, I really appreciate it.\n\nTo be honest with you, I mainly work with properties in Colombo and the nearby suburbs, so your area is a bit outside what I know well. I wouldn't want to take on your house and not do it justice.\n\nWhat I'd suggest is having a look on ikman, LankaPropertyWeb and Facebook to see which agents are most active in your area.\n\nThe good local agents usually already have buyers looking there, and they know how to market homes in that area better than most.\n\nReally wish you all the best with the sale. And if you ever need anything in Colombo, I'm always happy to help.", "Thank you for reaching out, {Name}, and for considering us.\n\nI specialise in properties in Colombo and the nearby suburbs, so a house in {Area} is outside my area of expertise. I'd rather be honest with you than keep you waiting.\n\nMy suggestion: look on ikman.lk, LankaPropertyWeb and Facebook to see which agents are most active in {Area}, and reach out to the strongest ones. A good local agent will already know the buyers there and how best to market your house, which gives you the best chance of a good sale.\n\nI truly wish you all the best with the sale.", "Thank you for reaching out, {Name}, and for considering us.\n\nAt the moment we focus on Colombo 3 to 7, Nawala, Rajagiriya and Battaramulla, so we wouldn't be the right fit for a house in {Area}. I'd rather be honest with you than keep you waiting.\n\nIf you ever have a property in these areas, or know someone who does, I'd be glad to help.", "Hi, thank you so much for reaching out, I really appreciate it.\n\nTo be honest with you, I mainly work with properties in Colombo and the nearby suburbs, so your area is a bit outside what I know well. I wouldn't want to take on your house and not do it justice.\n\nWhat I'd suggest is having a look on ikman, LankaPropertyWeb and Facebook to see which agents are most active in your area. The good local agents usually already have buyers looking there, and they know how to market homes in that area better than most. I think you'd have a much better chance with one of them.\n\nReally wish you all the best with the sale. And if you ever need anything in Colombo, I'm always happy to help.", "Hi, thank you so much for reaching out, I really appreciate it.\n\nTo be honest with you, I mainly work with properties in Colombo and the nearby suburbs, so your area is a bit outside what I know well. I wouldn't want to take on your house and not do it justice.\n\nWhat I'd suggest is having a look on ikman, LankaPropertyWeb and Facebook to see which agents are most active in your area.\n\nThe good local agents usually already have buyers looking there, and they know how to market homes in that area better than most. I think you'd have a much better chance with one of them.\n\nReally wish you all the best with the sale. And if you ever need anything in Colombo, I'm always happy to help."],
       "s-ma-25": ["Thank you, {Name}. To match your house with the right buyers, could you share a few details?\n\n• Location (area and road)\n• Land size (perches)\n• Number of floors\n• Bedrooms and bathrooms\n• Parking\n• Condition (any recent renovation)\n• Price you have in mind\n• When you'd like to sell\n\nA few photos and the location pin would also help. Short answers or a voice note are fine."],
       "s-ma-01": ["Thank you, {Name}. That's helpful.\n\nTo see which of our buyers it could suit, may I ask a few quick things?\n\n• Land size (perches)\n• Number of bedrooms and floors\n• When you'd like to sell\n\nA short call may be easier. Would 10 minutes today or tomorrow suit you?"],
-      "s-sl-11": ["Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n\u2022 Suggested asking price: {Price}, with my reasoning for us to discuss\n\u2022 Professional photos and video\n\u2022 One consistent listing, so the property is presented clearly\n\u2022 Buyers qualified before viewings (budget, funding, timeline)\n\u2022 Viewings handled by us\n\u2022 Negotiation and paperwork support\n\u2022 Regular updates\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"],
+      "s-sl-11": ["Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n\u2022 Suggested asking price: {Price}, with my reasoning for us to discuss\n\u2022 Professional photos and video\n\u2022 One consistent listing, so the property is presented clearly\n\u2022 Buyers qualified before viewings (budget, funding, timeline)\n\u2022 Viewings handled by us\n\u2022 Negotiation and paperwork support\n\u2022 Regular updates\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}", "Thank you for your time, {Name}. Here is the plan I suggest for the {Property}:\n\n• Suggested asking price: {Price}, with my reasoning for us to discuss\n• Professional photos and video\n• One consistent listing, so the property is presented clearly\n• Buyers qualified before viewings (budget, funding, timeline)\n• Viewings handled by us\n• Negotiation and paperwork support\n• Regular updates\n\nTerms: {Fee terms}\n\nShall we go ahead?\n\n{MyName}\n{Company}"],
       "s-ll-10": ["Thank you for your time, {Name}. Here is the plan I suggest for renting the {Property}:\n\n\u2022 Suggested rent: {Rent}, with my reasoning for us to discuss\n\u2022 Proper photos and a clear listing\n\u2022 Tenants screened first: employer, references and ability to pay the advance\n\u2022 Viewings handled by us\n\u2022 Lease agreement support\n\u2022 Inventory and handover\n\nTerms: {Fee terms}\n{Recent result}\n\nShall we go ahead?\n\n{MyName}\n{Company}"],
       "s-sl-04": ["Thank you, {Name}. So I can understand the property properly, may I ask a few things?\n\n\u2022 How many bedrooms and bathrooms does it have?\n\u2022 What is the land size in perches (for a house), or the floor area (for an apartment)?\n\u2022 Is there parking, and what condition is it in? Has anything been renovated recently?\n\u2022 Is it furnished, and is it occupied or vacant?\n\nShort answers or a voice note are fine."],
       "s-ll-15": ["Hi {Name}, we have found a tenant for the {Property}, and I would like your approval.\n\n*Tenant:* {Tenant profile}\n*Rent:* {Rent}\n*Advance:* {Advance}\n*Lease:* {Lease term}\n*Move-in:* {Move-in date}\n\nMy view: this looks like a sound match for the property, and I am comfortable recommending it.\n\nShall I proceed?"],
       's-c3-03': ["These are the photos of the living and dining area, bedrooms, courtyard, balconies, bathrooms, parking and outside of the house.\n\nMay I ask, are you looking for yourself or your family, or for a client?"],
-      's-rc-01': ["Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for your interest in the 40,000 sqft commercial building in Rajagiriya.\n\nBefore I share the details, may I ask — are you enquiring directly, or are you an agent representing a client?"]
+      's-rc-01': ["Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for your interest in the 40,000 sqft commercial building in Rajagiriya.\n\nBefore I share the details, may I ask — are you enquiring directly, or are you an agent representing a client?"],
+      "s-rc-14": ["Hi, just checking if you had a chance to look at the details and photos of the Rajagiriya building.\n\nDoes it suit what you're looking for? Happy to answer any questions."],
+      "s-rc-15": ["Hi, following up one last time on the Rajagiriya commercial building. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar commercial spaces?"],
+      "s-rc-23": ["Thank you. May I ask a few quick things?\n\n1. What does your client's business do?\n2. How much space do they need?\n3. When do they plan to move in?\n\nBefore arranging a viewing, let's confirm our co-broking and commission terms."],
+      "s-c3-14": ["Hi, just checking if you had a chance to look at the photos of the Colombo 3 house.\n\nDoes it suit what you're looking for? Happy to answer any questions."],
+      "s-c3-26": ["Hi, following up on the 4-bedroom house in Kollupitiya, Colombo 3.\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."],
+      "s-c3-15": ["Hi, following up one last time on the Kollupitiya house. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar homes in Colombo?"],
+      "s-c3-24": ["Thank you. May I ask a few quick things?\n\n1. Do you have a specific buyer for this house?\n2. Have they seen the price and photos?\n3. Will they attend the viewing?\n\nBefore arranging access, let's confirm our co-broking and commission terms."],
+      "s-c5-14": ["Hi, just checking if you had a chance to look at the Siripa Lane property in Colombo 5.\n\nDoes it suit what you're looking for? Happy to answer any questions."],
+      "s-c5-31": ["Hi, following up on the house on Siripa Lane, Colombo 5.\n\nIf it isn't quite what you need, that's completely fine. May I ask what you're looking for?\n\n• Area\n• Budget\n• Land size or number of bedrooms\n• When you plan to buy\n\nShort answers are fine. I'll let you know when something suitable comes up."],
+      "s-c5-15": ["Hi, following up one last time on the Siripa Lane property. If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar properties in Colombo?"],
+      "s-c5-29": ["Thank you. May I ask a few quick things?\n\n1. Do you have a specific buyer for this property?\n2. Have they seen the details and photo?\n3. Will they attend the viewing?\n\nBefore arranging access, let's confirm our co-broking and commission terms."],
+      "s-m02": ["Hello {Name}, thank you for your interest in *{Property}*.\n\nI would be glad to walk you through it: the layout, the surroundings and the terms the owner is open to. Homes at this level are often handled discreetly, so I will share details with you directly.\n\nCould I ask whether you are buying for your own use or as an investment, and what timeline you have in mind? That helps me point you towards the right options.\n\nWarm regards,\n{MyName}\n{Company}"],
+      "s-m09": ["Hi {Name}, just a gentle follow-up on my earlier message. I know how busy things get.\n\nIf your plans have changed, no problem at all. And if you would still like to go ahead, tell me what would help most: a shortlist, a viewing, or a quick call?\n\n{MyName}"],
+      "s-m12": ["Hello {Name}, I am {MyName} from {Company}, a boutique brokerage in Colombo.\n\nWe work with a select client base of expatriates, diplomats and high-net-worth individuals who are looking for premium homes, and I believe your property at *{Property}* could be a strong match for some of them.\n\nWould you be open to a short conversation about it? There is no obligation, and I would be happy to explain how we handle viewings and tenants discreetly.\n\nKind regards,\n{MyName}"],
+      "s-m13": ["Hello {Name}, thank you for your time today. It was a pleasure to see *{Property}*.\n\nTo recap how we would market it:\n- Professional photography and a polished presentation\n- A curated list of qualified buyers or tenants from our own network\n- Discreet handling, with viewings by appointment only\n- Regular updates from me, so you always know where things stand\n\nOur proposed fee is {Fee}. I will send the mandate for your review, and I am glad to go through any part of it on a call.\n\nKind regards,\n{MyName}\n{Company}"],
+      "s-sl-03": ["Hi {Name}, I wrote a couple of days ago about your {Property}. I know messages can get buried.\n\nIs it still available? If you would rather handle it yourself, I completely understand and will leave it with you."],
+      "s-sl-14": ["Hi {Name}, your {Property} is now live: {Link}\n\nFrom here, we respond to every enquiry, check the buyer's position, and only then arrange a viewing, so you are not disturbed unnecessarily. I will send you an update every week, and sooner if anything important comes in.\n\nDoes everything in the listing look right to you?"],
+      "s-sl-27": ["Happy to introduce buyers. We qualify them first, and we agree basic terms with you so that both sides are protected.\n\nA simple written agreement is enough. Shall I send one over for you to review?"],
+      "s-sl-29": ["That's perfectly fine, there is no need to rush. If the right offer came along, what price would make you decide to move now?\n\nOne option is a quiet, discreet listing, shared only with buyers we already know, so the property is not over-exposed. Would that suit you?"],
+      "s-ll-03": ["Hi {Name}, I wrote a few days ago about your {Property}. Is it still available for rent?\n\nIf you have already found a tenant, congratulations, and I will leave it with you."],
+      "s-ma-10": ["Hi, just following up on your message about selling your house.\n\nWhich area is it in? I'm happy to guide you, with no obligation."],
+      "s-ma-11": ["Hi, I know selling a house is a big decision, and there's no rush.\n\nMay I ask roughly when you're thinking of selling? Even a rough idea helps."],
+      "s-c5-23": ["I can't confirm zoning or development approvals yet, so I don't want to promise anything on that.\n\nMay I ask what you have in mind? I'll check with the owner what documents are available, such as the deed and survey plan, so you can do your own checks."],
+      "s-rc-17": ["The asking rent is approximately LKR 300 per sqft per month plus taxes, which comes to around LKR 11 Mn plus taxes for the full building.\n\nIf you've seen the building and would like to discuss terms, I'm happy to present your proposal to the owner."],
+      "s-rc-25": ["The standard lease details, including duration, deposit and advance terms, would be discussed directly with the owner once you've seen the building and confirmed your interest.\n\nWould you like to arrange a viewing first?"],
+      "s-m15": ["Hi {Name}, an update on *{Property}*: we have received an offer of *{Offer}*.\n\nMy suggestion is that we review it together before responding. I will share my read on how serious the other party is, what is on the table beyond price, and where I see room to negotiate.\n\nWhen is a good time for a quick call today?\n\n{MyName}\n{Company}"],
+      "s-c5-21": ["Thank you, {Name}. I'm happy to present any written offer to the owner.\n\nJust to note, this is a house with a garden on 32 perches, not bare land, so it's worth seeing before you decide on a figure. Would you like to arrange a viewing first?"],
+      "s-sl-24": ["Thank you for telling me, and I'm not criticising anyone. When a property is with many agents, buyers can see it at different prices in different places, and that often makes them doubt it and negotiate harder.\n\nOne well-managed listing with one price can look stronger. Would you consider that with us for an agreed period?"],
+      "s-ll-07": ["May I ask how long the property has been vacant, or when your last tenant left?\n\nEvery empty month is a month of rent not earned, so it helps to know what matters more to you right now: letting it quickly, or holding out for the highest rent?"],
+      "s-sl-01": ["Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you sell your property. To guide you properly, may I ask a few quick things?\n\n• Is it a house or an apartment, and where is it?\n• Roughly how soon would you like to sell?"],
+      "s-ll-01": ["Hi {Name}, thank you for reaching out. This is {MyName} from {Company}.\n\nI'd be glad to help you rent your property. May I ask a couple of quick things?\n\n• Is it a house or an apartment, and where is it?\n• When will it be available?"],
+      "s-sl-08": ["Has the property been listed before, with an agent or on your own? What happened?\n\nAnd if you could change one thing about how it was handled, what would it be? That tells me what to get right for you. If this is your first time selling it, simply say so and we'll start fresh."],
+      "s-m01": ["Hello {Name}, thank you for your enquiry about *{Property}*.\n\nI'd be delighted to help. It is a lovely address, and I can share the layout, the building's amenities and current availability with you.\n\nSo that I can guide you properly, may I ask:\n- When would you ideally like to move in?\n- How many people will be living there?\n\nKind regards,\n{MyName}\n{Company}"]
     };
+    // Objection and call-step revisions work the same way: if the user's text is still an older shipped
+    // version (never edited), it is replaced with the current starter text.
+    //   OBJ_REVISIONS:        objection id -> [old answers]; replaces answer and title.
+    //   STEP_REVISIONS:       step id -> [old say texts]; replaces title, say and notes.
+    //   STEP_NOTES_REVISIONS: step id -> [old notes]; replaces notes only (say unchanged).
+    // Add the previous text here whenever a starter objection or step changes.
+    var TH = window.__ascendTest || {};
+    // test hook (only exists with ?test=1) can inject revisions; withTest() merges them over the shipped maps
+    function withTest(base, extra) { for (var k in extra) base[k] = extra[k]; return base; }
+    var OBJ_REVISIONS = withTest({
+      "s-o01": ["I understand. It is an important number, and you should feel it is justified. The fee covers the full service: qualified clients, discreet handling, professional presentation, negotiation, and support right up to handover. I'd rather show you the value than argue about the figure. Which part of the fee feels out of line with what you expected?"],
+      "s-o04": ["That is fair, and thank you for being direct. Let us look at it properly: how does it compare with the other places you have seen, and what budget do you have in mind? There may be room to negotiate, or a similar option that suits you better. What would feel like the right level for this property?"],
+      "s-o05": ["Of course. It is a big decision and you should take your time. So that I can help in the right way, is there something specific you would like to think through, such as the price, the location or the timing? I am happy to send a short summary for you to review. When would you like me to check in?"],
+      "s-o08": ["A fair question. With an exclusive, I can invest properly: professional photography, a curated buyer list, discreet handling, and one clear voice to the market, rather than your property being diluted across many agents. You also have one person accountable for results and updates. We can agree a sensible period and review it together. What would you need to see from me to feel confident?"],
+      "s-o09": ["They may be right, and I would never want to talk you out of ambition. What matters is a price that buyers will actually pay, supported by comparable properties. I will show you the comparables and my reasoning, and you can judge for yourself. Did they share how they arrived at that number?"],
+      "s-os-04": ["Because it lets us put our full effort and spend behind one clear listing, with one price and one standard of presentation. You also know exactly who is accountable. We agree the period together, and you can end it if we don't perform. Does that seem fair to you?"],
+      "s-os-06": ["Of course, a decision like this should involve everyone. Would a short call with all the decision makers help? I can explain how we would work once and answer everyone's questions. When would suit you all?"]
+    }, TH.obj);
+    var STEP_REVISIONS = withTest({
+      "s-f-landlord-2": ["Tell me about the property: where it is, the size, the condition, and whether it is furnished.\n\nHave there been any recent upgrades or issues I should know about?"],
+      "s-f-landlord-3": ["What are you hoping to achieve?\n\nDo you have a price in mind, and a timeline? Is it vacant at the moment, or is there a tenant in place?"],
+      "s-f-landlord-4": ["Let me tell you how we work. {Company} focuses on a small number of premium properties, and we work with expatriates, diplomats and high-net-worth clients.\n\nWe market discreetly: professional photography, a curated list of qualified clients, and viewings only by appointment."],
+      "s-f-landlord-5": ["Here is how I would approach pricing. We look at comparable properties, both current and recently completed, and position yours on its merits.\n\nI will not promise a number I cannot support. I'd rather agree a realistic range with you and adjust with real feedback from the market. How does that sit with you?"],
+      "s-f-landlord-6": ["The next step I'd suggest is a visit to see the property and arrange the photography.\n\nIf you are comfortable, we can formalise our arrangement then. Would [day] or [day] suit you?"],
+      "s-f-landlord-7": ["Thank you for your time. To confirm: I'll visit on [date and time], bring a short proposal and the mandate for you to review, and send a summary on WhatsApp today.\n\nIs there anything else I should know before then?"],
+      "s-f-sell-2": ["Tell me a little about the property. Is it a house or an apartment, and how big is it? What condition is it in, and is it lived in or empty?"],
+      "s-f-sell-6": ["Has the property been listed before, and how did that go? And is anyone else involved in the decision, such as co-owners or family abroad?"],
+      "s-f-let-2": ["Tell me about the property. Is it a house or an apartment, and where is it? How many bedrooms, and is it furnished? When will it be available?"],
+      "s-f-let-6": ["How long has it been vacant? Every empty month is a month of rent not earned, so what matters more to you right now: letting it quickly, or the highest rent?"],
+      "s-f-cl-1": ["Hi, this is Adnan from Ascend Properties. Thank you for your message about the property in Colombo 5. Is this a good time for about 10 minutes?"]
+    }, TH.step);
+    var STEP_NOTES_REVISIONS = TH.notes || {};
     S.messages.forEach(function (m) {
       var old = REVISIONS[m.id];
       if (!old || old.indexOf(m.body) < 0) return;
       var cur = st.messages.filter(function (x) { return x.id === m.id; })[0];
       if (cur) { m.body = cur.body; m.title = cur.title; m.updatedAt = Date.now(); }
+    });
+    S.objections.forEach(function (o) {
+      var old = OBJ_REVISIONS[o.id];
+      if (!old || old.indexOf(o.answer) < 0) return;
+      var cur = st.objections.filter(function (x) { return x.id === o.id; })[0];
+      if (cur) { o.answer = cur.answer; o.title = cur.title; }
+    });
+    function starterStep(id) {
+      for (var a = 0; a < st.flows.length; a++) {
+        for (var b = 0; b < st.flows[a].steps.length; b++) if (st.flows[a].steps[b].id === id) return st.flows[a].steps[b];
+      }
+      return null;
+    }
+    S.flows.forEach(function (f) {
+      f.steps.forEach(function (s) {
+        var cur = starterStep(s.id);
+        if (!cur) return;
+        if (STEP_REVISIONS[s.id] && STEP_REVISIONS[s.id].indexOf(s.say) >= 0) { s.title = cur.title; s.say = cur.say; s.notes = cur.notes; }
+        else if (STEP_NOTES_REVISIONS[s.id] && STEP_NOTES_REVISIONS[s.id].indexOf(s.notes) >= 0) s.notes = cur.notes;
+      });
     });
     // Starter messages removed from the app: drop them only if the user never edited them.
     var RETIRED = {
@@ -946,6 +1031,7 @@
     title.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); ta.focus(); } });
     // keep the textarea focused/selection intact when tapping helper chips
     sh.el.addEventListener('mousedown', function (e) { if (e.target.closest('.ins')) e.preventDefault(); });
+    sh.acts.rules = function () { openRules(); };
     sh.acts.cancel = function () { sh.close(); };
     sh.acts.bold = function () { wrapSel(ta, '*'); };
     sh.acts.ital = function () { wrapSel(ta, '_'); };
@@ -979,20 +1065,90 @@
   /* =====================================================================
      Create: menu, listing pack, paste, script checker
      ===================================================================== */
+  /* The Ascend script rules (agreed 15 Nov 2026). Shown in the Rules sheet; text is verbatim. */
+  var RULES = {
+    top: "The one rule above all: every message should make the client trust you a little more. If a line pushes harder but costs trust, cut it.",
+    groups: [
+      { id: "A", title: "Who you're writing for", rules: [
+        { n: 1, text: "Write for one real person: local family, local investor, diaspora, expat or diplomat, seller or landlord, or agent. Each cares about different things." },
+        { n: 2, text: "Speak to what they care about most. Families: schools, safety, space for parents. Investors: rent and price growth. Diaspora: a clean deed and someone they trust on the ground. Expats and diplomats: speed, security, clear lease terms. Sellers: price, safety, no hassle." },
+        { n: 3, text: "Sell the life, not the property. \"Close to the school\" beats \"2 km from amenities.\"" },
+        { n: 4, text: "Bring the family in early. Ask \"Who else will help you decide?\" before the viewing, not after." }
+      ] },
+      { id: "B", title: "Language", rules: [
+        { n: 5, text: "One idea per sentence. Short, common words. \"Buy\", not \"acquire\". \"Rent\", not \"rental income stream\". If a 16-year-old wouldn't get it on the first read, rewrite it." },
+        { n: 6, text: "No property jargon. \"Rental yield\" → \"the rent you get each year out of the price\". \"Encumbrance\" → \"any loan or claim on the property\". \"Due diligence\" → \"checking the deed is clean\". \"Exclusive mandate\" → \"only we sell it, for a set time\". \"Kindly revert\" → \"please reply\"." },
+        { n: 7, text: "Write numbers the way clients say them: \"LKR 175 Mn\" or \"6 crore\", and keep it consistent within a set." },
+        { n: 8, text: "Match their tone. More formal with elders, corporates and diplomats; lighter with younger diaspora. Mirror how they greet you." }
+      ] },
+      { id: "C", title: "Structure", rules: [
+        { n: 9, text: "One message, one job: introduce, qualify, share details, book a viewing, or handle one worry. Never two." },
+        { n: 10, text: "Built for a phone: short paragraphs of two or three lines, bullets for property details." },
+        { n: 11, text: "End with one clear question or next step. Ask one question at a time; if you need two, put them in separate short paragraphs. The one exception is an intake checklist in bullets, with \"a voice note is fine\"." },
+        { n: 12, text: "Use their name: {Name} in the first reply once you know it, and in every follow-up." }
+      ] },
+      { id: "D", title: "Trust and honesty (the red lines)", rules: [
+        { n: 13, text: "Be an advisor, not a seller. \"I'll tell you honestly if this one is a good fit\" is the feeling behind every script." },
+        { n: 14, text: "Say the problem before they find it: damp, flooding, a narrow road. Mention it first, with what it costs to fix." },
+        { n: 15, text: "Say \"may\", never \"will\", about prices and rent. Never promise growth, never make up numbers." },
+        { n: 16, text: "Only real urgency. Never invent another buyer or a deadline." },
+        { n: 17, text: "Keep every client private. Never share one client's budget or situation with another, and say so when it helps." },
+        { n: 18, text: "Respect beliefs. If nakath or the family astrologer comes up, plan around it: \"Please let me know the good time, and I'll arrange it then.\"" }
+      ] },
+      { id: "E", title: "Price and the deal", rules: [
+        { n: 19, text: "Trust before price. In outreach and owner conversations, numbers come after rapport. Exception: when someone enquires about a listing, give the asking price in message 2, because that's what they asked for." },
+        { n: 20, text: "Never show your best number first. Scripts quote the asking price; offers go \"to the owner for a decision\"." },
+        { n: 21, text: "Get it in writing: offers in writing, and co-broking or commission terms agreed in writing before any viewing." },
+        { n: 22, text: "Ask for the next small step, not the whole deal. \"Shall I check the deed first?\" beats \"Shall we close?\"" }
+      ] },
+      { id: "F", title: "Follow-up", rules: [
+        { n: 23, text: "Reply within an hour. First replies are ready to send the moment an enquiry comes in." },
+        { n: 24, text: "Every follow-up gives something: a new listing, a price update, an answer, a video. Never just \"Any update?\"" },
+        { n: 25, text: "Follow up five to seven times, then a soft pause: \"Are you still looking, or should I pause for now?\"" },
+        { n: 26, text: "Always leave the door open, even when you say no. Colombo is small." },
+        { n: 27, text: "Ask for referrals at the happiest moment, right after handover, and make the ask specific." }
+      ] }
+    ],
+    check: { title: "Check before you send", text: "Simple? One job? Honest? About their life? Ends with one clear next step? If any answer is no, rewrite it." }
+  };
+
+  function ruleHtml(r) {
+    var t = r.text, a = t.indexOf(': '), b = t.indexOf('. '), i = a < 0 ? b : (b < 0 ? a : Math.min(a, b)), h;
+    if (i < 0) i = t.indexOf(', ');
+    if (i > 0) h = '<b>' + esc(t.slice(0, i + 1)) + '</b>' + esc(t.slice(i + 1)); else h = esc(t);
+    return '<li class="rule" value="' + r.n + '"><span class="rn" aria-hidden="true">' + r.n + '</span><span class="rt">' + h + '</span></li>';
+  }
+  function openRules() {
+    var sh = openSheet({ full: true, label: 'Script rules' });
+    sh.set(head('Script rules', { left: 'back', right: '<span class="sp"></span>' }) + '<div class="sheet-scroll rules">' +
+      '<div class="callout"><p>' + esc(RULES.top) + '</p></div>' +
+      RULES.groups.map(function (g) {
+        return '<section class="rule-group"><h3 class="label-sm">' + esc(g.id + ' \u00B7 ' + g.title) + '</h3><ol class="rule-list">' + g.rules.map(ruleHtml).join('') + '</ol></section>';
+      }).join('') +
+      '<div class="callout"><div class="label-sm">' + esc(RULES.check.title) + '</div><p>' + esc(RULES.check.text) + '</p></div></div>');
+    sh.focus();
+    return sh;
+  }
+
   var CLAUDE_PROMPT = [
     'Write WhatsApp sales scripts for Ascend Properties, a boutique real estate brokerage in Colombo, Sri Lanka.',
     '',
     'The property / situation:',
     '[describe it here: type, area, price, key details, who the client is]',
     '',
-    'Follow these rules:',
-    '- Write for one specific client. Many read English as a second language: short, simple, professional sentences. No jargon or idioms.',
-    '- Warm but not familiar. Confident, not pushy. Honest over clever.',
-    '- One message, one purpose. Short paragraphs (2-3 lines) for a phone screen.',
-    '- End with one clear question or next step. Ask one question at a time.',
-    '- Give value before asking for anything. Price comes after rapport and qualification.',
-    '- No exclamation marks in a first message. Always leave the door open.',
-    '- Use {Name} for the client\'s name, {MyName} and {Company} for me, and {Field} for any other fill-in.',
+    'Follow the Ascend script rules:',
+    '- Trust first: every message should make the client trust me a little more. Be an advisor, not a seller.',
+    '- Write for one specific client type (local family, investor, diaspora, expat/diplomat, seller/landlord, agent) and speak to what they care about. Sell the life, not the property.',
+    '- Simple English: one idea per sentence, short common words, no property jargon (say "the rent you get each year", not "rental yield"). Many clients read English as a second language.',
+    '- Numbers the way clients say them: "LKR 175 Mn" or "6 crore".',
+    '- One message, one job. Short paragraphs (2-3 lines), bullets for property details.',
+    '- End with one clear question or next step. One question at a time.',
+    '- Use {Name} in replies and every follow-up.',
+    '- Honesty: mention known problems first, say "may" not "will" about prices and rent, no invented urgency or buyers, keep every client\'s details private.',
+    '- Trust before price in outreach. For listing enquiries, give the asking price in message 2. Never show the best number first; offers go to the owner for a decision.',
+    '- Ask "Who else will help you decide?" before the viewing. Ask for the next small step, not the whole deal. Offers and co-broking terms in writing.',
+    '- Every follow-up gives something new (a video, the location pin, similar options, an answer). Never just "Any update?". After 5-7 follow-ups, a soft pause: "Are you still looking, or should I pause for now?" Always leave the door open.',
+    '- Use {MyName} and {Company} for me, and {Field} for any other fill-in.',
     '',
     'Format every script exactly like this, and nothing else:',
     '## 1 · Short title',
@@ -1029,7 +1185,8 @@
       row('c-script', 'New script', 'Write a single message') +
       row('c-pack', 'New listing pack', 'A full set of scripts for a property, built on your proven flow') +
       row('c-paste', 'Paste scripts', 'Add several at once from a Claude reply or your notes') +
-      '</div></div>');
+      '</div><button type="button" class="btn text rules-link" data-act="c-rules">Read the script rules</button></div>');
+    sh.acts['c-rules'] = function () { openRules(); };
     sh.acts['c-script'] = function () { sh.close(true); openEditor(null, { category: S.categories.indexOf(ui.cat) >= 0 ? ui.cat : null }); };
     sh.acts['c-pack'] = function () { sh.close(true); openPackWizard(); };
     sh.acts['c-paste'] = function () { sh.close(true); openPaste(); };
@@ -1058,7 +1215,7 @@
     var client = sale ? 'buyer' : 'tenant';
     var lines = String(input.details || '').split(/\r?\n/).map(function (l) { return l.replace(/^[\s•\-*]+/, '').trim(); }).filter(Boolean);
     var out = [];
-    function add(title, body) { out.push({ title: title, body: body }); }
+    function add(title, body, optional) { var o = { title: title, body: body }; if (optional) o.optional = true; out.push(o); }
 
     add('1 · First reply', "Hi, greetings from {Company}. My name is {MyName}.\n\nThank you for reaching out about the " + what + ".\n\nMay I ask, are you " + who + ", or are you enquiring on behalf of a client?");
     add('2 · Property details', "Here are the details:\n\n*" + head + "*\n\n" + B + "Location: " + (detail || area) + "\n" + B + PL + ": *" + price + "*\n" +
@@ -1068,20 +1225,21 @@
     if (res) add('5 · Main requirements', "What are the main things you need in a home? For example, number of bedrooms, parking, or space for the family.\n\nThat way I can tell you honestly if this one is a good fit.");
     else if (land) add('5 · Main requirements', "What are the main things you need? For example, land size, road access, or what you plan to build.\n\nThat way I can tell you honestly if this one is a good fit.");
     else add('5 · Main requirements', "May I ask what your business does, and roughly how many people would use the space?\n\nThat way I can tell you honestly if this one is a good fit.");
-    if (sale) add('6 · Timing & funding', "May I ask when you're hoping to buy?\n\nAnd will you be using your own funds, a bank loan, or money from selling another property?");
-    else add('6 · Move-in & lease', "When would you like to move in, and how long a lease are you looking for?");
-    if (com) add('7 · Who decides', "Will anyone else be part of the decision, such as a partner, director or facilities team? It's best if they can join the viewing too.");
-    else add('7 · Who decides', "Will anyone else be part of the decision, like your spouse or family? It's best if they can join the viewing too.");
+    if (com) add('6 · Who decides', "Will anyone else be part of the decision, such as a partner, director or facilities team? It's best if they can join the viewing too.");
+    else add('6 · Who decides', "Will anyone else be part of the decision, like your spouse or family? It's best if they can join the viewing too.");
+    if (sale) add('7 · Timing & funding', "May I ask when you're hoping to buy?\n\nAnd will you be using your own funds, a bank loan, or money from selling another property?");
+    else add('7 · Move-in & lease', "When would you like to move in, and how long a lease are you looking for?");
     add('8 · Offer a viewing', "From what you've shared, this " + noun + " could suit you well. Would you like to see it in person?\n\nWhich day and time would work best for you? I'll check with the owner and confirm.");
     add('9 · Confirm viewing', "Your viewing is confirmed:\n\n*" + head + "*\nDate: {Date}\nTime: {Time}\nLocation: {Location pin}\n\nPlease let me know who will be joining you. I'll meet you there. If anything changes, just message me.");
+    add('9b · Before viewing: known issue', "Hi {Name}, before you see the " + noun + ", I want to mention one thing: {Known issue}.\n\n{What it takes to fix}\n\nI'd rather you hear it from me first. Shall we go ahead with the viewing as planned?", true);
     add('10 · Viewing reminder', "Hi {Name}, just a reminder of the viewing today at *{Time}* for the " + noun + " in " + area + ".\n\nI'll meet you there. Here is the location: {Location pin}");
     add('11 · After viewing', "Hi {Name}, thank you for coming to see the " + noun + " today.\n\nWhat did you think? Was there anything you liked, or anything that didn't feel right?");
     if (sale) add('12 · Interested after viewing', "Great to hear you liked it, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, documents, a second visit, or questions for the owner.\n\nWhen you're ready, you can send me your offer in writing here and I'll present it to the owner.");
     else add('12 · Interested after viewing', "Great to hear you liked it, {Name}.\n\nIs there anything you'd like to check before moving forward? For example, the lease terms, a second visit, or questions for the owner.\n\nWhen you're ready, send me your proposed rent and move-in date here and I'll present it to the owner.");
     add('13 · Not a fit after viewing', "Thank you for letting me know, {Name}. I really appreciate your honest feedback.\n\nMay I ask what didn't suit you? If I come across something that fits better, I'll let you know.");
-    add('14 · No reply after details', "Hi, just checking if you had a chance to look at the details of the " + noun + " in " + area + ".\n\nDoes it suit what you're looking for? Happy to answer any questions.");
+    add('14 · No reply after details', "Hi {Name}, just checking if you had a chance to look at the " + noun + " in " + area + ".\n\nIf it helps, I can send a short video or the location pin so you can see the area. Would that be useful?");
     add('14b · Ask their requirements', "Hi, following up on the " + what + ".\n\nIf this one isn't quite right, that's completely fine. May I ask what you're looking for?\n\n" + B + "Area\n" + B + "Budget\n" + B + size + "\n" + B + "When you plan to " + when + "\n\nShort answers are fine. I'll let you know when something suitable comes up.");
-    add('15 · Last follow-up', "Hi, following up one last time on the " + noun + " in " + area + ". If the timing isn't right, no problem at all.\n\nShall I keep you in mind for similar properties?");
+    add('15 · Last follow-up', "Hi {Name}, following up one last time on the " + noun + " in " + area + ". Are you still looking, or should I pause for now?\n\nEither is completely fine. If something similar comes up, I'd be glad to let you know.");
     add('Q · Where exactly is it?', "It's in " + area + "." + (detail ? " " + detail.replace(/[.\s]+$/, '') + "." : "") + "\n\nI share the exact location before a viewing. Would you like to arrange one?");
     if (sale) add("Q · What's the best price?", "The asking price is *" + price + "*.\n\nIf you like the " + noun + " after seeing it, I'm happy to present your offer to the owner. Would you like to view it first?");
     else add("Q · What's the best rent?", "The asking rent is *" + price + "*.\n\nOnce you've seen the " + noun + ", I'm happy to present your proposal to the owner. Would you like to view it first?");
@@ -1169,7 +1327,7 @@
       for (var i = 0; i < checks.length; i++) {
         if (!v[checks[i][0]].trim()) { toast(checks[i][1]); sh.q('#w-' + checks[i][0]).focus(); return; }
       }
-      st.items = buildPack(v).map(function (x) { return { title: x.title, body: x.body, on: true, open: false }; });
+      st.items = buildPack(v).map(function (x) { return { title: x.title, body: x.body, on: !x.optional, open: false }; });
       paint2();
       sh.sheet.focus({ preventScroll: true });
     };
@@ -1326,8 +1484,15 @@
     ['prior to', 'before'], ['in terms of', 'for'], ['per se', null],
     ['utilise', 'use'], ['utilize', 'use'], ['leverage', 'use'], ['facilitate', 'help'], ['commence', 'start'],
     ['endeavour', 'try'], ['endeavor', 'try'], ['revert', 'reply'], ['hereby', null], ['aforementioned', 'this'],
-    ['optimal', 'best'], ['synergy', null], ['cognizant', 'aware']
+    ['optimal', 'best'], ['synergy', null], ['cognizant', 'aware'],
+    ['acquire', 'buy'], ['acquisition', 'purchase'], ['rental yield', 'the rent you get each year'], ['yield', 'the rent you get each year'],
+    ['capital appreciation', 'how much the price may go up'], ['appreciation', 'price growth'], ['liquidity', 'how fast you can sell'],
+    ['encumbrance', 'any loan or claim on the property'], ['due diligence', 'checking the deed'], ['title search', 'checking the deed'],
+    ['exclusive mandate', 'only we sell it, for a set time'], ['mandate', 'agreement'], ['high-net-worth', 'wealthy'], ['curated', 'chosen'],
+    ['rental income stream', 'rent'], ['amenities', "what's nearby"]
   ];
+  /* Longest phrase first, so a long phrase is reported once and its shorter parts are not double-reported. */
+  PLAIN.sort(function (x, y) { return y[0].length - x[0].length; });
   function syllables(w) {
     w = w.toLowerCase().replace(/[^a-z]/g, '');
     if (!w) return 0;
@@ -1343,8 +1508,13 @@
     var items = [], n = words.length;
     if (n > 120) items.push({ k: 'warn', t: 'Long message (' + n + ' words). Aim for under 80.' });
     else if (n > 80) items.push({ k: 'tip', t: n + ' words. Shorter messages get read.' });
-    var q = (t.match(/\?/g) || []).length;
-    if (!q) items.push({ k: 'tip', t: 'No question. End with one clear next step.' });
+    var q = 0, lq = 0;
+    t.split('\n').forEach(function (ln) {
+      var c = (ln.match(/\?/g) || []).length;
+      if (/^\s*(•|[-*]|\d+[.)])\s/.test(ln)) lq += c; else q += c;
+    });
+    if (!q && !lq) items.push({ k: 'tip', t: 'No question. End with one clear next step.' });
+    else if (lq >= 3 && q <= 2) items.push({ k: 'tip', t: 'Checklist of ' + lq + ' questions. Offer a voice note.' });
     else if (q >= 3) items.push({ k: 'warn', t: q + ' questions. Ask one at a time.' });
     if (t.indexOf('!') >= 0) items.push({ k: 'tip', t: 'Exclamation marks can read as eager.' });
     var sents = t.replace(/([.!?]+)(\s|$)/g, '$1\u0001').split(/[\u0001\n]+/).filter(function (s) { return /[A-Za-z]/.test(s); });
@@ -1369,6 +1539,15 @@
       items.push({ k: 'warn', t: p[1] ? 'Say "' + p[1] + '" instead of "' + w + '".' : 'Drop "' + w + '".' });
       work = work.replace(new RegExp('\\b' + p[0].replace(/ /g, '\\s+') + '\\b', 'ig'), ' ');
     });
+    if (/\b(will|guarantee[ds]?|definitely|sure to)\b[^.?!\n]{0,40}\b(appreciate|increase|grow|go up|rise|double|earn|return)/i.test(t) || /\bguaranteed?\b/i.test(t)) {
+      items.push({ k: 'warn', t: 'Say "may", not "will", about prices and rent.' });
+    }
+    if (/\b(hurry|last chance|act now|act fast|won't last|limited time|before it's gone|many buyers are interested|lots of interest)\b/i.test(t)) {
+      items.push({ k: 'warn', t: 'Only use urgency when it\'s real.' });
+    }
+    if (/\b(any update|any news|any progress|just checking in)\b/i.test(t)) {
+      items.push({ k: 'warn', t: 'Give something new, not just "Any update?".' });
+    }
     var reading = null;
     if (n >= 8) {
       var syl = 0;
@@ -1379,7 +1558,7 @@
     return { items: items, reading: reading };
   }
   function checkerHtml(text) {
-    var r = checkScript(text), h = '<div class="label-sm">Check</div>';
+    var r = checkScript(text), h = '<div class="chk-head"><div class="label-sm">Check</div><button type="button" class="btn text chk-rules" data-act="rules">Rules</button></div>';
     if (!r) return h + '<p class="chk-empty">Tips appear as you type.</p>';
     var rows = r.items.slice();
     if (!rows.length && !(r.reading && r.reading.warn)) rows.push({ k: 'ok', t: 'Looks good ✓' });
@@ -1765,6 +1944,7 @@
       '<label class="field"><span class="label-sm" style="text-transform:none;letter-spacing:0">My name (fills {MyName})</span><input id="sMy" type="text" value="' + esc(S.settings.myName) + '" autocomplete="off" autocapitalize="words"></label>' +
       '<label class="field"><span class="label-sm" style="text-transform:none;letter-spacing:0">Company (fills {Company})</span><input id="sCo" type="text" value="' + esc(S.settings.company) + '" autocomplete="off" autocapitalize="words"></label></div>' +
       '<div class="section"><div class="label-sm">Library</div><div class="list-btns">' +
+      '<button type="button" class="btn" data-act="rules">Script rules</button>' +
       '<button type="button" class="btn" data-act="cats">Manage categories</button>' +
       '<button type="button" class="btn" data-act="objs">Edit objections</button></div></div>' +
       '<div class="section"><div class="label-sm">Backup</div><div class="list-btns">' +
@@ -1781,6 +1961,7 @@
       if (e.target.id === 'sMy') { S.settings.myName = e.target.value; save(); refreshAll(); }
       if (e.target.id === 'sCo') { S.settings.company = e.target.value; save(); refreshAll(); }
     });
+    sh.acts.rules = function () { openRules(); };
     sh.acts.cats = function () { openCats(); };
     sh.acts.objs = function () { openObjManager(); };
     sh.acts.export = function () { exportBackup(); };
@@ -2022,6 +2203,7 @@
   /* =====================================================================
      Boot
      ===================================================================== */
+  if (/[?&]test=1\b/.test(location.search)) window.__ascendTest = { obj: {}, step: {}, notes: {}, migrate: function (st) { S = st; migrateStarter(); return S; }, normalize: normalize, checkScript: checkScript, buildPack: buildPack };
   load();
   try {
     var qm = new URLSearchParams(location.search).get('mode');
